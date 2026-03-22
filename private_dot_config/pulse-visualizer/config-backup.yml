@@ -1,0 +1,135 @@
+audio:
+  device: default
+  engine: pipewire
+  gain_db: 0
+  sample_rate: 48000
+  silence_threshold: -90
+
+debug:
+  log_fps: false
+  show_bandpassed: false
+
+fft:
+  beam_multiplier: 1
+  rotation: 0
+  flip_x: false
+  markers: true
+  size: 4096
+  slope: 3
+  key: sharp
+  mode: midside
+  cursor: true
+  limits:
+    max_db: 0
+    max_freq: 22000
+    min_db: -60
+    min_freq: 10
+  smoothing:
+    enabled: true
+    fall_speed: 50
+    hover_fall_speed: 10
+    rise_speed: 500
+  cqt:
+    bins_per_octave: 60
+    enabled: true
+  sphere:
+    enabled: false
+    max_freq: 5000
+    base_radius: 0.100000001
+
+font: ~/.local/share/fonts/JetBrainsMono/JetBrainsMonoNerdFont-Medium.ttf
+
+lissajous:
+  beam_multiplier: 1.5
+  mode: normal
+  spline_tension: 0.5
+  spline_density: 10
+  rotation: 0
+
+lufs:
+  label: compact
+  mode: momentary
+  scale: log
+
+oscilloscope:
+  beam_multiplier: 1
+  flip_x: false
+  rotation: 0
+  window: 50
+  edge_compression:
+    enabled: false
+    range: 0.100000001
+  pitch:
+    follow: true
+    type: zero_crossing
+    alignment: center
+    cycles: 3
+    min_cycle_time: 16
+  lowpass:
+    enabled: false
+    cutoff: 200
+    order: 4
+  bandpass:
+    bandwidth: 10
+    sidelobe: 60
+
+phosphor:
+  enabled: true
+  beam:
+    energy: 90
+    rainbow: true
+    width: 0.5
+  blur:
+    spread: 128
+    near_intensity: 0.600000024
+    far_intensity: 0.800000012
+  decay: 0
+  screen:
+    curvature: 0.100000001
+    gap: 0.0299999993
+    vignette: 0.300000012
+    chromatic_aberration: 0.00800000038
+    grain: 0.100000001
+  reflections:
+    strength: 0.5
+    box_blur_size: 4
+
+spectrogram:
+  frequency_scale: log
+  interpolation: true
+  window: 4
+  limits:
+    max_db: -10
+    max_freq: 22000
+    min_db: -60
+    min_freq: 20
+
+visualizers:
+  hidden:
+    - spectrogram
+  main:
+    - vu
+    - lufs
+    - lissajous
+    - oscilloscope
+    - spectrum_analyzer
+
+vu:
+  calibration_db: 3
+  scale: log
+  style: digital
+  window: 100
+  momentum:
+    enabled: true
+    damping_ratio: 10
+    spring_constant: 500
+  needle_width: 2
+
+window:
+  always_on_top: false
+  decorations: true
+  default_height: 200
+  default_width: 1080
+  fps_limit: 240
+  theme: mocha.txt
+  wayland: false

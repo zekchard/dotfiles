@@ -1,0 +1,135 @@
+audio:
+  device: alsa_output.pci-0000_03_00.6.analog-stereo
+  engine: auto
+  gain_db: -0.255317688
+  sample_rate: 48000
+  silence_threshold: -90
+
+debug:
+  log_fps: false
+  show_bandpassed: false
+
+fft:
+  beam_multiplier: 1
+  rotation: 0
+  flip_x: false
+  markers: true
+  size: 4096
+  slope: 3.06382942
+  key: sharp
+  mode: midside
+  cursor: true
+  limits:
+    max_db: 0.765958786
+    max_freq: 22000
+    min_db: -81.0319138
+    min_freq: 68.4840393
+  smoothing:
+    enabled: true
+    fall_speed: 50
+    hover_fall_speed: 10
+    rise_speed: 500
+  cqt:
+    bins_per_octave: 60
+    enabled: true
+  sphere:
+    enabled: false
+    max_freq: 5000
+    base_radius: 0.100000001
+
+font: ~/.local/share/fonts/JetBrainsMono/JetBrainsMonoNerdFont-Medium.ttf
+
+lissajous:
+  beam_multiplier: 0.984042585
+  mode: normal
+  spline_tension: 0.25
+  spline_density: 1
+  rotation: 0
+
+lufs:
+  label: compact
+  mode: momentary
+  scale: log
+
+oscilloscope:
+  beam_multiplier: 0.744680822
+  flip_x: false
+  rotation: 0
+  window: 50.1037254
+  edge_compression:
+    enabled: true
+    range: 0.0558510646
+  pitch:
+    follow: false
+    type: zero_crossing
+    alignment: center
+    cycles: 3
+    min_cycle_time: 2.57978725
+  lowpass:
+    enabled: false
+    cutoff: 372.340424
+    order: 1
+  bandpass:
+    bandwidth: 170.212753
+    sidelobe: 60
+
+phosphor:
+  enabled: true
+  beam:
+    energy: 930.920166
+    rainbow: false
+    width: 3.04893589
+  blur:
+    spread: 41.7712746
+    near_intensity: 0.0372340418
+    far_intensity: 0.220744684
+  decay: 100
+  screen:
+    curvature: 0
+    gap: 0.110000014
+    vignette: 0
+    chromatic_aberration: 0
+    grain: 0.40691489
+  reflections:
+    strength: 0
+    box_blur_size: 0
+
+spectrogram:
+  frequency_scale: log
+  interpolation: true
+  window: 4
+  limits:
+    max_db: -10
+    max_freq: 22000
+    min_db: -60
+    min_freq: 20
+
+visualizers:
+  hidden:
+    - vu
+    - spectrogram
+  main:
+    - lufs
+    - spectrum_analyzer
+    - oscilloscope
+    - lissajous
+
+vu:
+  calibration_db: 3
+  scale: log
+  style: digital
+  window: 100
+  momentum:
+    enabled: true
+    damping_ratio: 10
+    spring_constant: 500
+  needle_width: 2
+
+window:
+  always_on_top: true
+  decorations: false
+  default_height: 200
+  default_width: 1024
+  fps_limit: 120
+  theme: phosphor-white.txt
+  wayland: true
