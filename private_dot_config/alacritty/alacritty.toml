@@ -1,0 +1,44 @@
+[window]
+opacity = 0.9
+blur = true
+
+[font]
+normal = { family = "AnonymicePro Nerd Font Mono", style = "Regular" }
+bold = { family = "AnonymicePro Nerd Font Mono", style = "Bold" }
+italic = { family = "AnonymicePro Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "AnonymicePro Nerd Font Mono", style = "Bold Italic" }
+size = 11
+
+[colors.primary]
+foreground = "#9575CD"
+background = "#212121"
+
+[colors.normal]
+black = "#424242"
+red = "#E57373"
+green = "#81C784"
+yellow = "#FFD54F"
+blue = "#7986CB"
+magenta = "#9575CD"
+cyan = "#4DD0E1"
+white = "#E0E0E0"
+
+[colors.bright]
+black = "#616161"
+red = "#EF9A9A"
+green = "#A5D6A7"
+yellow = "#FFE082"
+blue = "#9FA8DA"
+magenta = "#B39DDB"
+cyan = "#80DEEA"
+white = "#FAFAFA"
+
+[colors.dim]
+black = "#212121"
+red = "#EF5350"
+green = "#66BB6A"
+yellow = "#FFCA28"
+blue = "#5C6BC0"
+magenta = "#7E57C2"
+cyan = "#26C6DA"
+white = "#9E9E9E"
