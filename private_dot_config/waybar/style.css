@@ -6,26 +6,26 @@
 }
 
 window#waybar {
-    background: linear-gradient(to bottom,  rgba(33,33,33,0.8) 0%,rgba(33,33,33,0.5) 100%);
+    /*background: linear-gradient(to bottom,  rgba(33,33,33,0.8) 0%,rgba(33,33,33,0.5) 100%);*/
+    background: rgba(33,33,33,0.8);
     color: #9575CD;
     font-family: 
         Lexend,
         feather;
     transition: background-color .5s;
+    border: 2px solid rgba(222, 222, 222, 0.2);
+    border-radius: 5px;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
     background: rgba(33, 33, 33, 0);
-    border: 0px solid rgb(149, 117, 205);
     margin: 0px;
-    padding: 0 10 0 10;
-    border-radius: 10px;
+    padding: 0 5 0 5;
+    border-radius: 5px;
 }
-s.modules-left {
-    padding: 0px;
-}
+
 .modules-center {
     opacity: 0;
 }
