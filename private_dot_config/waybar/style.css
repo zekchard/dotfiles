@@ -4,7 +4,7 @@
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
     font-family: Lexend, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
-    transition: background-color .3s ease-out;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 window#waybar {
@@ -14,7 +14,6 @@ window#waybar {
     font-family: 
         Lexend,
         feather;
-    transition: background-color .5s;
     border: 2px solid alpha(@outline,.3);
     border-radius: 5px;
 }
@@ -72,12 +71,8 @@ window#waybar {
 #power-profiles-daemon:hover,
 #language:hover,
 #mpd:hover {
-    background: rgba(149, 117, 205, 0.2);
+    background: alpha(@primary_container,.5);
     border-radius: 0px;
-}
-
-#tooltip {
-    background: rgba(149, 117, 205, 0.2);
 }
 
 #workspaces button {
@@ -95,8 +90,9 @@ window#waybar {
 }
 
 #workspaces button.active {
-background: linear-gradient(to bottom,  alpha(@on_primary_container,.5) 0%,alpha(@primary_container,.2) 100%);
-    color: @primary_fixed; 
+background: linear-gradient(to top, alpha(@on_primary,.5) 0%,alpha(@primary,.2) 100%);
+    color: @primary; 
+    border-bottom:2px solid alpha(@primary,1);
 }
 
 #workspaces button:hover {

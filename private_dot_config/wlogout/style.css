@@ -1,41 +1,63 @@
+@import "colors.css";
+
 * {
 	background-image: none;
 	box-shadow: none;
 }
 
 window {
-	background-color: rgba(12, 12, 12, 0.8);
-        margin: 10px;
+    color: @on_surface;
+    background-color: alpha(@background,0.8);
 }
 
+/* BUTTONS */
 button {
-    border-radius: 10px;
-    border-color: black;
-	text-decoration-color: #9575CD;
-    color:  #9575CD;
-    margin: 5px;
-	background-color: rgba(33, 33, 33, 0.5);
-	border-style: solid;
-	border-width: 3px;
-        border-color: #212121;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: center 43%;
+    background-size: 25%;
+    background-color: alpha(@background,0.8);
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s ease-in;
+    box-shadow: 0 0 10px 2px transparent;
+    border: 2px solid alpha(@outline,0.2);
+    border-radius: 5px;
+    margin: 3px;
+    min-width: 0px;
+    min-height: 0px;
+    padding: 1px;
 }
 
-button:focus, button:active, button:hover {
-	background-color: rgba(94, 53, 177, 0.1);
-	border-style: solid;
-        border-width: 3px;
-        border-color: rgb(149, 117, 205);
+/* TEXT LABELS (THIS WAS MISSING) */
+label {
+    color: @on_background;
+    font-size: 12pt;
+    font-weight: 500;
+    margin-top: 12px;
 }
+
+/* FOCUS */
+button:focus {
+    box-shadow: none;
+    outline-style: none;
+}
+
+/* HOVER */
+button:hover {;
+    background-color: alpha(@on_primary,0.8);
+    outline-style: none;	
+    box-shadow: 0 0 10px 3px rgba(0,0,0,.4);
+    border: 2px solid alpha(@primary,0.8);
+    transition: all 0.3s cubic-bezier(0.85, 0, 0.15, 1),
+                box-shadow 0.5s ease-in;
+}
+
 
 #lock {
-    background-image: image(url("/home/zek/.config/wlogout/icons/lock.png"), url("/home/zek/.config/wlogout/icons/lock.png"));
+    background-image: image(url("/home/zek/.config/wlogout/icons/lock.png"));
 }
 
 #logout {
-    background-image: image(url("/home/zek/.config/wlogout/icons/logout.png"), url("/home/zek/.config/wlogout/icons/logout.png"));
+    background-image: image(url("/home/zek/.config/wlogout/icons/logout.png"));
 }
 
 #suspend {
