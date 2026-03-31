@@ -65,7 +65,7 @@ window:
   default_width: 1280
   default_height: 200
   fps_limit: 24
-  theme: catppuccin-mocha_glow_zek.txt
+  theme: matugen.txt
 
 debug:
   log_fps: false

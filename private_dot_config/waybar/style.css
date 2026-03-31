@@ -1,3 +1,5 @@
+@import "colors.css";
+
 * {
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
     font-family: Lexend, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -7,20 +9,19 @@
 
 window#waybar {
     /*background: linear-gradient(to bottom,  rgba(33,33,33,0.8) 0%,rgba(33,33,33,0.5) 100%);*/
-    background: rgba(33,33,33,0.8);
-    color: #9575CD;
+    background: alpha(@background,.8);
+    color: @on_surface;
     font-family: 
         Lexend,
         feather;
     transition: background-color .5s;
-    border: 2px solid rgba(222, 222, 222, 0.2);
+    border: 2px solid alpha(@outline,.3);
     border-radius: 5px;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-    background: rgba(33, 33, 33, 0);
     margin: 0px;
     padding: 0 5 0 5;
     border-radius: 5px;
@@ -75,7 +76,7 @@ window#waybar {
     border-radius: 0px;
 }
 
-#network tooltip {
+#tooltip {
     background: rgba(149, 117, 205, 0.2);
 }
 
@@ -86,7 +87,7 @@ window#waybar {
     feather;
   font-weight: 500;
   font-size: 12pt;
-  color: rgb(149, 117, 205);
+    color: @on_secondary_container;
   border:none;
   border-radius: 0px;
   min-width: 8px;
@@ -94,18 +95,22 @@ window#waybar {
 }
 
 #workspaces button.active {
-background: linear-gradient(to bottom,  rgba(149,117,205,0.5) 0%,rgba(126,87,194,0.4) 100%);
-    color: rgb(237, 231, 246); 
+background: linear-gradient(to bottom,  alpha(@on_primary_container,.5) 0%,alpha(@primary_container,.2) 100%);
+    color: @primary_fixed; 
 }
 
 #workspaces button:hover {
-    color: rgb(179, 157, 219);
+    color: @primary;
 }
 
 #workspaces button.urgent {
-    color: #D4BBFF;
+    color: @tertiary;
 }
 
 #window {
     padding: 0 12;
 }
+
+
+
+
