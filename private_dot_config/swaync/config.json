@@ -50,9 +50,9 @@
     }
   },
   "widgets": [
-    "inhibitors",
     "mpris",
     "buttons-grid",
+    "inhibitors",
     "title",
     "dnd",
     "notifications"

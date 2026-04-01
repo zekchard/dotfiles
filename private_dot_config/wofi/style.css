@@ -5,7 +5,7 @@ window {
     padding: 0px;
     border: 2px solid alpha(@outline,0.2);
     border-radius: 5px;
-	background: alpha(@secondary_container,0.8);
+	background-color: alpha(@secondary_container,0.8);
 	background-image: url("/home/zek/.config/wofi/wrndewofi.png");
 	background-size: 50%;
 	background-position: top right;

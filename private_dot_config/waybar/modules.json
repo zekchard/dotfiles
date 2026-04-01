@@ -25,8 +25,8 @@
     "cava": {
             // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
             "framerate": 15,
-            "autosens": 0,
-            "sensitivity": 2.3,
+            "autosens": 1,
+            "sensitivity": 0.5,
             "bars": 16,
             "sample_rate": 44100,
             "lower_cutoff_freq": 100,
@@ -42,7 +42,7 @@
             "bar_spacing": 12,
             "monstercat": false,
             "waves": false,
-            "noise_reduction": 0.4,
+            "noise_reduction": 0.15,
             "input_delay": 2,
             "format-icons": ["⠀", "⠀", "⣀", "⣤", "⣤", "⣶", "⣿"],
             "actions": {

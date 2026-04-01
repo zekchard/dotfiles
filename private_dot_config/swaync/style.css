@@ -137,7 +137,7 @@ notificationwindow, blankwindow {
   /* Notification Primary Image */
   -gtk-icon-filter: none;
   -gtk-icon-size: var(--notification-icon-size);
-  border-radius: 100px;
+  border-radius: 0px;
   /* Size in px */
   margin: 4px;
 }
