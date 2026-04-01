@@ -15,6 +15,9 @@
         "hyprland/workspaces",
         "hyprland/window"
     ],
+    "modules-center": [
+        "cava",
+    ],
     "modules-right": [
         "group/hardware",
         "network",

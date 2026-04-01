@@ -2,7 +2,7 @@
 
 * {
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-    font-family: Lexend, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: Readex Pro, Lexend, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -27,7 +27,7 @@ window#waybar {
 }
 
 .modules-center {
-    opacity: 0;
+    opacity: 1;
 }
 #clock,
 #custom-arch,
@@ -52,6 +52,11 @@ window#waybar {
     padding: 0 6;
     border-radius: 0px;
 }
+
+#cava{
+	font-family: AnonymicePro Nerd Font Mono Bold, AnonymicePro Nerd Font Mono, AnonymicePro Nerd Font
+}
+
 #custom-arch:hover,
 #clock:hover,
 #battery:hover,

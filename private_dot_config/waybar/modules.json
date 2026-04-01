@@ -22,6 +22,36 @@
 		"idle_inhibitor"
 	]
     },
+    "cava": {
+            // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+            "framerate": 15,
+            "autosens": 0,
+            "sensitivity": 2.3,
+            "bars": 16,
+            "sample_rate": 44100,
+            "lower_cutoff_freq": 100,
+            "higher_cutoff_freq": 10000,
+            "sleep_timer": 2,
+            "hide_on_silence": true,
+            "format_silent": " ",
+            "method": "pulse",
+            "source": "auto",
+            "stereo": true,
+            "reverse": false,
+            "bar_delimiter": 0,
+            "bar_spacing": 12,
+            "monstercat": false,
+            "waves": false,
+            "noise_reduction": 0.4,
+            "input_delay": 2,
+            "format-icons": ["⠀", "⠀", "⣀", "⣤", "⣤", "⣶", "⣿"],
+            "actions": {
+                       "on-click-right": "mode"
+                       }
+        },
+     "hyprland/window": {
+            "max-length": 64,
+        },
     "hyprland/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
