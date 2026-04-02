@@ -1,5 +1,6 @@
 // -*- mode: jsonc -*-
 {
+	"on-sigusr2":"reload",
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 27, // Waybar height (to be removed for auto height)
