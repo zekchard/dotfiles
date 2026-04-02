@@ -1,0 +1,11 @@
+## All RGB & RGBA colors follow a 0-255 range. Including the Alpha channel. For instance full white is 255,255,255,255 or 255,255,255.
+
+## Primary Colors:
+
+credit: "Matugen generated theme"
+color: {{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}
+selection: {{colors.on_primary_container.default.red}}, {{colors.on_primary_container.default.green}}, {{colors.on_primary_container.default.blue}}
+text: {{colors.on_surface.default.red}}, {{colors.on_surface.default.green}}, {{colors.on_surface.default.blue}}
+accent: {{colors.source_color.default.red}}, {{colors.source_color.default.green}}, {{colors.source_color.default.blue}}
+bg: {{colors.background.default.red}}, {{colors.background.default.green}}, {{colors.background.default.blue}}
+bgaccent: {{colors.surface_bright.default.red}}, {{colors.surface_bright.default.green}}, {{colors.surface_bright.default.blue}}
