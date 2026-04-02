@@ -6,6 +6,10 @@ import = ["colors.toml"]
 opacity = 0.9
 blur = true
 
+[cursor]
+style = "Beam"
+thickness = 0.32
+
 [font]
 normal = { family = "AnonymicePro Nerd Font Mono", style = "Regular" }
 bold = { family = "AnonymicePro Nerd Font Mono", style = "Bold" }
