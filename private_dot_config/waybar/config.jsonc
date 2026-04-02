@@ -27,9 +27,9 @@
         "memory",
         "temperature",
         "battery",
-        "battery#bat2",
+        "custom/notification",
         "clock",
-        "custom/srstatus"
+        "custom/srstatus",
     ],
     //Modules configuration
 

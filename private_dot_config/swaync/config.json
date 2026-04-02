@@ -50,12 +50,13 @@
     }
   },
   "widgets": [
+    "menubar",
     "mpris",
-    "buttons-grid",
     "inhibitors",
     "title",
+    "notifications",
     "dnd",
-    "notifications"
+    "buttons-grid"
   ],
   "widget-config": {
     "inhibitors": {
@@ -77,17 +78,116 @@
     },
     "mpris": {
       "image-size": 96,
-      "image-radius": 12,
+      "image-radius": 5,
       "blacklist": []
+    },
+    "menubar": {
+      "menu#powermode-buttons": {
+        "label": "󰓅", 
+        "position": "right",
+        "actions": [ 
+          {
+            "label": "Performance",
+            "command": "cpupower-gui pr Performance && swaync-client -cp && swayosd-client --custom-message 'CPU in Performance governor'"
+          },
+          {
+            "label": "Ondemand",
+            "command": "cpupower-gui pr Ondemand && swaync-client -cp && swayosd-client --custom-message 'CPU in Ondemand governor'"
+          },
+          {
+            "label": "Limit to 1696Mhz",
+            "command": "cpupower-gui pr yuhhhhhh && swaync-client -cp && swayosd-client --custom-message 'CPU limited to 1.7GHz'"
+          }
+        ]
+      },
+      "menu#power-buttons": {
+        "label": "", 
+        "position": "right",
+        "actions": [ 
+          {
+            "label": "   Reboot",
+            "command": "systemctl reboot"
+          },
+          {
+            "label": "   Lock",
+            "command": "swaylock.sh"
+          },
+          {
+            "label": "   Logout",
+            "command": "loginctl terminate-session ${XDG_SESSION_ID-}"
+          },
+          {
+            "label": "   Shut down",
+            "command": "systemctl poweroff"
+          }
+        ]
+      },
+      "menu#screenshot-buttons": {
+        "label": "",
+        "position": "left",
+        "actions": [
+          {
+            "label": "   Entire screen",
+            "command": "swaync-client -cp && sleep 1 && pkill hyprshot & hyprshot -m active -m output -o ~/Pictures/Screenshots -z"
+          },
+          {
+            "label": "󱣴   Select a region",
+            "command": "swaync-client -cp && sleep 1 && pkill hyprshot & hyprshot -m region -o ~/Pictures/Screenshots -z"
+          },          {
+            "label": "󱣴   Select a window",
+            "command": "swaync-client -cp && sleep 1 && pkill hyprshot & hyprshot -m window -o ~/Pictures/Screenshots -z"
+          },
+          
+          {
+            "label": "󰉋   Open screenshot folder",
+            "command": "xdg-open ~/Pictures/Screenshots"
+          }
+        ]
+      },
+      "menu#screencast-buttons": {
+        "label": "",
+        "position": "left",
+        "actions": [
+          {
+            "label": "   Entire screen",
+            "command": "swaync-client -cp && sleep 1 && /home/zek/scripts/screenrec.sh record"
+          },
+          {
+            "label": "   Select a region",
+            "command": "swaync-client -cp && sleep 1 && /home/zek/scripts/screenrec.sh region"
+          },
+          {
+            "label": "   Stop",
+            "command": "swaync-client -cp && /home/zek/scripts/screenrec.sh end"
+          },
+          {
+            "label": "   Open screencast folder",
+            "command": "xdg-open ~/Videos/Screencasts"
+          }
+        ]
+      }
     },
     "buttons-grid": {
       "actions": [
+		{
+          "label": "",
+          "command": "airctl"
+        },
         {
-          "label": "WIFI",
-          "type": "toggle",
-          "active": true,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
-          "update-command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+          "label": "󰂯",
+          "command": "blueberry"
+        },
+        {
+          "label": "",
+          "command": "hyprsysteminfo"
+        },
+        {
+          "label": "󰉋",
+          "command": "nautilus"
+        },
+        {
+          "label": "",
+          "command": "waterfox"
         }
       ]
     }
