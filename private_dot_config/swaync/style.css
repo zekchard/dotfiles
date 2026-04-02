@@ -480,7 +480,7 @@ notificationwindow, blankwindow {
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-
+     background-color: var(--noti-bg-hover);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:checked {
