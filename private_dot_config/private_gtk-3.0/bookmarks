@@ -8,6 +8,7 @@ file:///home/zek/.config .config
 file:///home/zek/.local .local
 file:/// /
 file:///media /media
+file:///home/zek/.config/matugen matugen
 file:///home/zek/.local/share/anime-game-launcher anime-game-launcher
 file:///home/zek/.local/share/twintaillauncher twintaillauncher
 file:///home/zek/.local/share/bottles bottles

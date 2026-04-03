@@ -255,6 +255,7 @@ notificationwindow, blankwindow {
 }
 
 .notification-group:focus {
+  border-radius: var(--border-radius);
   background: var(--noti-bg-focus);
 }
 
@@ -370,15 +371,17 @@ notificationwindow, blankwindow {
 
 /*** Widgets ***/
 .widget {
-  margin: 8px;
-  padding: 8px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
   border-radius: var(--border-radius);
 }
 
 /* Title widget */
 .widget-title > label {
   margin-right: 8px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .widget-title button {
@@ -398,7 +401,7 @@ notificationwindow, blankwindow {
 .widget-dnd label {
   color: var(--text-color);
   margin-right: 8px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .widget-dnd switch {
@@ -418,13 +421,18 @@ notificationwindow, blankwindow {
 /* Mpris widget */
 :root {
   --mpris-album-art-overlay: rgba(0, 0, 0, 0.55);
-  --mpris-button-hover: rgba(0, 0, 0, 0.5);
-  --mpris-album-art-icon-size: 80px;
+  --mpris-button-hover: var(--accent-bg);
+  --mpris-album-art-icon-size: 32px;
   --mpris-album-art-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.75);
 }
 
 .widget-mpris {
+  border-radius: var(--border-radius);
   padding: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top:0;
+  margin-bottom:0;
   /* The parent to all players */
 }
 
@@ -438,13 +446,21 @@ notificationwindow, blankwindow {
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay {
-  padding: 16px;
+  padding:5px;
   background-color: var(--mpris-album-art-overlay);
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay button:hover {
   /* The media player buttons (play, pause, next, etc...) */
   background: var(--noti-bg-hover);
+  border: 2px solid transparent;
+  transition: var(--hover-tranistion);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay button {
+  /* The media player buttons (play, pause, next, etc...) */
+  border: 2px solid transparent;
+  transition: var(--hover-tranistion);
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-album-art {
@@ -455,7 +471,7 @@ notificationwindow, blankwindow {
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-title {
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-subtitle {
@@ -463,7 +479,7 @@ notificationwindow, blankwindow {
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button {
-  /* Change player control buttons */
+  /* Change player control buttons */k
   border: 2px solid transparent;
   transition: var(--hover-tranistion);
 }
@@ -475,8 +491,27 @@ notificationwindow, blankwindow {
   transition: var(--hover-tranistion);
 }
 
+.widget-mpris .widget-mpris-player .mpris-overlay > box > button:checked {
+	border-radius:333px;
+    transition: var(--hover-tranistion);
+    color: var(--accent);
+    background-color: var(--accent-bg);
+}
+
 .widget-mpris > box > button {
   /* Change player side buttons */
+  border: 2px solid transparent;
+  transition: var(--hover-tranistion);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.widget-mpris > box > button:hover {
+  /* Change player side buttons */
+  background-color: var(--mpris-button-hover);
+  color: var(--accent);
+  border: var(--border);
+  transition: var(--hover-tranistion);
 }
 
 .widget-mpris > box > button:disabled {
@@ -486,13 +521,14 @@ notificationwindow, blankwindow {
 /* Buttons widget */
 
 .widget-buttons-grid {
-  padding: 5px;
+  margin-bottom: 5px;
+  font-size:120%;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
   border: 2px solid transparent;
-  margin: 3px;
-  padding: 4px 30px;
+  margin: 0px;
+  padding: 3px 28px;
   transition: var(--hover-tranistion);
 }
 
@@ -525,6 +561,8 @@ notificationwindow, blankwindow {
   .AnyName>button:hover {
     background-color: var(--noti-bg-hover);
   } */
+  margin-bottom: 0px;
+  margin-top: 5px;
 }
 
 .widget-menubar > .menu-button-bar {
@@ -555,7 +593,7 @@ notificationwindow, blankwindow {
 }
 
 .widget-menubar > revealer * {
-  margin-top: 8px;
+  margin-top: 5px;
 }
 
 .widget-menubar > revealer * button {
@@ -580,8 +618,14 @@ notificationwindow, blankwindow {
   --widget-volume-row-icon-size: 24px;
 }
 
-.widget-volume .widget-backlight {
-  padding: 5px;
+.widget-volume {
+ background-color:@on_surface;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.widget-backlight {
+  margin: -8px 16px;
 }
 
 /* Each row app icon */
@@ -606,6 +650,7 @@ notificationwindow, blankwindow {
   background-color: var(--noti-bg-alt);
   margin: 8px;
   margin-bottom: 0;
+  margin-top: 0;
   border-radius: var(--border-radius);
 }
 

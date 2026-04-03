@@ -3,14 +3,16 @@
   "positionX": "right",
   "positionY": "top",
   "layer": "overlay",
+  "ignore-gtk-theme": true,
   "control-center-layer": "top",
   "layer-shell": true,
   "layer-shell-cover-screen": true,
   "cssPriority": "user",
-  "control-center-margin-top": 7,
-  "control-center-margin-bottom": 7,
-  "control-center-margin-right": 7,
-  "control-center-margin-left": 7,
+  "control-center-exclusive-zone": false,
+  "control-center-margin-top": 5,
+  "control-center-margin-bottom": 5,
+  "control-center-margin-right": 5,
+  "control-center-margin-left": 5,
   "notification-2fa-action": true,
   "notification-inline-replies": false,
   "notification-icon-size": 64,
@@ -21,8 +23,8 @@
   "timeout-critical": 0,
   "fit-to-screen": true,
   "relative-timestamps": true,
-  "control-center-width": 500,
-  "control-center-height": 600,
+  "control-center-width": 450,
+  "control-center-height": -1,
   "notification-window-width": 500,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
@@ -52,12 +54,10 @@
   "widgets": [
     "menubar",
     "mpris",
-    "volume",
-    "backlight",
     "inhibitors",
-    "title",
-    "notifications",
-    "dnd",
+    "notifications",/*
+    "volume",*/
+    "backlight",
     "buttons-grid"
   ],
   "widget-config": {
@@ -65,6 +65,9 @@
       "text": "Inhibitors",
       "button-text": "󰎟",
       "clear-all-button": true
+    },
+    "notifications": {
+      "vexpand": true
     },
     "volume": {
       "label": "󰕾",
@@ -89,9 +92,13 @@
       "text": "Label Text"
     },
     "mpris": {
-      "image-size": 96,
+      "image-size": 56,
       "image-radius": 5,
-      "blacklist": []
+      "show-album-art":"when-available",
+      "autohide":true,
+      "blacklist": [
+      	"kdeconnect*"
+      ]
     },
     "menubar": {
       "menu#powermode-buttons": {
@@ -200,12 +207,15 @@
           "update-command": "/home/zek/.config/swaync/gamemodewatch.sh"
         },
         {
-          "label": "󰉋",
-          "command": "nautilus"
+          "label": "󰂠",
+          "type": "toggle",
+          "active": true,
+          "command": "swaync-client --toggle-dnd",
+          "update-command": "swaync-client --get-dnd"
         },
         {
-          "label": "",
-          "command": "waterfox"
+          "label": "󰎟",
+          "command": "swaync-client --close-all"
         }
       ]
     }

@@ -12,7 +12,7 @@ command = "awww img --transition-type center '{{ image }}'"
 [templates.currentcolor]
 input_path = '~/.config/matugen/templates/current'
 output_path = '~/.config/matugen/current-color'
-post_hook = 'magick "/home/zek/.config/fastfetch/wriorindeffbase.png" -fill "{{colors.source_color.default.hex}}" -tint 80 /home/zek/.config/fastfetch/wriorindeffcolored.png'
+post_hook = 'magick "/home/zek/.config/fastfetch/wriorindeffbase.png" -fill "{{colors.primary.default.hex}}" -tint 90 /home/zek/.config/fastfetch/wriorindeffcolored.png'
 
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
