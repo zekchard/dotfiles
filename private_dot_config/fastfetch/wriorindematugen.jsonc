@@ -1,0 +1,84 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+		"source": "~/.config/fastfetch/wriorindeffcolored.png",
+		"type": "kitty",
+		"height": 15,
+		"preserveAspectRatio":"true",
+		"recache":"true",
+		"padding": {
+			"top": 1,
+			"left": 2
+			}
+  },
+    "display": {
+      "separator": "  ",
+      "constants": [
+        // CONSTANT {$1} - VERTICAL BARS AT START AND 75th CHARACTERS FORWARD AND BACKWARD
+        "\u001b[38;2;149;117;205m│                                                            │\u001b[60D\u001b[0m"
+      ]
+  },
+    "modules": [
+      "break",
+      "break",
+      {
+        "type": "title",
+        "key": "{##8b4254}{#38;2;149;117;205}",
+        "format": "{host-name}"
+      },
+      {
+        "type": "host",
+        "key": "{##a4425a}󰌢{#38;2;149;117;205}",
+        "format": "{name}"
+      },
+      {
+        "type": "os",
+        "key": "{##be405f}{#38;2;149;117;205}",
+        "format": "{pretty-name}"
+      },
+      {
+        "type": "cpu",
+        "key": "{##d93c62}{#38;2;149;117;205}",
+        "showPeCoreCount": true,
+        "temp": true,
+        "format": "{name}"
+      },
+      {
+        "type": "gpu",
+        "key": "{##f43464}󰢮{#38;2;149;117;205}",
+        "detectionMethod": "auto",
+        "driverSpecific": true,
+        "format": "{name}"
+      },
+      "break",
+      "break",
+      {
+        "type": "uptime",
+        "key": "{##856fc9}󱎴{#38;2;149;117;205}",
+        "format": "{?days}{days} {#2}days{#38;2;149;117;205}, {?}{hours} HRS, {minutes} MIN, {seconds} SEC"
+      },
+      {
+        "type": "battery",
+        "key": "{##8f7bcc}󰁹{#38;2;149;117;205}",
+        "format": "{capacity} {#2}{status}"
+      },
+      {
+        // cpuusage
+        "type": "cpuusage",
+        "driverSpecific": true,
+        "temp": true,
+        "key": "{##7b63c7}{#38;2;149;117;205}",
+        "format": "{avg} load"
+      },
+      {
+        "type": "memory",
+        "key": "{##7156c4}{#38;2;149;117;205}",
+        "format": "{percentage} used {#2}{used}"
+      },
+      {
+        "type": "disk",
+        "key": "{##6749c1}{#38;2;149;117;205}",
+        "format": "{size-percentage} used {#2}{size-available} free"
+      }
+    ]
+  }
