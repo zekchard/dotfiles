@@ -8,7 +8,8 @@ record() {
 	}
 
 end() {
-	kill -15 "$(cat /tmp/screenrecording)" && rm -f /tmp/screenrecording
+	kill -15 "$(cat /tmp/screenrecording)"
+	rm -f /tmp/screenrecording
 	echo "" > /tmp/srstatus
 	notify-send -t 3000 'Screen recording stopped' 'wl-screenrec has stopped recording'
 }

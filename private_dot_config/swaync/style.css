@@ -1,8 +1,11 @@
 @import "colors.css";
 
 :root {
+  --accent: alpha(@primary,1);
+  --accent-bg: alpha(@primary_fixed_dim,0.25);
   --cc-bg: alpha(@background,0.7);
-  --noti-border-color: alpha(@source_color,1);
+  --lower-border-color: alpha(@outline,0.3);
+  --noti-border-color: alpha(@primary,0.9);
   --noti-bg-alpha: 0.8;
   --noti-bg: alpha(@background,var(--noti-bg-alpha));
   --noti-bg-darker: @surface_container_lowest;
@@ -18,13 +21,12 @@
   --notification-group-icon-size: 32px;
   --border: 2px solid var(--noti-border-color);
   --border-radius: 5px;
-  --notification-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3),
-    0 1px 3px 1px rgba(0, 0, 0, 0.7), 0 2px 6px 2px rgba(0, 0, 0, 0.3);
+  --notification-shadow: 0 0 6px 2px alpha(@shadow,.8);
   --font-size-body: 15px;
   --font-size-summary: 16px;
   /* Deprecated variables (because of their typos). Keeeping them around for backwards compatibility. */
-  --hover-tranistion: background 0.15s ease-in-out;
-  --group-collapse-tranistion: opacity 400ms ease-in-out;
+  --hover-tranistion: all 0.15s linear;
+  --group-collapse-tranistion: opacity 400ms linear;
   --hover-transition: var(--hover-tranistion);
   --group-collapse-transition: var(--group-collapse-tranistion);
 }
@@ -90,6 +92,7 @@ notificationwindow, blankwindow {
   padding: 5px;
   transition: var(--hover-tranistion);
   background: var(--noti-bg);
+  box-shadow: 0px 0px 6px 0px #1A1A1A;
 }
 
 .notification-row .notification-background .notification.low {
@@ -323,7 +326,9 @@ notificationwindow, blankwindow {
   /* The Control Center which contains the old notifications + widgets */
   background: var(--cc-bg);
   color: var(--text-color);
+  border:2px solid var(--lower-border-color);
   border-radius: var(--border-radius);
+  box-shadow: 0px 0px 6px 0px #1A1A1A;
   }
 
 .control-center .control-center-list-placeholder {
@@ -373,19 +378,27 @@ notificationwindow, blankwindow {
 /* Title widget */
 .widget-title > label {
   margin-right: 8px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
-.widget-title > button {
-  margin-left: 8px;
+.widget-title button {
   border-radius: var(--border-radius);
+  border: 2px solid transparent;
+ transition: var(--hover-tranistion);;
 }
+
+.widget-title button:hover {
+  border: var(--border);
+  color: var(--accent);
+  transition: var(--hover-tranistion);
+}
+
 
 /* DND widget */
 .widget-dnd label {
   color: var(--text-color);
   margin-right: 8px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .widget-dnd switch {
@@ -406,8 +419,8 @@ notificationwindow, blankwindow {
 :root {
   --mpris-album-art-overlay: rgba(0, 0, 0, 0.55);
   --mpris-button-hover: rgba(0, 0, 0, 0.5);
-  --mpris-album-art-icon-size: 96px;
-  --mpris-album-art-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+  --mpris-album-art-icon-size: 80px;
+  --mpris-album-art-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.75);
 }
 
 .widget-mpris {
@@ -451,10 +464,15 @@ notificationwindow, blankwindow {
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button {
   /* Change player control buttons */
+  border: 2px solid transparent;
+  transition: var(--hover-tranistion);
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button:hover {
   background-color: var(--mpris-button-hover);
+  color: var(--accent);
+  border: var(--border);
+  transition: var(--hover-tranistion);
 }
 
 .widget-mpris > box > button {
@@ -468,23 +486,26 @@ notificationwindow, blankwindow {
 /* Buttons widget */
 
 .widget-buttons-grid {
-  font-size: x-large;
   padding: 5px;
-  margin: 10px 10px 10px 10px;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
+  border: 2px solid transparent;
   margin: 3px;
   padding: 4px 30px;
-  transition: background-color 0.15s ease-in-out;
+  transition: var(--hover-tranistion);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-     background-color: var(--noti-bg-hover);
+     border: var(--border);
+     transition: var(--hover-tranistion);
+     color: var(--accent);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:checked {
-	background-color: rgba(var(--noti-bg-focus), 1.0);
+    transition: var(--hover-tranistion);
+    color: var(--accent);
+    background-color: var(--accent-bg);
 }
 /* Menubar widget */
 .widget-menubar {
@@ -521,8 +542,16 @@ notificationwindow, blankwindow {
 }
 
 .widget-menubar > .menu-button-bar > .widget-menubar-container button {
-  border-radius: var(--border-radius);
-  margin: 0 3px;
+  padding: 4px 15px;
+  border: 2px solid transparent;
+  margin: 3px;
+  transition: var(--hover-tranistion);
+}
+
+.widget-menubar > .menu-button-bar > .widget-menubar-container button:hover {
+  border: var(--border);
+  color: var(--accent);
+  transition: var(--hover-tranistion);
 }
 
 .widget-menubar > revealer * {
@@ -531,8 +560,15 @@ notificationwindow, blankwindow {
 
 .widget-menubar > revealer * button {
   border-radius: var(--border-radius);
+  border: 2px solid transparent;
   margin: 8px;
   margin-top: 0;
+ transition: var(--hover-tranistion);
+}
+.widget-menubar > revealer * button:hover {
+  border: var(--border);
+  color: var(--accent);
+ transition: var(--hover-tranistion);
 }
 
 .widget-menubar > revealer * button:last-child {
@@ -544,10 +580,27 @@ notificationwindow, blankwindow {
   --widget-volume-row-icon-size: 24px;
 }
 
+.widget-volume .widget-backlight {
+  padding: 5px;
+}
+
 /* Each row app icon */
 .widget-volume row image {
   -gtk-icon-size: var(--widget-volume-row-icon-size);
 }
+
+.widget-volume button {
+  border-radius: var(--border-radius);
+  border: 2px solid transparent;
+ transition: var(--hover-tranistion);;
+}
+
+.widget-volume button:hover {
+  border: var(--border);
+  color: var(--accent);
+  transition: var(--hover-tranistion);
+}
+
 
 .per-app-volume {
   background-color: var(--noti-bg-alt);

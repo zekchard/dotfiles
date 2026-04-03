@@ -86,7 +86,8 @@
         // "format-linked": "{ifname} (No IP) ",
         "format-alt": "   {bandwidthUpBytes} | {bandwidthDownBytes} ",
         "format-disconnected": "Disconnected ⚠",
-	"on-click-right": "alacritty -T NetworkManager -e nmtui"
+	"on-click-right": "airctl",
+	"on-click-middle": "nmtui"
 	 
     },
     "cpu": {

@@ -14,18 +14,18 @@ set -gx PATH "$PATH:/home/zek/.cargo/bin"
 set -gx fish_greeting ' '
 
 # autostart
-fastfetch -c /home/zek/wriorinde.jsonc
+fastfetch -c /home/zek/wriorinde.jsonc --logo-recache
 
 # aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias configdotfish='$EDITOR /home/zek/.config/fish/config.fish'
 alias eimikosfetch='fastfetch -c ~/eimikosff3.jsonc'
-alias wriorindefetch='fastfetch -c ~/wriorinde.jsonc'
+alias wriorindefetch='fastfetch -c /home/zek/wriorinde.jsonc --logo-recache'
 alias screenrec="/home/zek/scripts/screenrec.sh"
-alias hyprconf='ranger ~/.config/hypr/'
+alias hyprconf='yazi ~/.config/hypr/'
 alias wbref='killall -SIGUSR2 waybar'
-alias wbconf='ranger ~/.config/waybar'
+alias wbconf='yazi ~/.config/waybar'
 alias xterm='xterm -fg white -bg black'
 alias tuifi="env tuifi_theme=azawy tuitilities_default_background=True tuifi_vim_mode=True tuifi_show_hidden=True tuifi_ctrl_scroll_sensitivity=14 tuifi_scroll_sensitivity=7 tuifi"
 
