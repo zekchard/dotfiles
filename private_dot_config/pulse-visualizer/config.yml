@@ -1,25 +1,35 @@
 oscilloscope:
   flip_x: false
-  centered: false
   edge_compression:
     enabled: false
     range: 0
   pitch:
     follow: false
     cycles: 3
-    min_cycle_time: 15.4813824
+    min_cycle_time: 15.481382
     type: zero_crossing
     alignment: center
   lowpass:
     enabled: false
     order: 1
-    cutoff: 1106.38293
-  beam_multiplier: 0.664893627
-  window: 302.257965
+    cutoff: 1106.3829
+  spline:
+    segments: 4
+    tension: 1
+  beam_multiplier: 2.4734042
+  window: 302.25797
   bandpass:
-    bandwidth: 247.340424
-    sidelobe: 11.4893618
+    bandwidth: 247.34042
+    sidelobe: 11.489362
   rotation: 0
+
+waveform:
+  midline: true
+  window: 2
+  low_mid_split_hz: 250
+  mid_high_split_hz: 4000
+  slope: 3
+  mode: stereo
 
 fft:
   flip_x: false
@@ -28,32 +38,36 @@ fft:
   readout_header: true
   smoothing:
     enabled: true
-    fall_speed: 54.3936195
+    fall_speed: 54.39362
     hover_fall_speed: 10
-    rise_speed: 620.851074
+    rise_speed: 620.8511
   cqt:
     enabled: false
     bins_per_octave: 16
   sphere:
     enabled: false
     max_freq: 4994
-    base_radius: 0.100000001
+    base_radius: 0.1
   size: 512
-  beam_multiplier: 1.51595736
-  slope: 6.95744705
+  beam_multiplier: 1.4893616
+  slope: 6.957447
   limits:
-    max_db: -0.936172724
-    max_freq: 16034.6279
-    min_db: -75.4148941
-    min_freq: 126.968079
+    max_db: -0.9361727
+    max_freq: 16034.628
+    min_db: -75.414894
+    min_freq: 126.96808
   key: sharp
   mode: midside
+  frequency_scale: log
   rotation: 0
 
 spectrogram:
   iterative_reassignment: true
   window: 4
+  slope: 0
   limits:
+    min_freq: 10
+    max_freq: 22000
     max_db: -10
     min_db: -60
   frequency_scale: log
@@ -76,17 +90,21 @@ phosphor:
   beam:
     rainbow: false
     energy: 1000
-  blur:
-    spread: 45.8484039
-    near_intensity: 0
-    far_intensity: 0.162234038
   screen:
-    decay: 30
+    aa_size: 2
+    decay:
+      fast_frames: 1
+      slow_frames: 1
+      threshold: 0.70212764
     curvature: 0
     gap: 0
     vignette: 0
     chromatic_aberration: 0
-    grain: 0
+    grain: 0.51329786
+  blur:
+    spread: 24.103722
+    near_intensity: 0
+    far_intensity: 0.16223404
   reflections:
     strength: 0
 
@@ -102,16 +120,17 @@ vu:
   scale: log
 
 lissajous:
-  spline_segments: 16
-  beam_multiplier: 1.27659571
-  spline_tension: 0
+  spline:
+    segments: 10
+    tension: 1
+  beam_multiplier: 2.4734042
   mode: black_hole
   rotation: 1
 
 audio:
   silence_threshold: -60.638298
   sample_rate: 44100
-  gain_db: 0.510639668
+  gain_db: 0.51063967
   engine: pipewire
   device: alsa_output.pci-0000_03_00.6.analog-stereo
 
@@ -123,11 +142,20 @@ lufs:
 font: /usr/share/fonts/TTF/SpaceMonoNerdFontPropo-Bold.ttf
 
 visualizers:
-  hidden:
-    - vu
-    - spectrogram
   main:
-    - lufs
-    - spectrum_analyzer
-    - oscilloscope
-    - lissajous
+    type: hsplit
+    ratio: 0.846519
+    children:
+      - type: hsplit
+        ratio: 0.09363296
+        children:
+          - id: lufs
+          - type: hsplit
+            ratio: 0.5
+            children:
+              - id: spectrum_analyzer
+              - id: oscilloscope
+      - id: lissajous
+
+plugins:
+  {}

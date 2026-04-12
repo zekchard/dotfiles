@@ -1,7 +1,6 @@
 @import ".config/wofi/colors.css";
 
 window {
-    all:unset;
     padding: 0px;
     border: 2px solid alpha(@outline,0.2);
     border-radius: 5px;
@@ -11,6 +10,7 @@ window {
 	background-position: top right;
 	background-repeat: no-repeat;
     font-size:18;
+    transition:all 0.2 linear;
 }
 #inner-box {
     margin: 0px;
@@ -29,10 +29,10 @@ window {
     margin:10px;
     padding: 5px;
     border: 2px solid alpha(@primary, 0.9);
-    outline: 2px solid alpha(@primary, 0.9);
     color: rgb(237, 231, 246);
     border-radius:5px;
     background-color: rgba(33, 33, 33, 0);
+    transition:all 0.2 linear;
 }
 #input image {
     border: none;
@@ -42,8 +42,8 @@ window {
 
 #input:focus {
     border: 3px solid alpha(@primary, 1);
-    outline: 3px solid alpha(@primary, 1);
     border-radius:5px;
+    transition:all 0.2 linear;
 }
 #text {
     margin-left: 4px;
@@ -55,19 +55,24 @@ window {
     border: none;
     margin: 1px;
     padding: 6px;
+    transition:all 0.2 linear;
 }
 #entry arrow {
     border: none;
     color: rgba(149, 117, 205, 0.0);
+    transition:all 0.2 linear;
 }
 #entry:selected {
     outline: 3px solid alpha(@primary, 0);
     -gtk-outline-radius: 5px;
     background: linear-gradient(to right, alpha(@on_primary,.5) 0%,alpha(@primary,.2) 100%);
+    transition:all 0.2 linear;
     }
+    
 #entry:selected #text {
     color: alpha(@primary, 1);
     background: none
+    transition:all 0.2 linear;
 }
 #entry:selected image {
 	padding-left:12;
@@ -75,9 +80,11 @@ window {
 	border-radius:4px;
     color: rgba(149, 117, 205, 0);
     background: none
+    transition:all 0.2 linear;
 }
 #entry:drop(active) {
     outline: 3px solid alpha(@primary, 1);
     -gtk-outline-radius: 5px;
     background:none;
+    transition:all 0.2 linear;
 }
