@@ -67,6 +67,10 @@ input_path = '~/.config/matugen/templates/system24.theme.css'
 output_path = '~/.config/goofcord/GoofCord/assets/system24.theme.css'
 pre_hook = 'rm -f ~/.config/goofcord/GoofCord/assets/system24.theme.css'
 
+[templates.color-scheme]
+input_path = '~/.config/matugen/templates/Matugen.colors'
+output_path = '~/.local/share/color-schemes/Matugen.colors'
+
 [templates.qt5ct]
 input_path = '~/.config/matugen/templates/qtct-colors.conf'
 output_path = '~/.config/qt5ct/colors/matugen.conf'
