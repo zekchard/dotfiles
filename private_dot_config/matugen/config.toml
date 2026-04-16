@@ -49,6 +49,7 @@ output_path = '~/.config/btop/themes/matugen.theme'
 input_path = '~/.config/matugen/templates/micro.micro'
 output_path = '~/.config/micro/colorschemes/matugen.micro'
 
+# Self-made
 [templates.pulsevis]
 input_path = '~/.config/matugen/templates/pulse-visualizer.txt'
 output_path = '~/.config/pulse-visualizer/themes/matugen.txt'
@@ -93,3 +94,8 @@ post_hook = 'spicetify refresh'
 [templates.yazi]
 input_path = '~/.config/matugen/templates/yazi-theme.toml'
 output_path = '~/.config/yazi/theme.toml'
+
+# Self-made
+[templates.ghostwriter]
+input_path = '~/.config/matugen/templates/ghostwriter.json'
+output_path = '~/.local/share/ghostwriter/themes/matugen.json'

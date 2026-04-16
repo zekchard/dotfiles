@@ -58,7 +58,7 @@
         "warp-on-scroll": true,
         "format": "{name}{icon}",
         "format-icons": {
-            "urgent": "  ",
+            "urgent": " ",
             "active": "",
             "default": ""
         }
@@ -71,7 +71,7 @@
         }
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon}{volume}%",
         "format-muted": " ",
         "format-source": " {volume}%",
         "format-source-muted": "",
@@ -80,11 +80,11 @@
     },
     "network": {
 	"interval": 2,
-        "format": "   {bandwidthTotalBytes}",
+        "format": " {bandwidthTotalBytes}",
         // "format-ethernet": "   {bandwidthUpBytes} | {bandwidthDownBytes} ",
         "tooltip-format": "{ifname} via {essid} ",
         // "format-linked": "{ifname} (No IP) ",
-        "format-alt": "   {bandwidthUpBytes} | {bandwidthDownBytes} ",
+        "format-alt": "  {bandwidthUpBytes} | {bandwidthDownBytes} ",
         "format-disconnected": "Disconnected ⚠",
 	"on-click-right": "airctl",
 	"on-click-middle": "nmtui"
@@ -92,14 +92,14 @@
     },
     "cpu": {
         "interval": 2,
-        "format": "  {usage}%",
-        "format-alt": "  {usage}% | {avg_frequency} GHz",
+        "format": " {usage}%",
+        "format-alt": " {usage}% | {avg_frequency} GHz",
         "tooltip": true
     },
     "memory": {
 	"interval": 2,
-        "format": "  {percentage}%",
-        "format-alt": "  {used:0.1f}G/{total:0.1f}G",
+        "format": " {percentage}%",
+        "format-alt": " {used:0.1f}G/{total:0.1f}G",
 	"tooltip": true
     },
     "temperature": {
@@ -116,11 +116,11 @@
     },
     "battery": {
 	"interval": 5,
-        "format": "{icon}   {capacity}%    {power} W",
-        "format-full": "{icon}   {capacity}%    {power} W",
-        "format-charging": "  {capacity}%    {power} W",
-        "format-plugged": "  {capacity}%    {power} W",
-        "format-alt": "{icon}   {time}    {power} W",
+        "format": "{icon} {capacity}%    {power} W",
+        "format-full": "{icon} {capacity}%    {power} W",
+        "format-charging": " {capacity}%    {power} W",
+        "format-plugged": " {capacity}%    {power} W",
+        "format-alt": "{icon} {time}    {power} W",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
@@ -138,7 +138,7 @@
 	},
 	"custom/notification": {
 	  "tooltip": true,
-	  "format": "<span size='10pt'>{icon}</span>   {0}",
+	  "format": "<span size='10pt'>{icon}</span>  {0}",
 	  "format-icons": {
 	    "notification": "󱅫",
 	    "none": "󰂜",
