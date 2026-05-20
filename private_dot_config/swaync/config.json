@@ -114,6 +114,15 @@
             "command": "cpupower-gui pr Ondemand && swaync-client -cp && swayosd-client --custom-message 'CPU in Ondemand governor'"
           },
           {
+            "label": "Conservative",
+            "command": "cpupower-gui pr Conservative && swaync-client -cp && swayosd-client --custom-message 'CPU in Conservative governor'"
+          },
+          {
+            "label": "Powersave",
+            "command": "cpupower-gui pr Powersave && swaync-client -cp && swayosd-client --custom-message 'CPU in Powersave governor'"
+          },
+
+          {
             "label": "Limit to 1696Mhz",
             "command": "cpupower-gui pr yuhhhhhh && swaync-client -cp && swayosd-client --custom-message 'CPU limited to 1.7GHz'"
           }

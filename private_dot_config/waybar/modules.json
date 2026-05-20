@@ -58,7 +58,7 @@
         "warp-on-scroll": true,
         "format": "{name}{icon}",
         "format-icons": {
-            "urgent": " ",
+            "urgent": " ",
             "active": "",
             "default": ""
         }
