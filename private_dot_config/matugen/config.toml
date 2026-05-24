@@ -14,7 +14,13 @@ input_path = '~/.config/matugen/templates/current'
 output_path = '~/.config/matugen/current-color'
 post_hook = 'magick "/home/zek/.config/fastfetch/wriorindeffbase.png" -gamma 2.5 -fill "{{colors.primary.default.hex}}" -tint 50 /home/zek/.config/fastfetch/wriorindeffcolored.png'
 
+# Modified it to take RGB values instead for me to modify its transparency in the configs
 [templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.lua'
+output_path = '~/.config/hypr/colors.lua'
+post_hook = 'hyprctl reload'
+
+[templates.hyprland-legacy]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
 post_hook = 'hyprctl reload'
@@ -99,3 +105,8 @@ output_path = '~/.config/yazi/theme.toml'
 [templates.ghostwriter]
 input_path = '~/.config/matugen/templates/ghostwriter.json'
 output_path = '~/.local/share/ghostwriter/themes/matugen.json'
+
+# Points to Freesm Launcher because yarrrrrrrrrrrrrrrrrr
+[templates.prismlauncher]
+input_path = '~/.config/matugen/templates/prismlauncher.json'
+output_path = '~/.local/share/FreesmLauncher/themes/MatugenFusion/theme.json'

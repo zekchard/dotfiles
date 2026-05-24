@@ -144,10 +144,10 @@ font: /usr/share/fonts/TTF/SpaceMonoNerdFontPropo-Bold.ttf
 visualizers:
   main:
     type: hsplit
-    ratio: 0.84572786
+    ratio: 0.84615386
     children:
       - type: hsplit
-        ratio: 0.09372071
+        ratio: 0.09293681
         children:
           - id: lufs
           - type: hsplit

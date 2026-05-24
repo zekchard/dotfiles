@@ -1,6 +1,6 @@
 /**
- * @name midnight matugen
- * @description A dark, rounded discord theme. (recolored with matugen, currently {{ colors.source_color.default.hex }})
+ * @name midnight
+ * @description A dark, rounded discord theme.
  * @author refact0r
  * @version 1.6.2
  * @invite nz87hXyvcy
@@ -34,6 +34,7 @@
 	--accent-3: {{colors.primary.default.hex}};             /* accent buttons */
 	--accent-4: {{colors.surface_bright.default.hex}};      /* accent buttons when hovered */
 	--accent-5: {{colors.primary_fixed_dim.default.hex}};   /* accent buttons when clicked */
+    --accent-new: {{colors.inverse_primary.default.hex}};   /* user panel mute & deafen buttons */
 	--mention:  {{colors.surface.default.hex}};             /* mentions & mention messages */
 	--mention-hover: {{colors.surface_bright.default.hex}}; /* mentions & mention messages when hovered */
 
