@@ -1,0 +1,28 @@
+{
+    "dark": {
+        "accent": "{{colors.primary.dark.hex}}",
+        "background": "{{colors.background.dark.hex}}",
+        "block": "{{colors.primary.dark.hex}}",
+        "cursor": "{{colors.on_error_container.dark.hex}}",
+        "emphasis": "{{colors.primary.dark.hex}}",
+        "error": "{{colors.error.dark.hex}}",
+        "foreground": "{{colors.on_surface.dark.hex}}",
+        "heading": "{{colors.primary.dark.hex}}",
+        "link": "{{colors.error.dark.hex}}",
+        "markup": "{{colors.on_primary_fixed_variant.dark.hex}}",
+        "selection": "{{colors.on_primary_fixed_variant.dark.hex}}"
+    },
+    "light": {
+        "accent": "{{colors.primary.light.hex}}",
+        "background": "{{colors.background.light.hex}}",
+        "block": "{{colors.primary.light.hex}}",
+        "cursor": "{{colors.on_error_container.light.hex}}",
+        "emphasis": "{{colors.primary.light.hex}}",
+        "error": "{{colors.error.light.hex}}",
+        "foreground": "{{colors.on_surface.light.hex}}",
+        "heading": "{{colors.primary.light.hex}}",
+        "link": "{{colors.error.light.hex}}",
+        "markup": "{{colors.on_primary_fixed_variant.light.hex}}",
+        "selection": "{{colors.on_primary_fixed_variant.light.hex}}"
+    }
+}
