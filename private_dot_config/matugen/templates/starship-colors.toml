@@ -1,5 +1,5 @@
 format = '''
-$directory$git_branch$rust$python
+$username$time$directory$git_branch$rust$python
 $character'''
 
 palette = 'colors'
@@ -18,12 +18,12 @@ color9 = '{{colors.tertiary.default.hex}}'
 
 # Prompt symbols 
 [character]
-success_symbol = "[🞈](color9 bold)"
-error_symbol = "[🞈](@{error})"
-vicmd_symbol = "[🞈](#f9e2af)"
+success_symbol = "[󰅂](color9 bold)"
+error_symbol = "[󰅂]({{colors.error.default.hex}})"
+vicmd_symbol = "[󰅂](#f9e2af)"
 
 [directory]
-format = "[](fg:color1 bg:color4)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color4)[$path ](fg:color3 bg:color4)[ ](fg:color4)"
+format = "[](fg:color1 bg:color4)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color4)[$path](fg:color3 bg:color4)[ ](fg:color4)"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
@@ -32,12 +32,16 @@ format = "[](fg:color1 bg:color4)[󰉋](bg:color1 fg:color2)[ ](fg:color1 
 "Pictures" = " "
 
 [git_branch]
-format = "[](fg:color8 bg:color4)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $branch](fg:color3 bg:color4)[](fg:color4) "
+format = "[](fg:color8 bg:color4)[󰊢](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $branch](fg:color3 bg:color4)[](fg:color4) "
 
 [time]
-format = "[](fg:color8 bg:color4)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $time](fg:color3 bg:color4)[](fg:color4) "
+format = "[ $time](fg:color3 bg:color4)[ ](fg:color4)"
 disabled = false
-time_format = "%R" # Hour:Minute Format
+time_format = "%I:%M %p" # Hour:Minute Format
+
+[username]
+format = "[ $user](bg:color8 fg:color5 bold)[](fg:color8 bg:color4)"
+show_always = true
 
 [python]
 format = "[](fg:color8 bg:color4)[${symbol}${version}](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5)( ${virtualenv})](fg:color3 bg:color4)[](fg:color4) "

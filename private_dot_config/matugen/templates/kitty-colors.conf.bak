@@ -8,29 +8,29 @@ selection_background  {{colors.primary.default.hex}}
 url_color             {{ colors.secondary.default.hex }}
 
 #: black 000000 767676
-color0  {{colors.shadow.default.hex}}
-color8  #616161
+color0  #181818
+color8  #585B70
 #: red cc0403 f2201f
 color1  {{colors.error.default.hex}}
-color9  {{colors.primary_fixed.default.hex | to_color | set_hue: 345 }}
+color9  #F38BA8
 #: green 19cb00 23fd00
 color2  {{colors.primary.default.hex}}
-color10 {{colors.primary_fixed.default.hex | to_color | set_hue: 115 }}
+color10 #A6E3A1
 #: yellow cecb00 fffd00
 color3  {{colors.inverse_primary.default.hex}}
-color11 {{colors.primary_fixed.default.hex | to_color | set_hue: 40 }}
+color11 #F9E2AF
 #: blue 0d73cc 1a8fff
 color4  {{colors.primary.default.hex}}
-color12 {{colors.primary_fixed.default.hex | to_color | set_hue: 215 }}
+color12 #89B4FA
 #: magenta cb1ed1 fd28ff
 color5  {{colors.tertiary.default.hex}}
-color13 {{colors.primary_fixed.default.hex | to_color | set_hue: 315 }}
+color13 #F5C2E7
 #: cyan 0dcdcd 14ffff
 color6  {{colors.secondary.default.hex}}
-color14 {{colors.primary_fixed.default.hex | to_color | set_hue: 170 }}
+color14 #94E2D5
 #: white dddddd ffffff
-color7  {{colors.primary_fixed.default.hex | to_color | set_saturation: 10.0 | set_lightness: 85}}
-color15 {{colors.primary_fixed.default.hex | to_color | set_saturation: 5.0 | set_lightness: 100}}
+color7  #BAC2DE
+color15 #A6ADC8
 
 mark1_foreground {{ colors.on_primary_fixed.default.hex }}
 mark1_background {{ colors.primary_fixed.default.hex }}
