@@ -1,5 +1,8 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+
+cat ~/.cache/matugen/sequences.txt 2> /dev/null
+
 set -gx RUSTICL_ENABLE radeonsi
 set -gx OCL_ICD_VENDORS /etc/OpenCL/vendors/rusticl.icd
 set -gx TERMINAL alacritty
@@ -23,7 +26,7 @@ alias configdotfish='$EDITOR /home/zek/.config/fish/config.fish'
 alias eimikosfetch='fastfetch -c ~/eimikosff3.jsonc'
 alias wriorindefetch='fastfetch -c /home/zek/wriorinde.jsonc --logo-recache'
 alias screenrec="/home/zek/scripts/screenrec.sh"
-alias hyprconf='ranger ~/.config/hypr/'
+alias hyprconf='yazi ~/.config/hypr/'
 alias wbref='killall -SIGUSR2 waybar'
 alias wbconf='yazi ~/.config/waybar'
 alias xterm='xterm -fg white -bg black'
@@ -36,3 +39,5 @@ alias tuifi="env tuifi_theme=azawy tuitilities_default_background=True tuifi_vim
 end
 
 fish_add_path /home/zek/.spicetify
+
+starship init fish | source

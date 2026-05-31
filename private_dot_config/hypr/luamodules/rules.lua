@@ -26,11 +26,20 @@
 -- Window Rules --
 ------------------
 
+local suppressMaximizeRule = hl.window_rule({
+    name  = "suppress-maximize-events",
+    match = { class = ".*" },
+    suppress_event = "maximize",
+})
+
+-- suppressMaximizeRule:set_enabled(false)
+-- Ignore maximize requests from all apps. Uncomment line above to disable
+
 hl.window_rule({
   name = "smart-gaps1",
   border_size = 2,
   rounding = 5,
-  border_color = outline_variant,
+  border_color = surface_container_highest,
   match = {
   	float = 0,
   	workspace = "w[tv1]"
@@ -41,7 +50,7 @@ hl.window_rule({
   name = "smart-gaps2",
   border_size = 2,
   rounding = 5,
-  border_color = outline_variant,
+  border_color = surface_container_highest,
   match = {
   	float = 0,
   	workspace = "f[1]"
@@ -50,9 +59,9 @@ hl.window_rule({
 
 hl.window_rule({
   name = "pip",
-  float = on,
-  pin = on,
-  keep_aspect_ratio = on,
+  float = 1,
+  pin = 1,
+  keep_aspect_ratio = 1,
   match = {
   	class = ".*waterfox.*",
  	title = "^(Picture-in-Picture)$",
@@ -67,7 +76,7 @@ hl.window_rule({
 
 hl.window_rule({
   name = "xwayland",
-  no_focus = on,
+  no_focus = 1,
   match = {
   	class = "^$",
   	title = "^$",
@@ -80,7 +89,7 @@ hl.window_rule({
 
 hl.window_rule({
   name = "windowrule-5",
-  no_initial_focus = on,
+  no_initial_focus = 1,
   opacity = 0.9,
   match = { class = "^(wine-.*)" },
 })
@@ -143,7 +152,7 @@ hl.window_rule({
 hl.window_rule({
   name = "airctl",
   match = { class = ".*io.github.airctl.*" },
-  float = on,
+  float = 1,
 })
 
 -----------------
@@ -159,12 +168,13 @@ hl.layer_rule({
 hl.layer_rule({
   name = "wlogout",
   match = { namespace = "logout_dialog" },
-  blur = on,
+  blur = 1,
 })
 
 hl.layer_rule({
   name = "waybar",
   blur = 1,
+  ignore_alpha = 0.5,
   animation = "slideFade top",
   match = { namespace = "waybar" },
 })

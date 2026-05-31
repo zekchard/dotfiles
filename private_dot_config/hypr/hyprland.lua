@@ -27,6 +27,8 @@ require("luamodules/start")
 require("luamodules/decor")
 require("luamodules/rules")
 
+--require("luamodules/plugins")
+
 hl.config({
   dwindle = {
       preserve_split               = true,

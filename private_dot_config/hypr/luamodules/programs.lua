@@ -15,7 +15,7 @@ $menu = wofi --show drun
 $browser = waterfox
 
 ]]--
-terminal = "alacritty"
+terminal = "kitty"
 fileManager = "nautilus"
 menu = "wofi --show drun"
 browser = "waterfox"

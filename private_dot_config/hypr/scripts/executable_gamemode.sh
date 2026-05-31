@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 HYPRGAMEMODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
-if [ "$HYPRGAMEMODE" = 1 ] ; then
+if [ "$HYPRGAMEMODE" = true ] ; then
     hyprctl --batch "\
-        keyword animations:enabled 0;\
-        keyword decoration:shadow:enabled 0;\
-        keyword decoration:blur:enabled 0;"
+        eval hl.config({ animations = { enabled = false } });\
+        eval hl.config({ decoration = { shadow = { enabled = false } } });\
+        eval hl.config({ decoration = { blur = { enabled = false } } });"
 	swayosd-client --custom-message "Decorations disabled"
     exit
 fi
