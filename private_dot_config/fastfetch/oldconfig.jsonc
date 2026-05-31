@@ -1,29 +1,169 @@
+// Modified from: the builtin fastfetch preset - 24.jsonc
 {
-  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "modules": [
-    "title",
-    "separator",
-    "os",
-    "kernel",
-    "packages",
-    "shell",
-    "terminal",
-    "de",
-    "wm",
-    "separator",
-    "wmtheme",
-    "theme",
-    "icons",
-    "font",
-    "separator",
-    "uptime",
-    "cpu",
-    "gpu",
-    "memory",
-    "swap",
-    "disk",
-    "battery",
-    "separator",
-    "colors"
-  ]
-}
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+		"padding": {
+		"top": 2,
+		"left": 4
+			}
+  },
+    "display": {
+      "separator": "",
+      "constants": [
+        // CONSTANT {$1} - VERTICAL BARS AT START AND 75th CHARACTERS FORWARD AND BACKWARD
+        "\u001b[38;2;149;117;205m│                                                            │\u001b[60D\u001b[0m"
+      ]
+  },
+    "modules": [
+      // CUSTOM - Top UI bar
+      {
+        "type": "custom",
+        "key": "{#38;2;149;117;205}╭ Keys ───────╮",
+        "format": "{#38;2;149;117;205}╭ Values ────────────────────────────────────────────────────╮",
+      },
+      {
+        "type": "title",
+        "key": "{#38;2;149;117;205}│ {#38;2;255;66;129}User        {#38;2;149;117;205}│",
+        "format": "{$1}{user-name}  {#2}[{home-dir}]"
+      },
+      {
+        "type": "users",
+        "key": "{#38;2;149;117;205}│ {#38;2;255;66;129}Users       {#38;2;149;117;205}│",
+        "myselfOnly": false,
+        "format": "{$1}{1}@{host-name}{/host-name}localhost{/}{?client-ip}  {#2}[IP:{client-ip}]{?}  [Login time: {login-time}]"
+      },
+      {
+        "type": "datetime",
+        "key": "{#38;2;149;117;205}│ {#38;2;255;66;129}Datetime    {#38;2;149;117;205}│",
+        "format": "{$1}{year}-{month-pretty}-{day-in-month} {hour-pretty}:{minute-pretty}:{second-pretty}  {#2}[{weekday}] [W{week}] [UTC{offset-from-utc}]"
+      },
+      {
+        "type": "title",
+        "key": "{#38;2;149;117;205}│ {#38;2;234;61;171}Host        {#38;2;149;117;205}│",
+        "format": "{$1}{host-name}"
+      },
+      {
+        "type": "host",
+        "key": "{#38;2;149;117;205}│ {#38;2;234;61;171}Machine     {#38;2;149;117;205}│",
+        "format": "{$1}{name}  {#2}{version}"
+      },
+      {
+        "type": "os",
+        "key": "{#38;2;149;117;205}│ {#38;2;234;61;171}Distro      {#38;2;149;117;205}│",
+        "format": "{$1}{pretty-name}{#2}  [{arch}] [{version}]"
+      },
+      {
+        "type": "kernel",
+        "key": "{#38;2;149;117;205}│ {#38;2;234;61;171}Kernel      {#38;2;149;117;205}│",
+        "format": "{$1}{sysname}  {#2}[v{release}]"
+      },
+      {
+        "type": "uptime",
+        "key": "{#38;2;149;117;205}│ {#38;2;234;61;171}Uptime      {#38;2;149;117;205}│",
+        "format": "{$1}{?days}{days} Days + {?}{hours}:{minutes}:{seconds}"
+      },
+      {
+        "type": "cpu",
+        "key": "{#38;2;149;117;205}│ {#38;2;203;63;208}CPU         {#38;2;149;117;205}│",
+        "showPeCoreCount": true,
+        "temp": true,
+        "format": "{$1}{name}  {#2}[C:{core-types}] [{freq-max}]"
+      },
+      {
+        "type": "gpu",
+        "key": "{#38;2;149;117;205}│ {#38;2;203;63;208}GPU         {#38;2;149;117;205}│",
+        "detectionMethod": "auto",
+        "driverSpecific": true,
+        "format": "{$1}{name}  {#2}[C:{core-count}]{?frequency} [{frequency}]{?} {#2}[{type}]"
+      },
+      {
+        "type": "memory",
+        "key": "{#38;2;149;117;205}│ {#38;2;203;63;208}Memory      {#38;2;149;117;205}│",
+        "format": "{$1}{used} / {total} ({percentage})"
+      },
+      {
+        "type": "swap",
+        "key": "{#38;2;149;117;205}│ {#38;2;203;63;208}Swap        {#38;2;149;117;205}│",
+        "ipv6": false,
+        "format": "{$1}{used} / {total} ({percentage})"
+      },
+      {
+        "type": "disk",
+        "key": "{#38;2;149;117;205}│ {#38;2;203;63;208}Disk        {#38;2;149;117;205}│",
+        "format": "{$1}{size-used} / {size-total} ({size-percentage})"
+      },
+      {
+        "type": "wm",
+        "key": "{#38;2;149;117;205}│ {#38;2;168;69;237}WM          {#38;2;149;117;205}│",
+        "format": "{$1}{pretty-name}  {#2}[{version}] [{protocol-name}]"
+      },
+      {
+        "type": "terminal",
+        "key": "{#38;2;149;117;205}│ {#38;2;168;69;237}Terminal    {#38;2;149;117;205}│",
+        "format": "{$1}{pretty-name}  {#2}[{version}] [PID:{pid}]"
+      },
+      {
+        "type": "shell",
+        "key": "{#38;2;149;117;205}│ {#38;2;168;69;237}Shell       {#38;2;149;117;205}│",
+        "format": "{$1}{pretty-name}  {#2}[v{version}] [PID:{pid}]"
+      },
+      {
+        "type": "battery",
+        "key": "{#38;2;149;117;205}│ {#38;2;124;77;255}Battery     {#38;2;149;117;205}│",
+        "format": "{$1}{capacity}  {#2}[{status}]"
+      },
+      {
+        "type": "poweradapter",
+        "key": "{#38;2;149;117;205}│ {#38;2;124;77;255}Power       {#38;2;149;117;205}│",
+        "format": "{$1}{name} at {watts}"
+      },
+      {
+        "type": "cpu",
+        "key": "{#38;2;149;117;205}│ {#38;2;124;77;255}Temperature {#38;2;149;117;205}│",
+        "showPeCoreCount": true,
+        "temp": true,
+        "format": "{$1}{temperature}"
+      },
+      {
+        // cpuusage
+        "type": "cpuusage",
+        "driverSpecific": true,
+        "temp": true,
+        "key": "{#38;2;149;117;205}│ {#38;2;124;77;255}CPU Usage   {#38;2;149;117;205}│",
+        "format": "{$1}{avg}"
+      },
+      {
+        // gpuusage
+        "type": "cpuusage",
+        "driverSpecific": true,
+        "temp": true,
+        "gpu": true,
+        "key": "{#38;2;149;117;205}│ {#38;2;124;77;255}GPU Usage   {#38;2;149;117;205}│",
+        "format": "{$1}{#38;2;179;157;219}{avg}"
+      },
+      // CUSTOM - Button UI bar
+      {
+        "type": "custom",
+        "key": "{#38;2;149;117;205}╰─────────────╯",
+        "format": "{#38;2;149;117;205}╰────────────────────────────────────────────────────────────╯",
+      },
+      {
+        "type": "custom",
+        "key": " ",
+        "format": "{#38;2;149;117;205}╭ Colors ───────────────────────────────────────────────────────────────────╮",
+      },
+      {
+        "type": "custom",
+        "format": "{#38;2;149;117;205}│ {#40}    {#41}    {#42}    {#43}    {#44}    {#45}    {#46}    {#47}    {#}                                          {#38;2;149;117;205}│",
+      },
+      {
+        "type": "custom",
+        "format": "{#38;2;149;117;205}│ {#100}    {#101}    {#102}    {#103}    {#104}    {#105}    {#106}    {#107}    {#}                                          {#38;2;149;117;205}│",
+      },
+      {
+        "type": "custom",
+        "format": "{#38;2;149;117;205}╰───────────────────────────────────────────────────────────────────────────╯",
+      },
+      "break"
+    ]
+  }
