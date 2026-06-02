@@ -1,0 +1,44 @@
+* {
+  font-family: "Readex Pro", "Lexend", sans-serif;
+  font-size: 12px;
+}
+
+#mainToolBar,
+#instanceToolBar,
+#statusBar,
+#newsToolBar {
+  border: 0;
+}
+
+QTabWidget::pane {
+    border: 0;
+    border-radius: 5px;
+}
+
+QTabWidget::tab-bar {
+	left:8px;
+}
+
+QPushButton,
+QToolButton,
+QTabBar::tab {
+  border: 0;
+  margin: 2px;
+  padding: 4px 6px;
+  background-color: {{colors.surface_container.default.rgba | to_color | set_alpha: 0.3}}; /* surface_container */
+  border-radius: 5px;
+}
+
+QTabBar::tab:hover,
+QPushButton:hover,
+QToolButton:hover {
+  background-color: {{colors.primary_container.default.rgba | to_color | set_alpha: 0.5}}; /* primary_container */
+}
+
+QTabBar::tab:selected,
+QPushButton:pressed,
+QToolButton:pressed,
+QToolButton:on {
+  background-color: {{colors.primary_container.default.rgba | to_color | set_alpha: 0.25}};
+}
+
