@@ -116,10 +116,14 @@ output_path = '~/.config/yazi/theme.toml'
 input_path = '~/.config/matugen/templates/ghostwriter.json'
 output_path = '~/.local/share/ghostwriter/themes/matugen.json'
 
+# Modified, with themestyle css
 # Points to Freesm Launcher because yarrrrrrrrrrrrrrrrrr
 [templates.prismlauncher]
 input_path = '~/.config/matugen/templates/prismlauncher.json'
 output_path = '~/.local/share/FreesmLauncher/themes/MatugenFusion/theme.json'
+[templates.prismlauncher-css]
+input_path = '~/.config/matugen/templates/prismlauncher.css'
+output_path = '~/.local/share/FreesmLauncher/themes/MatugenFusion/themeStyle.css'
 
 # Modified
 [templates.starship]
