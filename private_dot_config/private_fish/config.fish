@@ -3,21 +3,20 @@ if status is-interactive
 
 cat ~/.cache/matugen/sequences.txt 2> /dev/null
 
-set -gx RUSTICL_ENABLE radeonsi
-set -gx OCL_ICD_VENDORS /etc/OpenCL/vendors/rusticl.icd
-set -gx TERMINAL alacritty
-set -gx TERM alacritty
-
 # Created by `pipx` on 2025-03-15 20:43:40
 set -gx PATH "$PATH:/home/zek/.local/bin"
 
 # cargo path
 set -gx PATH "$PATH:/home/zek/.cargo/bin"
 
+fish_add_path /home/zek/.spicetify
+
 set -gx fish_greeting ' '
 
 # autostart
-fastfetch -c /home/zek/wriorinde.jsonc --logo-recache
+# fastfetch -c /home/zek/wriorinde.jsonc --logo-recache
+$HOME/scripts/shipfetch/shipfetch.sh
+starship init fish | source
 
 # aliases
 alias ls='ls --color=auto'
@@ -31,13 +30,11 @@ alias wbref='killall -SIGUSR2 waybar'
 alias wbconf='yazi ~/.config/waybar'
 alias xterm='xterm -fg white -bg black'
 alias tuifi="env tuifi_theme=azawy tuitilities_default_background=True tuifi_vim_mode=True tuifi_show_hidden=True tuifi_ctrl_scroll_sensitivity=14 tuifi_scroll_sensitivity=7 tuifi"
-
-# aagl stuff, notanymore
-# alias aagl-run="env DXVK_ASYNC="1" GST_PLUGIN_PATH="" LD_LIBRARY_PATH="/home/zek/.local/share/anime-game-launcher/runners/wine-spritz-10.12-1-staging-tkg-aagl-amd64-wow64/lib:/home/zek/.local/share/anime-game-launcher/runners/wine-spritz-10.12-1-staging-tkg-aagl-amd64-wow64/lib/wine/x86_64-unix" MANGOHUD="1" WINEARCH="win64" WINEFSYNC="1" WINEPREFIX="/home/zek/.local/share/anime-game-launcher/prefix" WINE_FULLSCREEN_FSR="0" '/home/zek/.local/share/anime-game-launcher/runners/wine-spritz-10.12-1-staging-tkg-aagl-amd64-wow64/bin/wine' "
-# alias aagl-gmrun="env DXVK_ASYNC="1" GST_PLUGIN_PATH="" LD_LIBRARY_PATH="/home/zek/.local/share/anime-game-launcher/runners/wine-spritz-10.12-1-staging-tkg-aagl-amd64-wow64/lib:/home/zek/.local/share/anime-game-launcher/runners/wine-spritz-10.12-1-staging-tkg-aagl-amd64-wow64/lib/wine/x86_64-unix" MANGOHUD="1" WINEARCH="win64" WINEFSYNC="1" WINEPREFIX="/home/zek/.local/share/anime-game-launcher/prefix" WINE_FULLSCREEN_FSR="0" gamemoderun '/home/zek/.local/share/anime-game-launcher/runners/wine-spritz-10.12-1-staging-tkg-aagl-amd64-wow64/bin/wine' "
+alias cl="matugen --dry-run --verbose --show-colors --continue-on-error -r gaussian -t scheme-tonal-spot color hex $(cat ~/.config/matugen/current-color)"
+alias cr="matugen --verbose --show-colors --continue-on-error -r gaussian -t scheme-tonal-spot color hex $(cat ~/.config/matugen/current-color)"
 
 end
 
-fish_add_path /home/zek/.spicetify
 
-starship init fish | source
+
+

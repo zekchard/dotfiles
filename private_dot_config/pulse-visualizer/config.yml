@@ -132,7 +132,7 @@ audio:
   sample_rate: 44100
   gain_db: 0.51063967
   engine: pipewire
-  device: alsa_output.pci-0000_03_00.6.analog-stereo
+  device: default
 
 lufs:
   mode: momentary
@@ -144,10 +144,10 @@ font: /usr/share/fonts/TTF/SpaceMonoNerdFontPropo-Bold.ttf
 visualizers:
   main:
     type: hsplit
-    ratio: 0.84615386
+    ratio: 0.84627575
     children:
       - type: hsplit
-        ratio: 0.09293681
+        ratio: 0.09380863
         children:
           - id: lufs
           - type: hsplit
