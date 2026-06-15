@@ -126,22 +126,34 @@ hl.window_rule({
 
 hl.window_rule({
   name = "desktop-portal",
-  float = on,
   match = {
-  	class = ".*desktop-portal.*",
-  	initial_class = ".*desktop-portal.*"
-  	}
+    	class = ".*desktop-portal.*",
+    	initial_class = ".*desktop-portal.*"
+    	},
+  float = 1,
+})
+
+hl.window_rule({
+  name = "polkit",
+  match = {
+    	class = ".*hyprpolkitagent.*",
+    	},
+  stay_focused = 1,
+  dim_around = 1,
 })
 
 hl.window_rule({
   name = "kdeconnectd",
-  float = on,
-  match = { class = ".*org.kde.kdeconnect.daemon.*" }
+  match = { class = ".*org.kde.kdeconnect.daemon.*" },
+  float = 1,
 })
 
 hl.window_rule({
   name = "pulsevis",
-  match = { class = ".*pulse-visualizer.*" },
+  match = {
+  	class = ".*pulse-visualizer.*",
+  	title = "Pulse.*"
+  	},
   size = {1280, 200},
   persistent_size = 1,
   pseudo = 1,
@@ -199,14 +211,14 @@ hl.layer_rule({
 hl.layer_rule({
   name = "hyprpicker",
   blur = 0,
-  animation = 0,
+  no_anim = 1,
   match = { namespace = "hyprpicker" },
 })
 
 hl.layer_rule({
   name = "selection",
   blur = 0,
-  animation = 0,
+  no_anim = 1,
   match = { namespace = "selection" },
 })
 
