@@ -16,6 +16,7 @@ fish_add_path /home/zek/.spicetify
 # fastfetch -c /home/zek/wriorinde.jsonc --logo-recache
 $HOME/scripts/shipfetch/shipfetch.sh
 starship init fish | source
+set -gx SUDO_PROMPT "$(tput setaf 1)󱈸 Password for $(tput setaf 1 bold)%p:$(tput sgr0) "
 
 # aliases
 alias ls='ls --color=auto'

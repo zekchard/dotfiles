@@ -26,6 +26,19 @@
 -- Window Rules --
 ------------------
 
+
+local floatfocusfix = hl.window_rule({
+  name = "floatfocusfix",
+  no_initial_focus = 1,
+  float = 1,
+  match = {
+  	float = 1,
+  	initial_class = ".*",
+  	},
+})
+
+floatfocusfix:set_enabled(true)
+
 local suppressMaximizeRule = hl.window_rule({
     name  = "suppress-maximize-events",
     match = { class = ".*" },
@@ -114,15 +127,6 @@ hl.window_rule({
 })
 
 -- The one above but for everything now because i also encountered that in Audacity aswell lmao --
-hl.window_rule({
-  name = "dragall",
-  no_initial_focus = 1,
-  float = 1,
-  match = {
-  	float = 1,
-  	initial_class = ".*",
-  	},
-})
 
 hl.window_rule({
   name = "desktop-portal",
@@ -131,6 +135,7 @@ hl.window_rule({
     	initial_class = ".*desktop-portal.*"
     	},
   float = 1,
+  size = {"(monitor_w*0.8)", "(monitor_h*0.8)"},
 })
 
 hl.window_rule({
@@ -138,6 +143,7 @@ hl.window_rule({
   match = {
     	class = ".*hyprpolkitagent.*",
     	},
+  no_initial_focus = 0,
   stay_focused = 1,
   dim_around = 1,
 })
@@ -166,6 +172,7 @@ hl.window_rule({
   match = { class = ".*io.github.airctl.*" },
   float = 1,
 })
+
 
 -----------------
 -- Layer Rules --

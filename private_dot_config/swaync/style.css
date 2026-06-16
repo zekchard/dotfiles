@@ -1,7 +1,7 @@
 @import "colors.css";
 
 :root {
-  font-family: "Symbols Nerd Font", "Lexend Deca";
+  font-family: "Symbols Nerd Font", "Readex Pro";
   --accent: alpha(@primary,1);
   --accent-bg: alpha(@primary_fixed_dim,0.25);
   --cc-bg: alpha(@background,0.7);

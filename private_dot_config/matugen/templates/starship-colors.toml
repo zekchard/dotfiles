@@ -1,29 +1,31 @@
 format = '''
 $username$time$directory$git_branch$rust$python
-$character'''
+$character
+'''
+right_format = '''
+$status $cmd_duration 
+'''
 
-palette = 'colors'
-
-[palettes.colors]
-mustard = '#af8700' # example
-color1 = '{{colors.primary.default.hex}}'
-color2 = '{{colors.on_primary.default.hex}}'
-color3 = '{{colors.on_surface_variant.default.hex}}'
-color4 = '{{colors.surface_container.default.hex}}'
-color5 = '{{colors.on_primary.default.hex}}'
-color6 = '{{colors.surface_dim.default.hex}}'
-color7 = '{{colors.surface.default.hex}}'
-color8 = '{{colors.secondary.default.hex}}'
-color9 = '{{colors.tertiary.default.hex}}'
+scan_timeout = 60
+palette = 'matugen'
 
 # Prompt symbols 
 [character]
-success_symbol = "[ 󰅂](color9 bold)"
-error_symbol = "[ 󰅂]({{colors.error.default.hex}})"
+success_symbol = "[ 󰅂](tertiary bold)"
+error_symbol = "[ 󰅂](error)"
 vicmd_symbol = "[󰅂](#f9e2af)"
 
+[username]
+format = "[ $user](bg:primary fg:on_primary bold)[](fg:primary bg:surface_container)"
+show_always = true
+
+[time]
+format = "[ $time ](fg:color3 bg:surface_container)"
+disabled = false
+time_format = "%I:%M %p"
+
 [directory]
-format = "[](fg:color8 bg:color4)[](bg:color8 fg:color2)[ ](fg:color8 bg:color4)[$path](fg:color3 bg:color4)[ ](fg:color4)"
+format = "[](fg:secondary bg:surface_container)[](bg:secondary fg:on_primary)[ ](fg:secondary bg:surface_container)[$path](fg:color3 bg:surface_container)[ ](fg:surface_container)"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
@@ -32,20 +34,32 @@ format = "[](fg:color8 bg:color4)[](bg:color8 fg:color2)[ ](fg:color8 b
 "Pictures" = " "
 
 [git_branch]
-format = "[](fg:color9 bg:color4)[󰊢](bg:color9 fg:color5)[](fg:color9 bg:color4)[(bg:color9 fg:color5) $branch](fg:color3 bg:color4)[](fg:color4) "
-
-[time]
-format = "[ $time ](fg:color3 bg:color4)"
-disabled = false
-time_format = "%I:%M %p" # Hour:Minute Format
-
-[username]
-format = "[ $user](bg:color1 fg:color5 bold)[](fg:color1 bg:color4)"
-show_always = true
+format = "[](fg:tertiary bg:surface_container)[󰊢](bg:tertiary fg:on_primary)[](fg:tertiary bg:surface_container)[(bg:tertiary fg:on_primary) $branch](fg:color3 bg:surface_container)[](fg:surface_container) "
 
 [python]
-format = "[](fg:color9 bg:color4)[${symbol}${version}](bg:color9 fg:color5)[](fg:color9 bg:color4)[(bg:color9 fg:color5)( ${virtualenv})](fg:color3 bg:color4)[](fg:color4) "
+format = "[](fg:tertiary bg:surface_container)[${symbol}${version}](bg:tertiary fg:on_primary)[](fg:tertiary bg:surface_container)[(bg:tertiary fg:on_primary)( ${virtualenv})](fg:color3 bg:surface_container)[](fg:surface_container) "
 symbol = '🐍'
 # pyenv_version_name = true
 pyenv_prefix = 'venv'
 
+
+[cmd_duration]
+min_time = 250
+show_milliseconds = true
+format = '[$duration ](fg:secondary bold)'
+
+[status]
+disabled = false
+format = '[$int $symbol]($style)'
+signal_symbol = ''
+sigint_symbol = '󰟾'
+not_found_symbol = '󰦀'
+not_executable_symbol = ''
+symbol = ''
+success_style = 'primary bold'
+failure_style = 'error bold'
+
+[palettes.matugen]
+<* for name, value in colors *>
+{{name}} = '{{value.default.hex}}'
+<* endfor *>
