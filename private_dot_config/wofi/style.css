@@ -5,7 +5,7 @@ window {
     border: 2px solid alpha(@outline,0.2);
     border-radius: 5px;
 	background-color: alpha(@secondary_container,0.8);
-	background-image: url(".config/wofi/wrndewofiopaque.png");
+	background-image: url(".config/wofi/wrndewofi.png");
 	background-blend-mode: overlay;
 	background-size: 50%;
 	background-position: top right;
