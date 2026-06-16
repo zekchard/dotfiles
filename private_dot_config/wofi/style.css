@@ -5,7 +5,8 @@ window {
     border: 2px solid alpha(@outline,0.2);
     border-radius: 5px;
 	background-color: alpha(@secondary_container,0.8);
-	background-image: url("/home/zek/.config/wofi/wrndewofi.png");
+	background-image: url(".config/wofi/wrndewofiopaque.png");
+	background-blend-mode: overlay;
 	background-size: 50%;
 	background-position: top right;
 	background-repeat: no-repeat;
@@ -28,10 +29,10 @@ window {
 #input {
     margin:10px;
     padding: 5px;
-    border: 2px solid alpha(@primary, 0.9);
+    border: 2px solid alpha(@primary, 0.8);
     color: rgb(237, 231, 246);
     border-radius:5px;
-    background-color: rgba(33, 33, 33, 0);
+    background-color: transparent;
     transition:all 0.2 linear;
 }
 #input image {
@@ -43,6 +44,7 @@ window {
 #input:focus {
     border: 3px solid alpha(@primary, 1);
     border-radius:5px;
+    background: linear-gradient(to right, alpha(@on_primary,.2) 0%,alpha(@primary,.1) 100%);
     transition:all 0.2 linear;
 }
 #text {
