@@ -24,6 +24,7 @@ hl.bind(mainMod .. " + Z", hl.dsp.window.float({ action = "toggle" }))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close()) -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + X", hl.dsp.window.fullscreen({ mode = "maximized" }))
 hl.bind(mainMod .. " + CTRL + X", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
+hl.bind(mainMod .. " + V", hl.dsp.window.pseudo())
 
 hl.bind(mainMod .. " + A", hl.dsp.window.cycle_next())
 hl.bind(mainMod .. " + SHIFT + A",  hl.dsp.focus({ urgent_or_last = "1" }))
@@ -34,7 +35,6 @@ hl.bind(mainMod .. " + SHIFT + D", hl.dsp.workspace.swap_monitors({ monitor1 = "
 
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("wlogout"))
 hl.bind(mainMod .. "+ SHIFT + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + V", hl.dsp.window.pseudo())
 
 hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("sleep 0.25 && hyprctl kill"))
 

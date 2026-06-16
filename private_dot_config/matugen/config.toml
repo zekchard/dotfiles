@@ -23,7 +23,7 @@ post_hook = 'magick mogrify -path /home/zek/scripts/shipfetch/assets/ -gamma 1.7
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.lua'
 output_path = '~/.config/hypr/colors.lua'
-post_hook = 'hyprctl reload'
+post_hook = 'hyprctl reload & systemctl --user start hyprpolkitagent'
 
 [templates.hyprland-legacy]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
