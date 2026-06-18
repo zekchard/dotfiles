@@ -2,7 +2,7 @@
 
 * {
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-    font-family: Readex Pro, Lexend, AnonymicePro Nerd Font Propo, Roboto, Helvetica, Arial, sans-serif;
+    font-family: Symbols Nerd Font, Readex Pro, Lexend, AnonymicePro Nerd Font Propo, Helvetica, Roboto, Arial, sans-serif;
     font-size: 12px;
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
