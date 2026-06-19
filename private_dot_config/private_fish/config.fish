@@ -34,15 +34,15 @@ alias wbconf='yazi ~/.config/waybar'
 alias cl="matugen --dry-run --verbose --show-colors --continue-on-error -r gaussian -t scheme-tonal-spot color hex $(cat ~/.config/matugen/current-color)"
 alias cr="matugen --verbose --show-colors --continue-on-error -r gaussian -t scheme-tonal-spot color hex $(cat ~/.config/matugen/current-color)"
 
-alias psyu='eos-update'
+alias psyu='sudo pacman -Syu'
 alias psy='sudo pacman -Sy'
 alias psyy='sudo pacman -Syy'
 
-alias syu='eos-update'
+alias syu='sudo pacman -Syu'
 alias sy='sudo pacman -Sy'
 alias syy='sudo pacman -Syy'
 
-alias ysyu='eos-update --yay'
+alias ysyu='yay -Syu'
 alias ysy='yay -Sy'
 alias ysyy='yay -Syy'
 
