@@ -21,7 +21,7 @@
       },
       {
         "type": "os",
-        "key": "{#33}{#38;2;149;117;205}",
+        "key": "{#33}{#38;2;149;117;205}",
         "format": "{pretty-name}"
       },
       {
@@ -47,7 +47,7 @@
       },
       {
         "type": "battery",
-        "key": "{#37}󰁹{#38;2;149;117;205}",
+        "key": "{#31}󰁹{#38;2;149;117;205}",
         "format": "{capacity} {#2}{status}"
       },
       {
@@ -55,17 +55,17 @@
         "type": "cpuusage",
         "driverSpecific": true,
         "temp": true,
-        "key": "{#38}{#38;2;149;117;205}",
+        "key": "{#32}{#38;2;149;117;205}",
         "format": "{avg} load"
       },
       {
         "type": "memory",
-        "key": "{#39}{#38;2;149;117;205}",
+        "key": "{#33}{#38;2;149;117;205}",
         "format": "{percentage} used {#2}{used}"
       },
       {
         "type": "disk",
-        "key": "{#40}{#38;2;149;117;205}",
+        "key": "{#34}{#38;2;149;117;205}",
         "format": "{size-percentage} used {#2}{size-available} free"
       }
     ]

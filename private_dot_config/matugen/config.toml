@@ -1,3 +1,4 @@
+
 [config]
 
 [config.wallpaper]
@@ -133,3 +134,9 @@ output_path = '~/.local/share/FreesmLauncher/themes/MatugenFusion/themeStyle.css
 [templates.starship]
 input_path = '~/.config/matugen/templates/starship-colors.toml'
 output_path = '~/.config/starship.toml'
+
+# Self-made
+[templates.zen-browser]
+input_path = '~/.config/matugen/templates/transparentzen.js'
+output_path = "~/.config/zen/viokbum7.Default (release)/user.js"
+

@@ -24,6 +24,7 @@ alias grep='grep --color=auto'
 alias configdotfish='$EDITOR ~/.config/fish/config.fish'
 alias eimikosfetch='fastfetch -c ~/eimikosff3.jsonc'
 alias wriorindefetch='fastfetch -c /home/zek/wriorinde.jsonc --logo-recache'
+alias shipfetch="~/scripts/shipfetch/shipfetch.sh"
 
 alias screenrec="/home/zek/scripts/screenrec.sh"
 
@@ -42,9 +43,9 @@ alias syu='sudo pacman -Syu'
 alias sy='sudo pacman -Sy'
 alias syy='sudo pacman -Syy'
 
-alias ysyu='yay -Syu'
-alias ysy='yay -Sy'
-alias ysyy='yay -Syy'
+alias ysyu='paru -Syu'
+alias ysy='paru -Sy'
+alias ysyy='paru -Syy'
 
 end
 

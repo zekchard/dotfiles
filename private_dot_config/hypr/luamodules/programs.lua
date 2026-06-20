@@ -18,4 +18,4 @@ $browser = waterfox
 terminal = "kitty"
 fileManager = "nautilus"
 menu = "wofi --show drun"
-browser = "waterfox"
+browser = "zen-browser"

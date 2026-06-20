@@ -119,12 +119,12 @@
           },
           {
             "label": "Powersave",
-            "command": "cpupower-gui pr Powersave && swaync-client -cp && swayosd-client --custom-message 'CPU in Powersave governor'"
+            "command": "cpupower-gui pr Balanced && swaync-client -cp && swayosd-client --custom-message 'CPU in Powersave governor'"
           },
 
           {
             "label": "Limit to 1696Mhz",
-            "command": "cpupower-gui pr yuhhhhhh && swaync-client -cp && swayosd-client --custom-message 'CPU limited to 1.7GHz'"
+            "command": "cpupower-gui pr 1.7GHz && swaync-client -cp && swayosd-client --custom-message 'CPU limited to 1.7GHz'"
           }
         ]
       },

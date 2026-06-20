@@ -16,7 +16,7 @@ oscilloscope:
   spline:
     segments: 4
     tension: 1
-  beam_multiplier: 5.505319
+  beam_multiplier: 1.0106384
   window: 302.25797
   bandpass:
     bandwidth: 247.34042
@@ -49,7 +49,7 @@ fft:
     max_freq: 4994
     base_radius: 0.1
   size: 512
-  beam_multiplier: 1.4893616
+  beam_multiplier: 0.61170214
   slope: 6.957447
   limits:
     max_db: -0.9361727
@@ -89,12 +89,12 @@ phosphor:
   enabled: true
   beam:
     rainbow: false
-    energy: 1000
+    energy: 883.09576
   screen:
     aa_size: 2
     decay:
-      fast_frames: 1
-      slow_frames: 150
+      fast_frames: 2
+      slow_frames: 300
       threshold: 0.3617021
     curvature: 0
     gap: 0
@@ -102,9 +102,8 @@ phosphor:
     chromatic_aberration: 0
     grain: 0.1143617
   blur:
-    spread: 24.103722
-    near_intensity: 0.06648936
-    far_intensity: 0.14893617
+    radius: 14
+    intensity: 0.050531916
   reflections:
     strength: 0
 
@@ -123,7 +122,7 @@ lissajous:
   spline:
     segments: 10
     tension: 1
-  beam_multiplier: 2.0212767
+  beam_multiplier: 0.9574468
   mode: black_hole
   rotation: 1
 
@@ -144,10 +143,10 @@ font: /usr/share/fonts/TTF/SpaceMonoNerdFontPropo-Bold.ttf
 visualizers:
   main:
     type: hsplit
-    ratio: 0.84627575
+    ratio: 0.84572786
     children:
       - type: hsplit
-        ratio: 0.09380863
+        ratio: 0.09372071
         children:
           - id: lufs
           - type: hsplit
