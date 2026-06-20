@@ -18,7 +18,7 @@
 		+ suggestion: `extra/qt5ct` & `extra/qt6ct`
 	- GTK - `extra/adw-gtk-theme` or [drop in ~/.local/share/themes](https://github.com/lassekongo83/adw-gtk3)
 		+ suggestion: `extra/nwg-look`
-	- Icons - `aur/whitesur-icon-theme` or [drop in ~/.local/share/icons](https://github.com/vinceliuice/WhiteSur-icon-theme)
+	- Icons - `aur/whitesur-icon-theme` or [use script](https://github.com/vinceliuice/WhiteSur-icon-theme)
 	- Cursor - `aur/bibata-cursor-theme` or [drop in ~/.local/share/icons](https://github.com/ful1e5/Bibata_Cursor)
 - Fonts
 	+ Readex Pro - `chaotic-aur/ttf-readex-pro`
@@ -55,7 +55,6 @@
 	- flags on hypr autostart
 - batsignal 
 	- also flags on hypr autostart
-
 - wlogout
 - Starship
 - wl-screenrec
