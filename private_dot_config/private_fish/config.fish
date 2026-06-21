@@ -19,7 +19,7 @@ starship init fish | source
 set -gx SUDO_PROMPT "$(tput setaf 1)󱈸 Password for $(tput setaf 1 bold)%p:$(tput sgr0) "
 
 # aliases
-alias ls='ls --color=auto'
+alias ls='eza -A'
 alias grep='grep --color=auto'
 alias configdotfish='$EDITOR ~/.config/fish/config.fish'
 alias eimikosfetch='fastfetch -c ~/eimikosff3.jsonc'

@@ -76,7 +76,7 @@ hl.window_rule({
   pin = 1,
   keep_aspect_ratio = 1,
   match = {
-  	class = ".*waterfox.*",
+  	class = ".*zen.*",
  	title = "^(Picture-in-Picture)$",
  	},
 })
