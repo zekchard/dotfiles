@@ -26,6 +26,9 @@
 	+ Anonymice Pro Nerd Font - `extra/ttf-anonymouspro-nerd`
 - Kitty - `extra/kitty`
 	+ previously Alacritty
+- waybar - `extra/waybar`
+- swaync - `extra/swaync`
+- swayosd - `extra/swayosd`
 - Ly - `extra/ly`
 > conf: `/etc/ly/config.ini`
 - Nautilus - `extra/nautilus`
@@ -34,38 +37,32 @@
 	- `aur/nautilus-admin-gtk4` 
 	- `extra/nautilus-image-converter`
 	- `extra/sushi`
-- Yazi `extra/yazi`
-- fastfetch
+- Yazi - `extra/yazi`
+- fastfetch - `extra/fastfetch`
 	+ with my own, ai-slop crafted fetch script named `shipfetch`
 		* deps: `extra/imagemagick`
-- awww
-- ^ with Waypaper
-- micro
-- Wofi 
+- awww - `extra/awww`
+- ^ with Waypaper - `chaotic-aur/waypaper-git`
+- micro - `extra/micro`
+- Wofi - `extra/wofi`
 - ^ extensions:
-	- wofi-emoji
-	- cliphist
-- nm-applet
-- blueberry-tray
-- udiskie
-- waybar
-- swaync
-- swayosd
-- wlsunset
+	- `aur/wofi-emoji`
+	- `extra/cliphist`
+- nm-applet - `extra/network-manager-applet`
+- blueberry-tray - `aur/blueberry-wayland`
+- udiskie - `extra/udiskie`
+- wlsunset - `extra/wlsunset`
 	- flags on hypr autostart
-- batsignal 
+- batsignal - `extra/batsignal`
 	- also flags on hypr autostart
-- wlogout
-- Starship
-- wl-screenrec
-- pulse-visualizer
-- tty-clock
-- cbonsai
+- wlogout - `chaotic-aur/wlogout`
+- Starship - `extra/starship`
+- wl-screenrec - `chaotic-aur/wl-screenrec`
+- pulse-visualizer - `aur/pulse-visualizer-git`
 
 ## Other software (in no order)
-- Waterfox (for Firefox)
+- Zen Browser (for Firefox)
 - Goofcord (for Discord)
-	+ previously Vesktop
 - Ghostwriter
 - cpupower-gui
 - ryzenadj

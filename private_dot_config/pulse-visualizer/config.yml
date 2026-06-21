@@ -89,21 +89,21 @@ phosphor:
   enabled: true
   beam:
     rainbow: false
-    energy: 883.09576
+    energy: 1000
   screen:
     aa_size: 2
     decay:
-      fast_frames: 2
+      fast_frames: 1
       slow_frames: 300
       threshold: 0.3617021
     curvature: 0
     gap: 0
     vignette: 0
-    chromatic_aberration: 0
-    grain: 0.1143617
+    chromatic_aberration: 0.0026595744
+    grain: 0.33510637
   blur:
-    radius: 14
-    intensity: 0.050531916
+    radius: 8
+    intensity: 0.015957447
   reflections:
     strength: 0
 
@@ -129,7 +129,7 @@ lissajous:
 audio:
   silence_threshold: -60.638298
   sample_rate: 44100
-  gain_db: 0.51063967
+  gain_db: -0.06382942
   engine: pipewire
   device: default
 
