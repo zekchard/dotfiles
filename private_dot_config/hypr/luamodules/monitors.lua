@@ -34,8 +34,9 @@ hl.monitor({
 })
 
 hl.monitor({
-	output = "HDMI-A-1",
+	output = "desc:XXX AAA",
 	mode = "1280x1024@67",
-	position = "auto-left",
+	position = "auto-center-left",
 	scale = "1",
+	vrr = 1
 })

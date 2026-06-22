@@ -66,7 +66,7 @@
       {
         "type": "disk",
         "key": "{#34}{#38;2;149;117;205}",
-        "format": "{size-percentage} used {#2}{size-available} free"
+        "format": "{size-percentage} used {#2}{size-available} free{#1} ({name})"
       }
     ]
   }

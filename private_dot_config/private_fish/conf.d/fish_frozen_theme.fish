@@ -7,7 +7,7 @@
 
 set --global fish_color_autosuggestion brblack
 set --global fish_color_cancel --reverse
-set --global fish_color_command normal
+set --global fish_color_command --reset
 set --global fish_color_comment red
 set --global fish_color_cwd green
 set --global fish_color_cwd_root red
@@ -15,11 +15,11 @@ set --global fish_color_end green
 set --global fish_color_error brred
 set --global fish_color_escape brcyan
 set --global fish_color_history_current --bold
-set --global fish_color_host normal
+set --global fish_color_host --reset
 set --global fish_color_host_remote yellow
 set --global fish_color_keyword 81a1c1
 set --global fish_color_match --background=brblue
-set --global fish_color_normal normal
+set --global fish_color_normal --reset
 set --global fish_color_operator brcyan
 set --global fish_color_option 8fbcbb
 set --global fish_color_param cyan
@@ -33,7 +33,7 @@ set --global fish_color_valid_path --underline=single
 set --global fish_pager_color_background 
 set --global fish_pager_color_completion e5e9f0
 set --global fish_pager_color_description yellow --italics
-set --global fish_pager_color_prefix normal --bold --underline=single
+set --global fish_pager_color_prefix --bold --underline=single
 set --global fish_pager_color_progress brwhite --bold --background=cyan
 set --global fish_pager_color_secondary_background 
 set --global fish_pager_color_secondary_completion 
