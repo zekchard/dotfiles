@@ -26,7 +26,7 @@
             // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
             "framerate": 15,
             "autosens": 0,
-            "sensitivity": 50,
+            "sensitivity": 25,
             "bars": 16,
             "sample_rate": 44100,
             "lower_cutoff_freq": 100,
@@ -34,7 +34,7 @@
             "sleep_timer": 2,
             "hide_on_silence": true,
             "format_silent": " ",
-            "method": "pulse",
+            "method": "pipewire",
             "source": "auto",
             "stereo": true,
             "reverse": false,
@@ -43,7 +43,7 @@
             "monstercat": false,
             "waves": false,
             "noise_reduction": 0.15,
-            "input_delay": 2,
+            "input_delay": 0,
             "format-icons": ["⠀", "⠀", "⣀", "⣤", "⣤", "⣶", "⣿"],
             "actions": {
                        "on-click-right": "mode"
@@ -71,7 +71,7 @@
             "deactivated": ""
         }
     },
-    "pulseaudio": {
+    "wireplumber": {
         "format": "{icon}{volume}%",
         "format-muted": " ",
         "format-source": " {volume}%",
