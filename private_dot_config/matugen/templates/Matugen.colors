@@ -48,7 +48,7 @@ ForegroundVisited={{colors.on_secondary_container.default.hex}}
 
 [Colors:Header]
 BackgroundAlternate={{colors.surface.default.hex}}
-BackgroundNormal={{colors.surface_container.default.hex}}
+BackgroundNormal={{colors.background.default.hex}}
 DecorationFocus={{colors.primary.default.hex}}
 DecorationHover={{colors.primary.default.hex}}
 ForegroundActive={{colors.primary.default.hex}}
@@ -61,8 +61,8 @@ ForegroundPositive={{colors.tertiary_fixed.default.hex}}
 ForegroundVisited={{colors.on_secondary_container.default.hex}}
 
 [Colors:Header][Inactive]
-BackgroundAlternate={{colors.surface_container.default.hex}}
-BackgroundNormal={{colors.surface_container.default.hex}}
+BackgroundAlternate={{colors.background.default.hex}}
+BackgroundNormal={{colors.background.default.hex}}
 DecorationFocus={{colors.primary.default.hex}}
 DecorationHover={{colors.primary.default.hex}}
 ForegroundActive={{colors.primary.default.hex}}
@@ -90,7 +90,7 @@ ForegroundVisited={{colors.on_secondary_container.default.hex}}
 
 [Colors:Tooltip]
 BackgroundAlternate={{colors.surface.default.hex}}
-BackgroundNormal={{colors.surface_container.default.hex}}
+BackgroundNormal={{colors.background.default.hex}}
 DecorationFocus={{colors.primary.default.hex}}
 DecorationHover={{colors.primary.default.hex}}
 ForegroundActive={{colors.primary.default.hex}}
@@ -103,7 +103,7 @@ ForegroundPositive={{colors.tertiary_fixed.default.hex}}
 ForegroundVisited={{colors.on_secondary_container.default.hex}}
 
 [Colors:View]
-BackgroundAlternate={{colors.surface_container.default.hex}}
+BackgroundAlternate={{colors.background.default.hex}}
 BackgroundNormal={{colors.background.default.hex}}
 DecorationFocus={{colors.primary_container.default.hex}}
 DecorationHover={{colors.on_primary.default.hex}}
@@ -118,7 +118,7 @@ ForegroundVisited={{colors.on_secondary_container.default.hex}}
 
 [Colors:Window]
 BackgroundAlternate={{colors.primary_container.default.hex}}
-BackgroundNormal={{colors.surface_container.default.hex}}
+BackgroundNormal={{colors.background.default.hex}}
 DecorationFocus={{colors.primary.default.hex}}
 DecorationHover={{colors.primary.default.hex}}
 ForegroundActive={{colors.primary.default.hex}}

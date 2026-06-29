@@ -1,6 +1,7 @@
+
 {
     "label" : "shutdown",
-    "action" : "systemctl poweroff",
+    "action" : "pw-play --volume 0.3 '/home/zek/.config/hypr/snds/(o).wav' & hyprshutdown -p 'systemctl poweroff'",
     "text" : "Shutdown",
     "keybind" : "s"
 }
@@ -12,7 +13,7 @@
 }
 {
     "label" : "logout",
-    "action" : "loginctl terminate-user $USER",
+    "action" : "hyprshutdown",
     "text" : "Logout",
     "keybind" : "e"
 }

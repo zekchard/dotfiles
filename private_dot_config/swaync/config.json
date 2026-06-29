@@ -34,6 +34,10 @@
   "text-empty": "No Notifications",
   "script-fail-notify": true,
   "scripts": {
+    "sound": {
+      "exec": "pw-play '/home/zek/.config/hypr/snds/(n).wav'",
+      "app-name": ".*"
+    }
   },
   "notification-visibility": {
     "example-name": {
@@ -68,7 +72,7 @@
     },
     "backlight": {
       "label": "󰃠",
-      "device": "amdgpu_bl0"
+      "device": "amdgpu_bl1"
     },
     "title": {
       "text": "Notifications",
