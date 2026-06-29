@@ -126,6 +126,19 @@ hl.window_rule({
   float = 1,
 })
 
+hl.window_rule({
+  name = "dvr",
+  match = {
+  	class = "resolve",
+  	},
+  no_blur = 1,
+  no_dim = 1,
+  no_anim = 1,
+  nearest_neighbor = 1,
+  no_max_size = 1,
+  force_rgbx = 0,
+})
+
 -- The one above but for everything now because i also encountered that in Audacity aswell lmao --
 
 hl.window_rule({
