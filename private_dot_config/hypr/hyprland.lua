@@ -37,11 +37,11 @@ hl.config({
       new_status = master,
   },
   misc = {
-      force_default_wallpaper = 2,
-      disable_hyprland_logo = false,
+      force_default_wallpaper = 1,
+      disable_hyprland_logo = true,
 
-      font_family = "Readex",
-      splash_font_family = "Readex",
+      font_family = "Readex Pro",
+      splash_font_family = "Readex Pro",
 
       background_color = background,
       

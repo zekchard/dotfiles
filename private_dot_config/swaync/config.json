@@ -35,7 +35,7 @@
   "script-fail-notify": true,
   "scripts": {
     "sound": {
-      "exec": "pw-play '/home/zek/.config/hypr/snds/(n).wav'",
+      "exec": "pw-play --volume 0.5 '/home/zek/.config/hypr/snds/(n).wav'",
       "app-name": ".*"
     }
   },

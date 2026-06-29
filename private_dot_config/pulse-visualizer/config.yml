@@ -99,7 +99,7 @@ phosphor:
     curvature: 0
     gap: 0
     vignette: 0
-    chromatic_aberration: 0.0026595744
+    chromatic_aberration: 0
     grain: 0.33510637
   blur:
     radius: 8
@@ -131,7 +131,7 @@ audio:
   sample_rate: 44100
   gain_db: -0.06382942
   engine: pipewire
-  device: default
+  device: alsa_output.pci-0000_03_00.6.analog-stereo
 
 lufs:
   mode: momentary

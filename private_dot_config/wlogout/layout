@@ -7,7 +7,7 @@
 }
 {
     "label" : "reboot",
-    "action" : "systemctl reboot",
+    "action" : "pw-play --volume 0.3 '/home/zek/.config/hypr/snds/(o).wav' & hyprshutdown -p 'systemctl reboot'",
     "text" : "Reboot",
     "keybind" : "r"
 }
