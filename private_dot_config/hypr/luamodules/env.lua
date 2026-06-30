@@ -41,4 +41,4 @@ hl.env("EDITOR", "micro")
 hl.env("OCL_ICD_VENDORS", "/etc/OpenCL/vendors/rusticl.icd")
 hl.env("RUSTICL_ENABLE", "radeonsi")
 
-hl.env("MPD_HOST", "$XDG_RUNTIME_DIR/mpd/socket")
+hl.env("MPD_HOST", "/home/zek/.config/mpd/socket")

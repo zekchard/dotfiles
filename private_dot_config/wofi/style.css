@@ -1,5 +1,9 @@
 @import ".config/wofi/colors.css";
 
+* {
+	    transition:all 0.2 linear;
+}
+
 window {
     padding: 0px;
     border: 2px solid alpha(@outline,0.2);
@@ -11,7 +15,6 @@ window {
 	background-position: top right;
 	background-repeat: no-repeat;
     font-size:18;
-    transition:all 0.2 linear;
 }
 #inner-box {
     margin: 0px;

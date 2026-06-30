@@ -156,11 +156,11 @@
           {
             "label": "󱣴   Select a region",
             "command": "swaync-client -cp && sleep 1 && pkill hyprshot & hyprshot -m region -o ~/Pictures/Screenshots -z"
-          },          {
+          },
+          {
             "label": "󱣴   Select a window",
             "command": "swaync-client -cp && sleep 1 && pkill hyprshot & hyprshot -m window -o ~/Pictures/Screenshots -z"
           },
-          
           {
             "label": "󰉋   Open screenshot folder",
             "command": "xdg-open ~/Pictures/Screenshots"
@@ -172,8 +172,12 @@
         "position": "left",
         "actions": [
           {
-            "label": "   Entire screen",
+            "label": "   Main screen",
             "command": "swaync-client -cp && sleep 1 && /home/zek/scripts/screenrec.sh record"
+          },
+                    {
+            "label": "   Second screen",
+            "command": "swaync-client -cp && sleep 1 && /home/zek/scripts/screenrec.sh record2"
           },
           {
             "label": "   Select a region",
@@ -184,7 +188,7 @@
             "command": "swaync-client -cp && /home/zek/scripts/screenrec.sh end"
           },
           {
-            "label": "   Open screencast folder",
+            "label": "󰉋   Open screencast folder",
             "command": "xdg-open ~/Videos/Screencasts"
           }
         ]
