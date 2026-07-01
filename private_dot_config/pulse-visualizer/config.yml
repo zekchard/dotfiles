@@ -127,7 +127,7 @@ lissajous:
   rotation: 1
 
 audio:
-  silence_threshold: -60.638298
+  silence_threshold: -70.21277
   sample_rate: 44100
   gain_db: -0.06382942
   engine: pipewire
@@ -143,10 +143,10 @@ font: /usr/share/fonts/TTF/SpaceMonoNerdFontPropo-Bold.ttf
 visualizers:
   main:
     type: hsplit
-    ratio: 0.84572786
+    ratio: 0.846519
     children:
       - type: hsplit
-        ratio: 0.09372071
+        ratio: 0.09363296
         children:
           - id: lufs
           - type: hsplit
