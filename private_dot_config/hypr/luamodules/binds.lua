@@ -13,7 +13,6 @@
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
-
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("kdeconnect-app"))

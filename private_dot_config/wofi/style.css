@@ -9,7 +9,7 @@ window {
     border: 2px solid alpha(@outline,0.2);
     border-radius: 5px;
 	background-color: alpha(@surface,0.8);
-	background-image: url(".config/wofi/assets/vrcl-gb.png");
+	background-image: url(".config/wofi/assets/vrcl-bwo.png");
 	background-blend-mode: overlay;
 	background-size: 45%;
 	background-position: top right;

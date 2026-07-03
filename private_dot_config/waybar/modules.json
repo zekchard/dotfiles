@@ -51,6 +51,10 @@
         },
      "hyprland/window": {
             "max-length": 64,
+            "icon": false,
+            "icon-size": 12,
+            "format": "{title}",
+            "format-alt": "{class}",
         },
     "hyprland/workspaces": {
         "disable-scroll": false,

@@ -26,7 +26,6 @@
 -- Window Rules --
 ------------------
 
-
 local floatfocusfix = hl.window_rule({
   name = "floatfocusfix",
   no_initial_focus = 1,

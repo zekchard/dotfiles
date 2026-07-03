@@ -4,7 +4,7 @@
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
     font-family: "Symbols Nerd Font", "Readex Pro", Lexend, AnonymicePro Nerd Font Propo, Helvetica, Roboto, Arial, sans-serif;
     font-size: 12px;
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 window#waybar {
@@ -86,11 +86,20 @@ window#waybar {
     feather;
   font-weight: 500;
   font-size: 12pt;
-    color: @on_secondary_container;
+    color: @on_surface;
   border:none;
   border-radius: 0px;
   min-width: 8px;
   padding: 0 5;
+}
+
+
+#workspaces button.visible {
+    border-bottom:2px solid alpha(@secondary,0.65);
+}
+
+#workspaces button.hosting-monitor {
+    color: @primary;
 }
 
 #workspaces button.active {
@@ -100,7 +109,13 @@ background: linear-gradient(to top, alpha(@on_primary,.5) 0%,alpha(@primary,.2) 
 }
 
 #workspaces button:hover {
-    color: @primary;
+    color: @secondary;
+}
+
+#workspaces button.special {
+    background: linear-gradient(to top, alpha(@on_tertiary,.5) 0%,alpha(@tertiary,.2) 100%);
+    color: @tertiary; 
+    border-bottom:2px solid alpha(@tertiary,1);
 }
 
 #workspaces button.urgent {
