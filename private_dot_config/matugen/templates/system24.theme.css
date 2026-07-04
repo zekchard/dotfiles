@@ -59,7 +59,7 @@ body {
     /* transparency/blur options */
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
     --transparency-tweaks: on; /* off: no changes, on: remove some elements for better transparency */
-    --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --remove-bg-layer: on; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
     --panel-blur: on; /* off: no changes, on: blur the background of panels */
     --blur-amount: 12px; /* amount of blur */
     --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
@@ -97,8 +97,8 @@ body {
     --bg-1: rgb(from {{colors.surface_variant.default.hex}} r g b / 0.4); /* dark buttons when clicked */
     --bg-2: rgb(from {{colors.surface_container_high.default.hex}} r g b / 0.8); /* dark buttons */
     --bg-3: rgb(from {{colors.surface_container_low.default.hex}} r g b / 0.8); /* spacing, secondary elements */
-    --bg-4: rgb(from {{colors.surface.default.hex}} r g b / 0.85); /* main background color */
-    --hover: rgb(from {{colors.surface_container.default.hex}} r g b / 0.9); /* channels and buttons when hovered */
+    --bg-4: rgb(from {{colors.surface.default.hex}} r g b / 0.425); /* main background color */
+    --hover: rgb(from {{colors.surface_container.default.hex}} r g b / 0.425); /* channels and buttons when hovered */
     --active: rgb(from {{colors.surface_bright.default.hex}} r g b); /* channels and buttons when clicked or selected */
     --active-2: rgb(from {{colors.surface_bright.default.hex}} r g b); /* extra state for transparent buttons */
     --message-hover: var(--hover); /* messages when hovered */

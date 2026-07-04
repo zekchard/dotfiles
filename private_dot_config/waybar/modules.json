@@ -123,7 +123,7 @@
 	"interval": 5,
         "format": "{icon} {capacity}%    {power} W",
         "format-full": "{icon} {capacity}%    {power} W",
-        "format-charging": " {capacity}%    {power} W",
+        "format-charging": " {capacity}%    {power} W",
         "format-plugged": " {capacity}%    {power} W",
         "format-alt": "{icon} {time}    {power} W",
         "format-icons": ["", "", "", "", ""]

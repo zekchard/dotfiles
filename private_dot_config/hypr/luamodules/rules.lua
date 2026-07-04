@@ -74,6 +74,7 @@ hl.window_rule({
   float = 1,
   pin = 1,
   keep_aspect_ratio = 1,
+  content = "video",
   match = {
   	class = ".*zen.*",
  	title = "^(Picture-in-Picture)$",
@@ -82,8 +83,12 @@ hl.window_rule({
 
 hl.window_rule({
   name = "nautiluspreview",
-  float = 1,
-  match = {class = "^(org.gnome.NautilusPreviewer)$"}
+  match = {class = "^(org.gnome.NautilusPreviewer)$"},
+  float = true,
+  move = {"(monitor_w*0.05)", "(monitor_h*0.075)"},
+  dim_around = 0,
+  min_size = {0,0},
+  opacity = 1.0,
 })
 
 hl.window_rule({
@@ -97,13 +102,6 @@ hl.window_rule({
   	fullscreen = 0,
   	pin = 0,
   	},
-})
-
-hl.window_rule({
-  name = "windowrule-5",
-  no_initial_focus = 1,
-  opacity = 0.9,
-  match = { class = "^(wine-.*)" },
 })
 
 

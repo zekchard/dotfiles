@@ -39,6 +39,8 @@ alias psyu='sudo pacman -Syu'
 alias psy='sudo pacman -Sy'
 alias psyy='sudo pacman -Syy'
 
+alias pm='sudo pacman'
+
 alias syu='sudo pacman -Syu'
 alias sy='sudo pacman -Sy'
 alias syy='sudo pacman -Syy'
@@ -46,6 +48,9 @@ alias syy='sudo pacman -Syy'
 alias ysyu='paru -Syu'
 alias ysy='paru -Sy'
 alias ysyy='paru -Syy'
+
+alias radj='sudo ryzenadj'
+
 
 end
 

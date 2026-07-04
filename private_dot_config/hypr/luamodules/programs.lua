@@ -16,7 +16,7 @@ $browser = waterfox
 
 ]]--
 
-fileManager = "nautilus"
+fileManager = "nautilus -w"
 menu = "wofi --show drun"
 
 terminal = "$TERMINAL"

@@ -47,6 +47,8 @@ hl.config({
       new_status = master,
   },
   misc = {
+  	  size_limits_tiled = true,
+  	  
       force_default_wallpaper = 1,
       disable_hyprland_logo = true,
 
