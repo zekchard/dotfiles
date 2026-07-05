@@ -1,6 +1,6 @@
 # EiMikOS dotfiles
 
-https://raw.githubusercontent.com/zekchard/dotfiles/refs/heads/main/dotfile-repo-assets/pulsevisdemo.mp4
+![Fetches](dotfile-repo-assets/fetches.png)
 
 ## (most) packages
 > [!IMPORTANT]
