@@ -3,9 +3,9 @@
 # shipfetch
 my **vibecoded** [^1] extension of fastfetch that so happens to have matugen integration for some reason
 
-</div>
-
 ![shipfetch demo.](../../dotfile-repo-assets/shipfetchdemo.gif)
+
+</div>
 
 ## Dependencies
 - `extra/imagemagick`
