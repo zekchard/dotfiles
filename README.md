@@ -1,5 +1,7 @@
 # EiMikOS dotfiles
 
+https://raw.githubusercontent.com/zekchard/dotfiles/refs/heads/main/dotfile-repo-assets/pulsevisdemo.mp4
+
 ## (most) packages
 > [!IMPORTANT]
 > This doc assumes that you are using these dotfiles with Arch Linux et al., also highly recommended that you have [chaotic-aur](https://aur.chaotic.cx) installed in your pacman repos
