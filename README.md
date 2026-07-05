@@ -1,7 +1,9 @@
-# EiMikOS dotfiles
+<div align=center>
 
+# EiMikOS dotfiles
 ![Fetches](dotfile-repo-assets/fetches.png)
 
+</div>
 ## (most) packages
 > [!IMPORTANT]
 > This doc assumes that you are using these dotfiles with Arch Linux et al., also highly recommended that you have [chaotic-aur](https://aur.chaotic.cx) installed in your pacman repos
@@ -50,6 +52,7 @@
 | Shell Prompt | `extra/starship` |
 | Text Editor | `extra/micro` |
 | Browser | `chaotic-aur/zen-browser-bin` |
+|  | see [zen-notes.md](zen-notes.md) for more info |
 | Discord Client | `chaotic-aur/goofcord-bin` |
 | Wireless Managers | `extra/network-manager-applet` |
 |  | `aur/blueberry-wayland` |
