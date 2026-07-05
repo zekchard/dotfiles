@@ -25,10 +25,10 @@ You can also download the tar from [releases](https://github.com/zekchard/dotfil
 | Qt | `aur/darkly-bin` |
 ||`extra/qt5ct`|
 ||`extra/qt6ct`|
-| GTK | [`adw-gtk-theme`](https://github.com/lassekongo83/adw-gtk3) |
+| GTK | [`adw-gtk-theme`](https://github.com/lassekongo83/adw-gtk3) in `~/.local/share/themes` |
 ||`extra/nwg-look`|
 | Icons | `chaotic-aur/papirus-folders` [with extra setup](https://github.com/InioX/matugen-themes#papirus-folders) |
-| Cursor | [`bibata-cursor-theme`](https://github.com/ful1e5/Bibata_Cursor) |
+| Cursor | [`bibata-cursor-theme`](https://github.com/ful1e5/Bibata_Cursor) in `~/.local/share/icons` |
 
 ### fonts
 |font name|repo/package-name|
@@ -50,7 +50,7 @@ You can also download the tar from [releases](https://github.com/zekchard/dotfil
 | File Manager (gui) | `extra/nautilus` |
 | File Manager (tui) | `extra/yazi` |
 | Fetcher | `extra/fastfetch` |
-|  | `./scripts/shipfetch` needs `extra/imagemagick` to work |
+|  | [`scripts/shipfetch`](./scripts/shipfetch) needs `extra/imagemagick` to work |
 | Wallpaper Daemon | `chaotic-aur/waypaper-git` |
 |  | `extra/awww` |
 | Power Menu | `chaotic-aur/wlogout` |
@@ -63,7 +63,7 @@ You can also download the tar from [releases](https://github.com/zekchard/dotfil
 | Shell Prompt | `extra/starship` |
 | Text Editor | `extra/micro` |
 | Browser | `chaotic-aur/zen-browser-bin` |
-|  | see [zen-notes.md](zen-notes.md) for more info |
+|  | see [zen-notes.md](./zen-notes.md) for more info |
 | Discord Client | `chaotic-aur/goofcord-bin` |
 | Wireless Managers | `extra/network-manager-applet` |
 |  | `aur/blueberry-wayland` |

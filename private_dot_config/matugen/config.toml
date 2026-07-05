@@ -19,7 +19,7 @@ output_path = '~/.config/matugen/current-color'
 [templates.shipfetch]
 input_path = '~/.config/matugen/templates/current'
 #post_hook = 'magick "/home/zek/.config/fastfetch/wriorindeffbase.png" -gamma 2.5 -fill "{{colors.primary.default.hex}}" -tint 50 /home/zek/.config/fastfetch/wriorindeffcolored.png'
-post_hook = 'magick mogrify -path /home/zek/scripts/shipfetch/assets/ -gamma 1.75 -fill "{{colors.primary.default.hex}}" -tint 80 /home/zek/scripts/shipfetch/assets/base/*.{jpg,jpeg,png}'
+post_hook = 'magick mogrify -path /home/zek/scripts/shipfetch/assets/ -gamma 1.75 -fill "{{colors.primary.default.hex}}" -tint 80 /home/zek/scripts/shipfetch/assets/base/*.png'
 
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.lua'
