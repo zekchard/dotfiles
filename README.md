@@ -1,5 +1,7 @@
 # EiMikOS dotfiles
 
+![Fetches](dotfile-repo-assets/fetches.png)
+
 ## (most) packages
 > [!IMPORTANT]
 > This doc assumes that you are using these dotfiles with Arch Linux et al., also highly recommended that you have [chaotic-aur](https://aur.chaotic.cx) installed in your pacman repos
@@ -26,7 +28,7 @@
 | :- | :- |
 | Window Manager and Compositor | `extra/hyprland` |
 | Theming Engine | `extra/matugen` |
-|  | `chaotic-aur/python-materialyoucolor` for universal terminal colors |
+|  | `chaotic-aur/python-materialyoucolor` for the [universal terminal colors template]( https://github.com/InioX/matugen-themes/pull/132) to work|
 | Terminal | `extra/kitty` |
 | Status Bar | `extra/waybar` |
 | Notifications | `extra/swaync` |
@@ -35,11 +37,16 @@
 | File Manager (gui) | `extra/nautilus` |
 | File Manager (tui) | `extra/yazi` |
 | Fetcher | `extra/fastfetch` |
+|  | `./scripts/shipfetch` needs `extra/imagemagick` to work |
 | Wallpaper Daemon | `chaotic-aur/waypaper-git` |
 |  | `extra/awww` |
 | Power Menu | `chaotic-aur/wlogout` |
 | Lock Screen | `extra/hyprlock` |
+| Color Picker | `extra/hyprpicker` |
+| Screenshots | `extra/hyprshot` |
+| Idle Manager | `extra/hypridle` |
 | Launcher | `extra/wofi` |
+| Clipboard | `extra/cliphist` |
 | Shell Prompt | `extra/starship` |
 | Text Editor | `extra/micro` |
 | Browser | `chaotic-aur/zen-browser-bin` |
@@ -51,3 +58,5 @@
 | Screen Recorder | `chaotic-aur/wl-screenrec` |
 | Audio Visualizer | `aur/pulse-visualizer-git` |
 | Music Player | `extra/rmpc` |
+| spotify for some reason | `chaotic-aur/spotify` |
+| theming/plugins engine for `spotify` | `chaotic-aur/spicetify-cli` |
