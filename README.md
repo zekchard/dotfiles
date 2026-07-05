@@ -11,13 +11,13 @@ more screenshots coming soonr™️
 
 ## Installation?
 
-This is managed by [chezmoi](https://www.chezmoi.io/) so if you clone this repo you would have to manually rename the directories modified by it (ie. `private_dot_config` to `.config`) before using it.  
-You can also download the tar from [releases](https://github.com/zekchard/dotfiles) and untar it in your home directory.
+This is managed by [chezmoi](https://www.chezmoi.io/) so if you clone this repo you will have to manually rename the directories modified by it (ie. `private_dot_config` to `.config`) before using it.  
+You can also download the tar from [releases](https://github.com/zekchard/dotfiles/releases/latest) and untar it in your home directory.
 
 ## (most) packages used
 
 > [!IMPORTANT]
-> This doc assumes that you are using these dotfiles with Arch Linux et al., also highly recommended that you have [chaotic-aur](https://aur.chaotic.cx) installed in your pacman repos
+> This assumes that you are using these dotfiles with Arch Linux et al., also highly recommended that you have [chaotic-aur](https://aur.chaotic.cx) installed in your pacman repos
 
 ### toolkit themes and stuff
 | | |
