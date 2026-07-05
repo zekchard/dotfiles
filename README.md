@@ -11,7 +11,7 @@ more screenshots coming soonr™️
 
 ## Installation?
 
-Aside fhis is managed by [chezmoi](https://www.chezmoi.io/) so if you clone this repo you will have to manually rename the directories modified by it (ie. `private_dot_config` to `.config`) before using it.  
+Aside from installing [the packages below](#most-packages-used), this dotfiles repo is managed by [chezmoi](https://www.chezmoi.io/) so if you clone this repo you will have to manually rename the directories modified by it (ie. `private_dot_config` to `.config`) before using it.  
 You can also download the tar from [releases](https://github.com/zekchard/dotfiles/releases/latest) and untar it in your home directory.
 
 ## (most) packages used
