@@ -1,10 +1,21 @@
 <div align=center>
 
 # EiMikOS dotfiles
+~we don't need shells where we're going~
+
 ![Fetches](dotfile-repo-assets/fetches.png)
 
+more screenshots coming soonr™️
+
 </div>
-## (most) packages
+
+## Installation?
+
+This is managed by [chezmoi](https://www.chezmoi.io/) so if you clone this repo you would have to manually rename the directories modified by it (ie. `private_dot_config` to `.config`) before using it.  
+You can also download the tar from [releases](https://github.com/zekchard/dotfiles) and untar it in your home directory.
+
+## (most) packages used
+
 > [!IMPORTANT]
 > This doc assumes that you are using these dotfiles with Arch Linux et al., also highly recommended that you have [chaotic-aur](https://aur.chaotic.cx) installed in your pacman repos
 
