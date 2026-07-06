@@ -85,8 +85,7 @@ hl.window_rule({
   name = "nautiluspreview",
   match = {class = "^(org.gnome.NautilusPreviewer)$"},
   float = true,
-  move = {"(monitor_w*0.05)", "(monitor_h*0.075)"},
-  dim_around = 0,
+  dim_around = false,
   min_size = {0,0},
   opacity = 1.0,
 })
@@ -178,8 +177,7 @@ hl.window_rule({
 })
 
 hl.window_rule({
-  name = "airctl",
-  match = { class = ".*io.github.airctl.*" },
+  match = { title = "QuickCSS" },
   float = 1,
 })
 

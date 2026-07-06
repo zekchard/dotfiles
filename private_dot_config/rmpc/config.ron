@@ -2,10 +2,11 @@
 #![enable(unwrap_newtypes)]
 #![enable(unwrap_variant_newtypes)]
 (
-    address: "~/.config/mpd/socket",
+    address: "~/.cache/mpd/socket",
     password: None,
     theme: Some("matugen"),
     cache_dir: Some("~/.cache/rmpc/"),
+    lyrics_dir: Some("~/Music"),
     on_song_change: None,
     volume_step: 5,
     max_fps: 30,
@@ -119,7 +120,7 @@
         },
         queue: {
             "<Backspace>": Delete,
-            "<S-Backspace>": DeleteAll,
+            "<C-Backspace>": DeleteAll,
             "<CR>":       Play,
             "C":          JumpToCurrent,
             "X":          Shuffle,
@@ -163,7 +164,7 @@
                                     pane: Pane(AlbumArt)
                                 ),
                                 (
-                                    size: "7",
+                                    size: "14",
                                     borders: "ALL",
                                     border_symbols: Inherited(parent: Rounded, top_left: "├", top_right: "┤",),
                                     border_title: [(kind: Text(" Lyrics "))],

@@ -50,7 +50,7 @@ You can also download the tar from [releases](https://github.com/zekchard/dotfil
 | File Manager (gui) | `extra/nautilus` |
 | File Manager (tui) | `extra/yazi` |
 | Fetcher | `extra/fastfetch` |
-|  | [`scripts/shipfetch`](./scripts/shipfetch) needs `extra/imagemagick` to work |
+|  | [`./scripts/shipfetch`](./scripts/shipfetch) needs `extra/imagemagick` to work |
 | Wallpaper Daemon | `chaotic-aur/waypaper-git` |
 |  | `extra/awww` |
 | Power Menu | `chaotic-aur/wlogout` |

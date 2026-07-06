@@ -97,7 +97,7 @@ body {
     --bg-1: rgb(from {{colors.surface_variant.default.hex}} r g b / 0.4); /* dark buttons when clicked */
     --bg-2: rgb(from {{colors.surface_container_high.default.hex}} r g b / 0.8); /* dark buttons */
     --bg-3: rgb(from {{colors.surface_container_low.default.hex}} r g b / 0.8); /* spacing, secondary elements */
-    --bg-4: rgb(from {{colors.surface.default.hex}} r g b / 0.425); /* main background color */
+    --bg-4: rgb(from {{colors.surface.default.hex}} r g b / 0.525); /* main background color */
     --hover: rgb(from {{colors.surface_container.default.hex}} r g b / 0.425); /* channels and buttons when hovered */
     --active: rgb(from {{colors.surface_bright.default.hex}} r g b); /* channels and buttons when clicked or selected */
     --active-2: rgb(from {{colors.surface_bright.default.hex}} r g b); /* extra state for transparent buttons */
