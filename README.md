@@ -5,7 +5,11 @@
 
 ![Fetches](dotfile-repo-assets/fetches.png)
 
-more screenshots coming soonr™️
+| rmpc + pulse-visualizer | shipfetch + ao3 on elinks + btop |
+| :- | :- |
+| ![1](dotfile-repo-assets/ss1.png) | ![2](dotfile-repo-assets/ss2.png) |
+| wofi | shipfetches |
+| ![3](dotfile-repo-assets/ss3.png) | ![4](dotfile-repo-assets/ss4.png) |
 
 </div>
 
