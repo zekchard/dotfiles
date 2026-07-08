@@ -1,7 +1,7 @@
 /* Load Matugen colors */
 @import "colors.css";
 @import "libadwaita.css";
-@import "libadwaitatweaks.css";
+@import "libadwaita-tweaks.css";
 
 /* Window */
 window {

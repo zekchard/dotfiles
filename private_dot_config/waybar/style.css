@@ -79,6 +79,17 @@ window#waybar {
     border-radius: 0px;
 }
 
+#battery.warning,
+#temperature.warning{
+	color: alpha(@on_error_container,1);
+}
+#battery.critical,
+#temperature.critical{
+	color: alpha(@on_error_container,.8);
+    background: alpha(@error_container,.5);
+}
+
+
 #workspaces button {
   background: transparent;
   font-family:
@@ -92,7 +103,6 @@ window#waybar {
   min-width: 8px;
   padding: 0 5;
 }
-
 
 #workspaces button.visible {
     border-bottom:2px solid alpha(@secondary,0.65);

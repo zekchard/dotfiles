@@ -7,7 +7,7 @@ shopt -s nullglob
 images=("$SHIPFETCH_DIR"/*.{jpg,jpeg,png})
 
 if [ ${#images[@]} -eq 0 ]; then
-    echo "No images found in $LOGO_DIR"
+    echo "No images found in $SHIPFETCH_DIR"
     exit 1
 fi
 

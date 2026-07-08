@@ -1,11 +1,11 @@
 [config]
 allow_images=true
-show=drun
+show=dmenu
 prompt=Search
 height=500
 width=1100
-term=Alacritty
-hide_scroll=false
+term=kitty
+hide_scroll=true
 print_command=true
 insensitive=true
 columns=1

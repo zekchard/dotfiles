@@ -110,8 +110,8 @@
     "temperature": {
         "interval": 2,
         "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
-        "critical-threshold": 100,
-        "format-critical": " {temperatureC}",
+        "critical-threshold": 95,
+        "warning-threshold": 85,
         "format": " {temperatureC}°C"
     },
     "hyprland/language": {
@@ -120,6 +120,10 @@
        "format-ru": "RU"
     },
     "battery": {
+    "states": {
+    	"warning": 20,
+    	"critical": 15
+    },
 	"interval": 5,
         "format": "{icon} {capacity}%    {power} W",
         "format-full": "{icon} {capacity}%    {power} W",
@@ -127,9 +131,6 @@
         "format-plugged": " {capacity}%    {power} W",
         "format-alt": "{icon} {time}    {power} W",
         "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
     },
     "clock": {
     	"interval": 1,

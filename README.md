@@ -23,6 +23,7 @@ You can also download the tar from [releases](https://github.com/zekchard/dotfil
 | | |
 | :- | :- |
 | Qt | `aur/darkly-bin` |
+|| or alternatively, `extra/kvantum` |
 ||`extra/qt5ct`|
 ||`extra/qt6ct`|
 | GTK | [`adw-gtk-theme`](https://github.com/lassekongo83/adw-gtk3) in `~/.local/share/themes` |
