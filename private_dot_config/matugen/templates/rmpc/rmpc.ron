@@ -23,10 +23,10 @@
     borders_style: (fg: "{{ colors.secondary.default.hex }}"),
     highlight_border_style: (fg: "{{ colors.secondary.default.hex }}"),
     symbols: (
-        song: "S",
-        dir: "D",
-        playlist: "P",
-        marker: "M",
+        song: "󰎇",
+        dir: "",
+        playlist: "󰲸",
+        marker: "",
         ellipsis: "...",
         song_style: None,
         dir_style: None,
@@ -40,7 +40,7 @@
         trace: (fg: "magenta", bg: "black"),
     ),
     progress_bar: (
-        symbols: ["[", "-", ">", " ", "]"],
+        symbols: ["", "█", "", "█", ""],
         track_style: (
             fg: "{{ colors.on_secondary.default.hex }}",
         ),
@@ -49,6 +49,7 @@
         ),
         thumb_style: (
             fg: "{{ colors.secondary.default.hex }}",
+            bg: "{{ colors.on_secondary.default.hex }}",
         ),
         use_track_when_empty: false,
     ),
@@ -65,7 +66,8 @@
                 style: (fg: "{{ colors.primary_fixed.default.hex }}"),
                 default: (kind: Text("Unknown"), style: (fg: "{{ colors.primary_fixed.default.hex }}"))
             ),
-            width: "20%",
+            width: "25%",
+            alignment: Left,
         ),
         (
             prop: (
@@ -73,19 +75,21 @@
                 style: (fg: "{{ colors.primary.default.hex }}"),
                 default: (kind: Text("Unknown"), style: (fg: "{{ colors.primary_fixed.default.hex }}"))
             ),
-            width: "35%",
+            width: "40%",
+            alignment: Left,
         ),
         (
             prop: (kind: Property(Album), style: (fg: "{{ colors.primary_fixed.default.hex }}"),
                 default: (kind: Text("Unknown Album"), style: (fg: "{{ colors.primary_fixed.default.hex }}"))
             ),
-            width: "30%",
+            width: "25%",
+            alignment: Right,
         ),
         (
             prop: (kind: Property(Duration), style: (fg: "{{ colors.primary.default.hex }}"),
                 default: (kind: Text("-"), style: (fg: "{{ colors.primary_fixed.default.hex }}"))
             ),
-            width: "15%",
+            width: "8%",
             alignment: Right,
         ),
     ],
@@ -94,20 +98,35 @@
         direction: Vertical,
         panes: [
             (
-                pane: Pane(Header),
-                size: "2",
-            ),
-            (
                 pane: Pane(Tabs),
-                size: "3",
+                size: "2",
+                border_title: [(kind: Text(" rmpc "))], border_title_alignment: Left,
+                borders: "LEFT | RIGHT | TOP",
+                border_symbols: Inherited(
+                    parent: Rounded,
+                    bottom_left: "├",
+                    bottom_right: "┤",
+                ),
             ),
             (
                 pane: Pane(TabContent),
                 size: "100%",
             ),
             (
+                pane: Pane(Header),
+                size: "3",
+                borders: "LEFT | RIGHT | BOTTOM",
+                border_symbols: Inherited(
+                    parent: Rounded,
+                    bottom_left: "├",
+                    bottom_right: "┤",
+                ),
+            ),
+            (
                 pane: Pane(ProgressBar),
-                size: "1",
+                size: "2",
+                borders: "LEFT | RIGHT | BOTTOM",
+                border_symbols: Rounded
             ),
         ],
     ),
@@ -180,7 +199,8 @@
         ),
     ],
     lyrics: (
-        timestamp: false
+        timestamp: false,
+        alignment: Center,
     ),
     cava: (
 

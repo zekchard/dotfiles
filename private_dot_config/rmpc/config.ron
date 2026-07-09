@@ -146,6 +146,7 @@
         album_sort_by: Date,
         album_date_tags: [Date],
     ),
+    
     tabs: [
         (
             name: "Queue",
@@ -159,16 +160,30 @@
                             panes: [
                                 (
                                     size: "100%",
-                                    borders: "LEFT | RIGHT | TOP",
-                                    border_symbols: Rounded,
-                                    pane: Pane(AlbumArt)
+                                    borders: "LEFT | TOP | BOTTOM",
+                                    border_symbols: Inherited(
+                                        parent: Rounded,
+                                        top_left: "├",
+                                        bottom_left: "├",
+                                        top_right: "┬",
+                                    ),
+                                    pane: Pane(AlbumArt),
+                                    border_title: [(kind: Text(" ")),(kind: Property(Song(Album)), default: (kind: Text("Album Art"))),(kind: Text(" "))],
+                                    border_title_alignment: Center,
+                                    border_title_position: Bottom,
                                 ),
                                 (
-                                    size: "14",
-                                    borders: "ALL",
-                                    border_symbols: Inherited(parent: Rounded, top_left: "├", top_right: "┤",),
-                                    border_title: [(kind: Text(" Lyrics "))],
-                                    border_title_alignment: Right,
+                                    size: "30%",
+                                    borders: "LEFT | BOTTOM",
+                                    border_symbols: Inherited(
+                                        parent: Rounded,
+                                        top_left: "├",
+                                        bottom_left: "├",
+                                        top_right: "┤",
+                                        bottom_right: "┤",
+                                    ),
+                                    border_title: [(kind: Text(" Lyrics"), style: (modifiers: "Bold | Dim"))],
+                                    border_title_alignment: Left,
                                     pane: Pane(Lyrics)
                                 ),
                             ],
@@ -182,7 +197,13 @@
                                 (
                                     size: "3",
                                     borders: "ALL",
-                                    border_symbols: Inherited(parent: Rounded, bottom_left: "├", bottom_right: "┤",),
+                                    border_symbols: Inherited(
+                                    	parent: Rounded,
+                                    	bottom_left: "├",
+                                    	top_left: "┬",
+                                    	bottom_right: "┤",
+                                    	top_right: "┤",
+                                    ),
                                     pane: Split(
                                         direction: Horizontal,
                                         panes: [
@@ -200,7 +221,7 @@
                                 (
                                     size: "100%",
                                     borders: "LEFT | RIGHT | BOTTOM",
-                                    border_symbols: Rounded,
+                                    border_symbols: Inherited(parent: Rounded, bottom_left: "┴", bottom_right: "┤",),
                                     pane: Split(
                                         direction: Horizontal,
                                         panes: [
@@ -228,7 +249,7 @@
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(Directories), size: "100%", borders: "ALL", border_symbols: Rounded)],
+                panes: [(pane: Pane(Directories), size: "100%", borders: "ALL", border_symbols: Inherited(parent: Rounded, top_left: "├", bottom_left: "├", top_right: "┤", bottom_right: "┤"))],
             )
         ),
         (
@@ -238,7 +259,7 @@
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(Artists), size: "100%", borders: "ALL", border_symbols: Rounded)],
+                panes: [(pane: Pane(Artists), size: "100%", borders: "ALL", border_symbols: Inherited(parent: Rounded, top_left: "├", bottom_left: "├", top_right: "┤", bottom_right: "┤"))],
             )
         ),
         (
@@ -248,7 +269,7 @@
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(AlbumArtists), size: "100%", borders: "ALL", border_symbols: Rounded)],
+                panes: [(pane: Pane(AlbumArtists), size: "100%", borders: "ALL", border_symbols: Inherited(parent: Rounded, top_left: "├", bottom_left: "├", top_right: "┤", bottom_right: "┤"))],
             )
         ),
         (
@@ -258,7 +279,7 @@
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(Albums), size: "100%", borders: "ALL", border_symbols: Rounded)],
+                panes: [(pane: Pane(Albums), size: "100%", borders: "ALL", border_symbols: Inherited(parent: Rounded, top_left: "├", bottom_left: "├", top_right: "┤", bottom_right: "┤"))],
             )
         ),
         (
@@ -268,7 +289,7 @@
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(Playlists), size: "100%", borders: "ALL", border_symbols: Rounded)],
+                panes: [(pane: Pane(Playlists), size: "100%", borders: "ALL", border_symbols: Inherited(parent: Rounded, top_left: "├", bottom_left: "├", top_right: "┤", bottom_right: "┤"))],
             )
         ),
         (
@@ -278,7 +299,7 @@
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(Search), size: "100%", borders: "ALL", border_symbols: Rounded)],
+                panes: [(pane: Pane(Search), size: "100%", borders: "ALL", border_symbols: Inherited(parent: Rounded, top_left: "├", bottom_left: "├", top_right: "┤", bottom_right: "┤"))],
             )
         ),
     ],
