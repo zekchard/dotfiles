@@ -21,6 +21,15 @@
     highlighted_item_style: (fg: "#c1c6dd", modifiers: "Bold"),
     current_item_style: (fg: "#c1c6dd", bg: "#4a5c92", modifiers: "Bold"),
     borders_style: (fg: "#c1c6dd"),
+    border_symbol_sets: {
+        "bar_corners": (
+        	parent: Rounded,
+            top_left: "├",
+            bottom_left: "├",
+            top_right: "┤",
+            bottom_right: "┤"
+            )
+    },
     highlight_border_style: (fg: "#c1c6dd"),
     symbols: (
         song: "󰎇",

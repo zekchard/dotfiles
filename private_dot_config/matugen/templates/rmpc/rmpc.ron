@@ -22,6 +22,15 @@
     current_item_style: (fg: "{{ colors.secondary.default.hex }}", bg: "{{ colors.inverse_primary.default.hex }}", modifiers: "Bold"),
     borders_style: (fg: "{{ colors.secondary.default.hex }}"),
     highlight_border_style: (fg: "{{ colors.secondary.default.hex }}"),
+    border_symbol_sets: {
+        "bar_corners": (
+        	parent: Rounded,
+            top_left: "├",
+            bottom_left: "├",
+            top_right: "┤",
+            bottom_right: "┤"
+            )
+    },
     symbols: (
         song: "󰎇",
         dir: "",
