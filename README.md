@@ -8,7 +8,7 @@
 | rmpc + pulse-visualizer | shipfetch + ao3 on elinks + btop |
 | :- | :- |
 | ![1](dotfile-repo-assets/ss1.png) | ![2](dotfile-repo-assets/ss2.png) |
-| wofi | shipfetches |
+| wofi ([artwork by @mintothesoul](https://x.com/mintothesoul/status/2013006326125789365)) | shipfetches |
 | ![3](dotfile-repo-assets/ss3.png) | ![4](dotfile-repo-assets/ss4.png) |
 
 </div>
