@@ -21,6 +21,7 @@
     highlighted_item_style: (fg: "#c1c6dd", modifiers: "Bold"),
     current_item_style: (fg: "#c1c6dd", bg: "#4a5c92", modifiers: "Bold"),
     borders_style: (fg: "#c1c6dd"),
+    highlight_border_style: (fg: "#c1c6dd"),
     border_symbol_sets: {
         "bar_corners": (
         	parent: Rounded,
@@ -30,7 +31,6 @@
             bottom_right: "┤"
             )
     },
-    highlight_border_style: (fg: "#c1c6dd"),
     symbols: (
         song: "󰎇",
         dir: "",
@@ -75,7 +75,7 @@
                 style: (fg: "#dbe1ff"),
                 default: (kind: Text("Unknown"), style: (fg: "#dbe1ff"))
             ),
-            width: "25%",
+			width: "25%",
             alignment: Left,
         ),
         (
@@ -84,21 +84,22 @@
                 style: (fg: "#b3c5ff"),
                 default: (kind: Text("Unknown"), style: (fg: "#dbe1ff"))
             ),
-            width: "40%",
+            width: "35%",
             alignment: Left,
         ),
         (
             prop: (kind: Property(Album), style: (fg: "#dbe1ff"),
                 default: (kind: Text("Unknown Album"), style: (fg: "#dbe1ff"))
             ),
-            width: "25%",
-            alignment: Right,
+            width: "30%",
+            alignment: Left,
         ),
         (
             prop: (kind: Property(Duration), style: (fg: "#b3c5ff"),
                 default: (kind: Text("-"), style: (fg: "#dbe1ff"))
             ),
-            width: "8%",
+			label: "Lnth.",
+            width: "6",
             alignment: Right,
         ),
     ],
@@ -132,23 +133,52 @@
                 ),
             ),
             (
-                pane: Pane(ProgressBar),
-                size: "2",
-                borders: "LEFT | RIGHT | BOTTOM",
-                border_symbols: Rounded
-            ),
+               size: "2",
+               borders: "LEFT | RIGHT | BOTTOM",
+               border_symbols: Inherited(
+                   parent: Rounded,
+                   top_left: "├",
+                   top_right: "┤",
+                ),
+               pane: Split(
+                   direction: Horizontal,
+                   panes: [
+                       (
+                           pane: Pane(Property(content: [
+                           	(kind: Text("["), style: (fg: "#e1bbdc", modifiers: "Bold")),
+                            (
+                           		kind: Property(Status(StateV2(playing_label: "Playing", paused_label: "Paused", stopped_label: "Stopped"))),
+                           	    style: (fg: "#e1bbdc", modifiers: "Bold")
+                           	),
+                           						(kind: Text("]"), style: (fg: "#e1bbdc", modifiers: "Bold"))
+                           ], align: Left)),
+                           size: "12",
+                       ),
+                       (
+                           size: "100%",
+                           pane: Pane(ProgressBar),
+                       ),
+                       (
+                           size: "14",
+                           pane: Pane(Property(
+                               content: [
+                                   (kind: Property(Status(Elapsed)), style: (fg: "#b3c5ff")),
+                                   (kind: Text(" / ")),
+                                   (kind: Property(Status(Duration)), style: (fg: "#b3c5ff")),
+                               ], align: Right,
+                           )),
+                       ),
+                      ]
+                    ),
+                ),
         ],
     ),
     header: (
         rows: [
             (
                 left: [
-                    (kind: Text("["), style: (fg: "#e1bbdc", modifiers: "Bold")),
-                    (
-                      kind: Property(Status(StateV2(playing_label: "Playing", paused_label: "Paused", stopped_label: "Stopped"))),
-                      style: (fg: "#e1bbdc", modifiers: "Bold")
-                    ),
-                    (kind: Text("]"), style: (fg: "#e1bbdc", modifiers: "Bold"))
+                    (kind: Property(Status(Bitrate))),
+                    (kind: Text(" kbps"), style: (modifiers: "Dim"))
                 ],
                 center: [
                     (kind: Property(Song(Title)), style: (modifiers: "Bold"),
@@ -162,12 +192,8 @@
             ),
             (
                 left: [
-                    (kind: Property(Status(Elapsed))),
-                    (kind: Text(" / ")),
-                    (kind: Property(Status(Duration))),
-                    (kind: Text(" (")),
-                    (kind: Property(Status(Bitrate))),
-                    (kind: Text(" kbps)"))
+                    (kind: Property(Status(QueueTimeRemaining()))),
+                    (kind: Text(" remaining in queue"), style: (modifiers: "Dim"))
                 ],
                 center: [
                     (kind: Property(Song(Artist)), style: (fg: "#e1bbdc", modifiers: "Bold"),

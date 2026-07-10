@@ -182,7 +182,9 @@
                                         top_right: "┤",
                                         bottom_right: "┤",
                                     ),
-                                    border_title: [(kind: Text(" Lyrics"), style: (modifiers: "Bold | Dim"))],
+                                    border_title: [
+                                    (kind: Text(" Lyrics"), style: (modifiers: "Bold | Dim")),
+                                    ],
                                     border_title_alignment: Left,
                                     pane: Pane(Lyrics)
                                 ),

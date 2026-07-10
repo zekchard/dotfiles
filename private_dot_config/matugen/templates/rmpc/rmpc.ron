@@ -75,7 +75,7 @@
                 style: (fg: "{{ colors.primary_fixed.default.hex }}"),
                 default: (kind: Text("Unknown"), style: (fg: "{{ colors.primary_fixed.default.hex }}"))
             ),
-            width: "25%",
+			width: "25%",
             alignment: Left,
         ),
         (
@@ -84,21 +84,22 @@
                 style: (fg: "{{ colors.primary.default.hex }}"),
                 default: (kind: Text("Unknown"), style: (fg: "{{ colors.primary_fixed.default.hex }}"))
             ),
-            width: "40%",
+            width: "35%",
             alignment: Left,
         ),
         (
             prop: (kind: Property(Album), style: (fg: "{{ colors.primary_fixed.default.hex }}"),
                 default: (kind: Text("Unknown Album"), style: (fg: "{{ colors.primary_fixed.default.hex }}"))
             ),
-            width: "25%",
-            alignment: Right,
+            width: "30%",
+            alignment: Left,
         ),
         (
             prop: (kind: Property(Duration), style: (fg: "{{ colors.primary.default.hex }}"),
                 default: (kind: Text("-"), style: (fg: "{{ colors.primary_fixed.default.hex }}"))
             ),
-            width: "8%",
+			label: "Lnth.",
+            width: "6",
             alignment: Right,
         ),
     ],
@@ -132,23 +133,52 @@
                 ),
             ),
             (
-                pane: Pane(ProgressBar),
-                size: "2",
-                borders: "LEFT | RIGHT | BOTTOM",
-                border_symbols: Rounded
-            ),
+               size: "2",
+               borders: "LEFT | RIGHT | BOTTOM",
+               border_symbols: Inherited(
+                   parent: Rounded,
+                   top_left: "├",
+                   top_right: "┤",
+                ),
+               pane: Split(
+                   direction: Horizontal,
+                   panes: [
+                       (
+                           pane: Pane(Property(content: [
+                           	(kind: Text("["), style: (fg: "{{ colors.tertiary.default.hex }}", modifiers: "Bold")),
+                            (
+                           		kind: Property(Status(StateV2(playing_label: "Playing", paused_label: "Paused", stopped_label: "Stopped"))),
+                           	    style: (fg: "{{ colors.tertiary.default.hex }}", modifiers: "Bold")
+                           	),
+                           						(kind: Text("]"), style: (fg: "{{ colors.tertiary.default.hex }}", modifiers: "Bold"))
+                           ], align: Left)),
+                           size: "12",
+                       ),
+                       (
+                           size: "100%",
+                           pane: Pane(ProgressBar),
+                       ),
+                       (
+                           size: "14",
+                           pane: Pane(Property(
+                               content: [
+                                   (kind: Property(Status(Elapsed)), style: (fg: "{{ colors.primary.default.hex }}")),
+                                   (kind: Text(" / ")),
+                                   (kind: Property(Status(Duration)), style: (fg: "{{ colors.primary.default.hex }}")),
+                               ], align: Right,
+                           )),
+                       ),
+                      ]
+                    ),
+                ),
         ],
     ),
     header: (
         rows: [
             (
                 left: [
-                    (kind: Text("["), style: (fg: "{{ colors.tertiary.default.hex }}", modifiers: "Bold")),
-                    (
-                      kind: Property(Status(StateV2(playing_label: "Playing", paused_label: "Paused", stopped_label: "Stopped"))),
-                      style: (fg: "{{ colors.tertiary.default.hex }}", modifiers: "Bold")
-                    ),
-                    (kind: Text("]"), style: (fg: "{{ colors.tertiary.default.hex }}", modifiers: "Bold"))
+                    (kind: Property(Status(Bitrate))),
+                    (kind: Text(" kbps"), style: (modifiers: "Dim"))
                 ],
                 center: [
                     (kind: Property(Song(Title)), style: (modifiers: "Bold"),
@@ -162,12 +192,8 @@
             ),
             (
                 left: [
-                    (kind: Property(Status(Elapsed))),
-                    (kind: Text(" / ")),
-                    (kind: Property(Status(Duration))),
-                    (kind: Text(" (")),
-                    (kind: Property(Status(Bitrate))),
-                    (kind: Text(" kbps)"))
+                    (kind: Property(Status(QueueTimeRemaining()))),
+                    (kind: Text(" remaining in queue"), style: (modifiers: "Dim"))
                 ],
                 center: [
                     (kind: Property(Song(Artist)), style: (fg: "{{ colors.tertiary.default.hex }}", modifiers: "Bold"),
