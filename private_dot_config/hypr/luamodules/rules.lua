@@ -26,6 +26,50 @@
 -- Window Rules --
 ------------------
 
+local modalMatches = {
+    { title = "^(Open|Authentication Required|Add Folder to Workspace|Choose Files|Save As|Confirm to replace files|File Operation Progress)$" },
+    { initial_title = "^(Open File)$" },
+    { class = "^([Xx]dg-desktop-portal-gtk)$" },
+    { title = "^(File Upload|Choose wallpaper|Library)(.*)$" },
+    { class = "^(.*dialog.*)$" },
+    { title = "^(.*dialog.*)$" },
+    { class = "^(hyprland-share-picker)$"},
+}
+for _, m in ipairs(modalMatches) do hl.window_rule({match = m, float = true, size = {"max(monitor_w, monitor_h)*0.8", "min(monitor_w, monitor_h)*0.8"}, }) end
+
+local gameClass = "^(steam_app.*|gamescope|genshinimpact.*|zenlesszonezero.*)$"
+hl.window_rule({
+	match = { class = gameClass },
+	float = 0,
+	monitor = 0,
+	fullscreen_state = 3,
+	center = true,
+	immediate = true,
+	content = "game",
+	no_blur = 1,
+})
+
+local opacityOverride = {
+    { class = "^(kitty|ghostty|[Kk]onsole|Alacritty|gnome-terminal|xfce[0-9]?-terminal)$" },
+    { class = "^(mpv|org.kde.haruna|.*plex.*|org\\.kde\\.gwenview|.*vlc.*)$" },
+    { class = "^(firefox|zen.*|goofcord)$" },
+}
+for _, m in ipairs(opacityOverride) do hl.window_rule({ match = m, opacity = "1.0 override" }) end
+
+local floatApps = {
+    { class = "^(kvantummanager|qt[56]ct|nwg-look)$" },
+    { class = "^(org.pulseaudio.pavucontrol|blueman-manager|nm-applet|nm-connection-editor)$" },
+    { title = "^(Winetricks.*|Protontricks.*)$" },
+    { title = ".*QuickCSS.*" },
+}
+for _, m in ipairs(floatApps) do hl.window_rule({ match = m, float = true }) end
+
+hl.window_rule({
+	match = { class = "^(.*[Cc]alculator.*)$" },
+	float = true,
+	size = { "max(monitor_w, monitor_h)*0.17", "min(monitor_w, monitor_h)*0.43" }
+})
+
 local floatfocusfix = hl.window_rule({
   name = "floatfocusfix",
   no_initial_focus = 1,
@@ -44,8 +88,8 @@ local suppressMaximizeRule = hl.window_rule({
     suppress_event = "maximize",
 })
 
--- suppressMaximizeRule:set_enabled(false)
--- Ignore maximize requests from all apps. Uncomment line above to disable
+suppressMaximizeRule:set_enabled(true)
+-- Ignore maximize requests from all apps. set_enabled(false) to disable
 
 hl.window_rule({
   name = "smart-gaps1",
@@ -69,15 +113,39 @@ hl.window_rule({
   	},
 })
 
+hl.window_rule({ match = { float = true }, center = true })
+
+-- Disabling that thing that bugged me from dragging anything in Photoshop --
+hl.window_rule({
+  name = "photoshop",
+  match = {
+  	class = ".*steam_proton.*",
+  	xwayland = 1,
+  	float = 1,
+  	},
+  no_initial_focus = 1,
+  no_blur = 1,
+  no_dim = 1,
+  no_anim = 1,
+  nearest_neighbor = 1,
+  no_max_size = 1,
+  force_rgbx = 0,
+  float = 1,
+  center = false,
+})
+
 hl.window_rule({
   name = "pip",
   float = 1,
   pin = 1,
   keep_aspect_ratio = 1,
+  size = {
+  	"max(monitor_w, monitor_h)*0.25",
+  	"min(monitor_w, monitor_h)*0.25" 
+  	},
   content = "video",
   match = {
-  	class = ".*zen.*",
- 	title = "^(Picture-in-Picture)$",
+ 	title = "^([Pp]icture[-\\s]?[Ii]n[-\\s]?[Pp]icture)(.*)$",
  	},
 })
 
@@ -103,25 +171,6 @@ hl.window_rule({
   	},
 })
 
-
--- Disabling that thing that bugged me from dragging anything in Photoshop --
-hl.window_rule({
-  name = "photoshop",
-  match = {
-  	class = ".*steam_proton.*",
-  	xwayland = 1,
-  	float = 1,
-  	},
-  no_initial_focus = 1,
-  no_blur = 1,
-  no_dim = 1,
-  no_anim = 1,
-  nearest_neighbor = 1,
-  no_max_size = 1,
-  force_rgbx = 0,
-  float = 1,
-})
-
 hl.window_rule({
   name = "dvr",
   match = {
@@ -135,18 +184,6 @@ hl.window_rule({
   force_rgbx = 0,
 })
 
--- The one above but for everything now because i also encountered that in Audacity aswell lmao --
-
-hl.window_rule({
-  name = "desktop-portal",
-  match = {
-    	class = ".*desktop-portal.*",
-    	initial_class = ".*desktop-portal.*"
-    	},
-  float = 1,
-  size = {"(monitor_w*0.8)", "(monitor_h*0.8)"},
-})
-
 hl.window_rule({
   name = "polkit",
   match = {
@@ -154,6 +191,7 @@ hl.window_rule({
     	},
   no_initial_focus = 0,
   stay_focused = 1,
+  pin = 1,
   dim_around = 1,
 })
 
@@ -167,19 +205,16 @@ hl.window_rule({
   name = "pulsevis",
   match = {
   	class = ".*pulse-visualizer.*",
-  	title = "Pulse.*"
+  	title = "Pulse .*"
   	},
   size = {1280, 200},
   persistent_size = 1,
   pseudo = 1,
   tile = 1,
-  keep_aspect_ratio = 1
+  keep_aspect_ratio = 1,
+  opacity = 0.85
 })
 
-hl.window_rule({
-  match = { title = "QuickCSS" },
-  float = 1,
-})
 
 
 -----------------

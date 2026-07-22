@@ -43,10 +43,16 @@ hl.config({
       split_bias                   = 0,
       precise_mouse_move           = false,
   },
+  
   master = {
       new_status = master,
   },
+  
   misc = {
+  	  col = {
+      	splash = primary,
+      },
+      
   	  size_limits_tiled = true,
   	  
       force_default_wallpaper = 1,
@@ -59,22 +65,31 @@ hl.config({
       
       always_follow_on_dnd = 1,
       anr_missed_pings = 30,
+
+      enable_swallow = true,
+	  swallow_regex = "(kitty|ghostty|[Kk]onsole|Alacritty|gnome-terminal|xfce[0-9]?-terminal)",
+
+	  vrr = 3
   },
-  debug = {
   
+  debug = {
     full_cm_proto = true,
     disable_logs = true,
-    
-    },
-    xwayland = {
-    
+  },
+  
+  xwayland = {
     create_abstract_socket = true,
-    
-    },
-    render = {
-    
+    force_zero_scaling = true
+  },
+  
+  render = {
     xp_mode = false,
     new_render_scheduling = false,
-    
-    }
+  },
+  
+  ecosystem = {
+    no_update_news = true,
+    no_donation_nag = true,
+  }
+  
 })

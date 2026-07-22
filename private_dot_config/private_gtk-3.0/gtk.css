@@ -3,7 +3,13 @@
 
 /* Window */
 window {
-    background-color: alpha(@window_bg_color, 0.85);
+    background-color: alpha(@window_bg_color, 0.85) ;
+}
+
+.sidebar-pane,
+.sidebar-pane:disabled,
+.sidebar-pane:backdrop {
+    background-color: alpha(@surface_container_high, 0.10) ;
 }
 
 /* Headerbar */
@@ -14,16 +20,16 @@ headerbar {
 /* Selected files */
 .view:selected,
 .view:selected:focus {
-    border-radius: 6px;
+    border-radius: 6px ;
 }
 
 /* Buttons */
 button {
-    border-radius: 5px;
+    border-radius: 5px ;
 }
 
 /* Scrollbars */
 scrollbar slider {
-    background-color: alpha(@accent_color, 0.5);
+    background-color: alpha(@accent_color, 0.5) ;
     border-radius: 15px;
 }

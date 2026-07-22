@@ -177,7 +177,7 @@
         rows: [
             (
                 left: [
-                    (kind: Property(Status(Bitrate))),
+                    (kind: Property(Status(Bitrate)), default: (kind: Text("0"))),
                     (kind: Text(" kbps"), style: (modifiers: "Dim"))
                 ],
                 center: [

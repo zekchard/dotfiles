@@ -48,7 +48,6 @@
 @define-color destructive_fg_color {{colors.on_error_container.default.hex}};
 @define-color destructive_color {{colors.error.default.hex}};
 
-
 /*
  adw-gtk-theme colors
  Generated with Matugen
@@ -57,7 +56,7 @@
  https://gitlab.gnome.org/GNOME/libadwaita/-/blob/main/src/stylesheet/_colors.scss
 */
 
-:root {
+* {
     --accent-blue: {{ colors.primary.default.hex | to_color | harmonize: {{ "#3584e4" | to_color }} }};
     --accent-teal: {{ colors.primary.default.hex | to_color | harmonize: {{ "#2190a4" | to_color }} }};
     --accent-green: {{ colors.primary.default.hex | to_color | harmonize: {{ "#3a944a" | to_color }} }};
@@ -125,3 +124,6 @@
     --shade-color: @shade_color;
     --scrollbar-outline-color: @scrollbar_outline_color;
 }
+<* for name, value in colors *>
+@define-color {{name}} {{value.default.hex}};
+<* endfor *>

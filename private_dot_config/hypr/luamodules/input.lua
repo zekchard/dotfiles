@@ -13,12 +13,7 @@
 
 hl.config({
     input = {
-        kb_layout  = "us",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "",
-        kb_rules   = "",
-
+    
         follow_mouse = 1,
  	    follow_mouse_threshold = 1,
 	    mouse_refocus = 1,
@@ -30,6 +25,10 @@ hl.config({
         touchpad = {
             natural_scroll = false,
         },
+
+        tablet = {
+        	output = "current",
+        }
     },
     gestures = {
   	  workspace_swipe_touch = false,
@@ -46,7 +45,14 @@ hl.gesture({
 -- Example per-device config
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
 hl.device({
+    name = "opentabletdriver-virtual-artist-tablet",
+	enabled = true,
+	output = "current",
+})
+
+hl.device({
     name        = "ugreen-mouse-1",
+    enabled = true,
     sensitivity = -0.865,
     scroll_factor = 1.0,
 })
@@ -58,3 +64,9 @@ hl.device({
     scroll_factor = 0.3,
 })
 
+hl.device({
+    name        = "asue1201:00-04f3:3125-mouse",
+    sensitivity = 0.4,
+    accel_profile = "flat",
+    scroll_factor = 0.3,
+})

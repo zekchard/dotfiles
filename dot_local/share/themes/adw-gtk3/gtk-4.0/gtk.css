@@ -1,16 +1,17 @@
 /* Load Matugen colors */
-@import "colors.css";
 @import "libadwaita.css";
-@import "libadwaitatweaks.css";
+@import "libadwaita-tweaks.css";
+@import "colors.css";
 
 /* Window */
 window {
     background-color: alpha(@window_bg_color, 0.85) ;
 }
 
-/* Headerbar */
-headerbar {
-    border-bottom: 1px solid alpha(@window_fg_color, 0.1);
+.sidebar-pane,
+.sidebar-pane:disabled,
+.sidebar-pane:backdrop {
+    background-color: alpha(@surface_container_high, 0.10) ;
 }
 
 /* Selected files */
@@ -29,4 +30,3 @@ scrollbar slider {
     background-color: alpha(@accent_color, 0.5) ;
     border-radius: 15px;
 }
-

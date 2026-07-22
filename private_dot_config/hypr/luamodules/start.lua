@@ -32,6 +32,7 @@ exec-once = kdeconnect-indicator
 
 hl.on("hyprland.start", function () 
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+  hl.exec_cmd("xhost +SI:localuser:root")
   hl.exec_cmd("wlsunset -l 13.6 -L 121.1 -t 3700")
   hl.exec_cmd("waypaper --restore --no-post-command")
   hl.exec_cmd(terminal)
@@ -50,8 +51,8 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("kdeconnectd")
   hl.exec_cmd("kdeconnect-indicator")
   hl.exec_cmd("sleep 1 && easyeffects -w --service-mode")
-  hl.exec_cmd("sleep 2.5 && pw-play '/home/zek/.config/hypr/snds/(s).wav' --volume 0.3")
-  hl.exec_cmd("sleep 3 && pano-scrobbler -m")
+  hl.exec_cmd("sleep 3.5 && pw-play '/home/zek/.config/hypr/snds/(s).wav' --volume 0.3")
+  hl.exec_cmd("sleep 3.5 && pano-scrobbler -m")
 end)
 
 hl.on("hyprland.shutdown", function () 
