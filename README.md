@@ -1,7 +1,6 @@
 <div align=center>
 
-# EiMikOS dotfiles
-~we don't need shells where we're going~
+![Title](dotfile-repo-assets/title.png)
 
 ![Fetches](dotfile-repo-assets/fetches.png)
 
