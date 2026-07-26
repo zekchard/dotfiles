@@ -17,7 +17,7 @@ SHIPFETCH_IMG="${images[$SHIPFETCH_INDEX]}"
 
 fastfetch \
 -c "$HOME/scripts/shipfetch/shipfetch.jsonc" \
---kitty "$SHIPFETCH_IMG" \
+--logo "$SHIPFETCH_IMG" \
 --logo-height 12 \
 --logo-padding-right 2 \
 --logo-padding-left 2 \

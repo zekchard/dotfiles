@@ -1,5 +1,7 @@
 [config]
 
+verbose = true
+
 [config.wallpaper]
 # Whether to set the wallpaper or not
 set = false
@@ -80,6 +82,7 @@ post_hook = "swaync-client -R -rs"
 [templates.wlogout]
 input_path = '~/.config/matugen/colors.css'
 output_path = '~/.config/wlogout/colors.css'
+pre_hook = """sed -i 's/fill="[^"]*"/fill="{{ colors.primary.default.hex }}"/g' $HOME/.config/wlogout/icons/*.svg"""
 
 # Self-made
 [templates.discord-system24]
@@ -199,3 +202,8 @@ colors_to_compare = [
 compare_to = "{{ colors.primary.default.hex }}"
 post_hook = 'sudo -n papirus-folders -C {{ closest_color }} -u'
 index = 1
+
+[templates.nvim]
+input_path = "~/.config/matugen/templates/nvim-colors.json"
+output_path = "~/.config/nvim/matugen.json"
+post_hook = "pkill -SIGUSR1 nvim"
