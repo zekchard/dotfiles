@@ -29,7 +29,7 @@ You can also download the tar from [releases](https://github.com/zekchard/dotfil
 || or alternatively, `extra/kvantum` |
 ||`extra/qt5ct`|
 ||`extra/qt6ct`|
-| GTK | [`adw-gtk-theme`](https://github.com/lassekongo83/adw-gtk3) in `~/.local/share/themes` |
+| GTK | [`adw-gtk-theme`](https://github.com/lassekongo83/adw-gtk3) in [`~/.local/share/themes`](./dot_local/share/themes) |
 ||`extra/nwg-look`|
 | Icons | `chaotic-aur/papirus-folders` [with extra setup](https://github.com/InioX/matugen-themes#papirus-folders) |
 | Cursor | [`bibata-cursor-theme`](https://github.com/ful1e5/Bibata_Cursor) in `~/.local/share/icons` |
@@ -45,7 +45,8 @@ You can also download the tar from [releases](https://github.com/zekchard/dotfil
 | :- | :- |
 | Window Manager and Compositor | `extra/hyprland` |
 | Theming Engine | `extra/matugen` |
-|  | `chaotic-aur/python-materialyoucolor` for the [universal terminal colors template]( https://github.com/InioX/matugen-themes/pull/132) to work|
+|  | `chaotic-aur/python-materialyoucolor` for the [universal terminal colors template](https://github.com/InioX/matugen-themes/pull/132) to work |
+|  | `chaotic-aur/papirus-folders` for the [papirus-folders template](https://github.com/InioX/matugen-themes#papirus-folders) to work |
 | Terminal | `extra/kitty` |
 | Status Bar | `extra/waybar` |
 | Notifications | `extra/swaync` |

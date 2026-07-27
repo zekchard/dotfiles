@@ -22,6 +22,7 @@ output_path = '~/.config/matugen/current-color'
 input_path = '~/.config/matugen/templates/current'
 #post_hook = 'magick "/home/zek/.config/fastfetch/wriorindeffbase.png" -gamma 2.5 -fill "{{colors.primary.default.hex}}" -tint 50 /home/zek/.config/fastfetch/wriorindeffcolored.png'
 post_hook = 'magick mogrify -path /home/zek/scripts/shipfetch/assets/ -gamma 1.75 -fill "{{colors.primary.default.hex}}" -tint 80 /home/zek/scripts/shipfetch/assets/base/*.png'
+index = 2
 
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.lua'
@@ -200,10 +201,5 @@ colors_to_compare = [
     { name = "yellow",     color = "#f9bd30" },
 ]
 compare_to = "{{ colors.primary.default.hex }}"
-post_hook = 'sudo -n papirus-folders -C {{ closest_color }} -u'
+post_hook = 'nohup sudo -n papirus-folders -C {{ closest_color }} -u > /dev/null 2>&1 &'
 index = 1
-
-[templates.nvim]
-input_path = "~/.config/matugen/templates/nvim-colors.json"
-output_path = "~/.config/nvim/matugen.json"
-post_hook = "pkill -SIGUSR1 nvim"
