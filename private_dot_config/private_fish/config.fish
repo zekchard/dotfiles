@@ -32,8 +32,8 @@ alias hyprconf='yazi ~/.config/hypr/'
 alias wbref='killall -SIGUSR2 waybar'
 alias wbconf='yazi ~/.config/waybar'
 
-alias cl="matugen --dry-run --verbose --show-colors --continue-on-error -r gaussian -t scheme-tonal-spot color hex $(cat ~/.config/matugen/current-color)"
-alias cr="matugen --verbose --show-colors --continue-on-error -r gaussian -t scheme-tonal-spot color hex $(cat ~/.config/matugen/current-color)"
+alias cl="$HOME/.config/matugen/cliparams.sh --dry-run color hex $(cat ~/.config/matugen/current-color)"
+alias cr="$HOME/.config/matugen/cliparams.sh color hex $(cat ~/.config/matugen/current-color)"
 
 alias psyu='sudo pacman -Syu'
 alias psy='sudo pacman -Sy'

@@ -27,7 +27,7 @@ hl.config({
         },
 
         tablet = {
-        	output = "current",
+        	output = "1",
         }
     },
     gestures = {
@@ -47,7 +47,7 @@ hl.gesture({
 hl.device({
     name = "opentabletdriver-virtual-artist-tablet",
 	enabled = true,
-	output = "current",
+	output = "1",
 })
 
 hl.device({

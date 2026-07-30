@@ -55,7 +55,7 @@ output_path = '~/.config/wofi/colors.css'
 [templates.gtk3]
 input_path = '~/.config/matugen/templates/adw-gtk.css'
 output_path = '~/.config/gtk-3.0/colors.css'
-#post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
 
 [templates.gtk4]
 input_path = '~/.config/matugen/templates/adw-gtk.css'
@@ -160,9 +160,16 @@ input_path = '~/.config/matugen/templates/starship-colors.toml'
 output_path = '~/.config/starship.toml'
 
 # Self-made
-[templates.zen-browser]
+[templates.zen-transparentzen]
 input_path = '~/.config/matugen/templates/transparentzen.js'
 output_path = "~/.config/zen/viokbum7.Default (release)/user.js"
+# https://github.com/InioX/matugen-themes/pull/159
+[templates.zen-usercontent]
+input_path = "~/.config/matugen/templates/zen-usercontent.css"
+output_path = "~/.config/zen/viokbum7.Default (release)/chrome/zen-userContent.css"
+[templates.zen-userchrome]
+input_path = "~/.config/matugen/templates/zen-userchrome.css"
+output_path = "~/.config/zen/viokbum7.Default (release)/chrome/zen-userChrome.css"
 
 # Self-made
 [templates.mangohud]

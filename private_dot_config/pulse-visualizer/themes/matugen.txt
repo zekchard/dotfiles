@@ -3,9 +3,9 @@
 ## Primary Colors:
 
 credit: "Matugen generated theme"
-color: 179, 197, 255
+color: 180, 197, 255
 selection: 219, 225, 255
 text: 227, 226, 233
-accent: 81, 86, 104
+accent: 102, 107, 127
 bg: 18, 19, 24
 bgaccent: 56, 57, 63

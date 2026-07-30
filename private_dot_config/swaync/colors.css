@@ -11,7 +11,7 @@
 
 @define-color inverse_on_surface rgba(47, 48, 54, 1);
 
-@define-color inverse_primary rgba(74, 92, 146, 1);
+@define-color inverse_primary rgba(75, 92, 146, 1);
 
 @define-color inverse_surface rgba(227, 226, 233, 1);
 
@@ -21,19 +21,19 @@
 
 @define-color on_error_container rgba(255, 218, 214, 1);
 
-@define-color on_primary rgba(25, 46, 96, 1);
+@define-color on_primary rgba(26, 45, 96, 1);
 
 @define-color on_primary_container rgba(219, 225, 255, 1);
 
-@define-color on_primary_fixed rgba(0, 24, 73, 1);
+@define-color on_primary_fixed rgba(0, 23, 75, 1);
 
-@define-color on_primary_fixed_variant rgba(49, 69, 120, 1);
+@define-color on_primary_fixed_variant rgba(50, 68, 120, 1);
 
 @define-color on_secondary rgba(42, 48, 66, 1);
 
-@define-color on_secondary_container rgba(221, 226, 249, 1);
+@define-color on_secondary_container rgba(221, 225, 249, 1);
 
-@define-color on_secondary_fixed rgba(21, 27, 44, 1);
+@define-color on_secondary_fixed rgba(22, 27, 44, 1);
 
 @define-color on_secondary_fixed_variant rgba(65, 70, 89, 1);
 
@@ -43,7 +43,7 @@
 
 @define-color on_tertiary rgba(66, 39, 65, 1);
 
-@define-color on_tertiary_container rgba(255, 214, 249, 1);
+@define-color on_tertiary_container rgba(255, 214, 248, 1);
 
 @define-color on_tertiary_fixed rgba(43, 18, 43, 1);
 
@@ -53,27 +53,27 @@
 
 @define-color outline_variant rgba(69, 70, 79, 1);
 
-@define-color primary rgba(179, 197, 255, 1);
+@define-color primary rgba(180, 197, 255, 1);
 
-@define-color primary_container rgba(49, 69, 120, 1);
+@define-color primary_container rgba(50, 68, 120, 1);
 
 @define-color primary_fixed rgba(219, 225, 255, 1);
 
-@define-color primary_fixed_dim rgba(179, 197, 255, 1);
+@define-color primary_fixed_dim rgba(180, 197, 255, 1);
 
 @define-color scrim rgba(0, 0, 0, 1);
 
-@define-color secondary rgba(193, 198, 221, 1);
+@define-color secondary rgba(193, 197, 221, 1);
 
 @define-color secondary_container rgba(65, 70, 89, 1);
 
-@define-color secondary_fixed rgba(221, 226, 249, 1);
+@define-color secondary_fixed rgba(221, 225, 249, 1);
 
-@define-color secondary_fixed_dim rgba(193, 198, 221, 1);
+@define-color secondary_fixed_dim rgba(193, 197, 221, 1);
 
 @define-color shadow rgba(0, 0, 0, 1);
 
-@define-color source_color rgba(81, 86, 104, 1);
+@define-color source_color rgba(102, 107, 127, 1);
 
 @define-color surface rgba(18, 19, 24, 1);
 
@@ -91,15 +91,15 @@
 
 @define-color surface_dim rgba(18, 19, 24, 1);
 
-@define-color surface_tint rgba(179, 197, 255, 1);
+@define-color surface_tint rgba(180, 197, 255, 1);
 
 @define-color surface_variant rgba(69, 70, 79, 1);
 
-@define-color tertiary rgba(225, 187, 220, 1);
+@define-color tertiary rgba(226, 187, 220, 1);
 
 @define-color tertiary_container rgba(90, 61, 88, 1);
 
-@define-color tertiary_fixed rgba(255, 214, 249, 1);
+@define-color tertiary_fixed rgba(255, 214, 248, 1);
 
-@define-color tertiary_fixed_dim rgba(225, 187, 220, 1);
+@define-color tertiary_fixed_dim rgba(226, 187, 220, 1);
 
