@@ -61,4 +61,8 @@ fi
 if [[ $1 == "endsilent" ]]; then
  endsilent
 fi
+if [[ $1 == "killallprocs" ]]; then
  killallprocs
+fi
+ end
+fi
