@@ -53,6 +53,7 @@
             "max-length": 64,
             "icon": false,
             "icon-size": 12,
+            "tooltip-format": "{initialClass}",
             "format": "{title}",
             "format-alt": "{class}",
         },
@@ -77,7 +78,7 @@
     },
     "wireplumber": {
         "format": "{icon}{volume}%",
-        "format-muted": " ",
+        "format-muted": "󰝟 MUTED",
         "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": [" ", " ", " "],
@@ -87,13 +88,11 @@
 	"interval": 2,
         "format": " {bandwidthTotalBytes}",
         // "format-ethernet": "   {bandwidthUpBytes} | {bandwidthDownBytes} ",
-        "tooltip-format": "{ifname} via {essid} ",
+        "tooltip-format": "{essid} connected as {ipaddr}",
         // "format-linked": "{ifname} (No IP) ",
         "format-alt": "  {bandwidthUpBytes} | {bandwidthDownBytes} ",
         "format-disconnected": "Disconnected ⚠",
-	"on-click-right": "airctl",
-	"on-click-middle": "nmtui"
-	 
+	"on-click-right": "$TERM nmtui"
     },
     "cpu": {
         "interval": 2,
@@ -109,7 +108,7 @@
     },
     "temperature": {
         "interval": 2,
-        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
+        "hwmon-path": ["/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp1_input", "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp2_input"],
         "critical-threshold": 95,
         "warning-threshold": 85,
         "format": " {temperatureC}°C"
@@ -123,6 +122,13 @@
     "states": {
     	"warning": 20,
     	"critical": 15
+    },
+    "events": {
+		"on-discharging-warning": "notify-send -a 'Waybar battery notification' -u normal 'Battery is at 20%, consider charging'",
+		"on-discharging-critical": "notify-send -a 'Waybar battery notification' -u critical 'Battery is at 15%, consider charging immediately'",
+		"on-charging-100": "notify-send  -a 'Waybar battery notification' -u normal 'Battery is full'",
+		"on-discharging": "notify-send -a 'Waybar battery notification' -u normal 'Battery is disconnected from power source'",
+		"on-charging": "notify-send -a 'Waybar battery notification' -u normal 'Battery is charging'"
     },
 	"interval": 5,
         "format": "{icon} {capacity}%    {power} W",
@@ -146,14 +152,14 @@
 	  "tooltip": true,
 	  "format": "<span size='10pt'>{icon}</span>  {0}",
 	  "format-icons": {
-	    "notification": "󱅫",
-	    "none": "󰂜",
-	    "dnd-notification": "󰂠",
-	    "dnd-none": "󰪓",
-	    "inhibited-notification": "󰂛",
-	    "inhibited-none": "󰪑",
-	    "dnd-inhibited-notification": "󰂛",
-	    "dnd-inhibited-none": "󰪑"
+		    "notification": "󱅫",
+		    "none": "󰂜",
+		    "dnd-notification": "󰂠",
+		    "dnd-none": "󰪓",
+		    "inhibited-notification": "󰂛",
+		    "inhibited-none": "󰪑",
+		    "dnd-inhibited-notification": "󰂛",
+		    "dnd-inhibited-none": "󰪑"
 	  },
 	  "restart-interval": 5,
 	  "return-type": "json",

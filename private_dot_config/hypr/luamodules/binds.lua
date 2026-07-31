@@ -64,9 +64,9 @@ hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- hyprpicker and hyprshot --
 hl.bind("ALT + SHIFT + Z", hl.dsp.exec_cmd("hyprpicker -a"))
-hl.bind("PRINT", hl.dsp.exec_cmd("pkill hyprshot & hyprshot -m active -m output -o ~/Pictures/Screenshots -z")) -- Screenshot active monitor
-hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("pkill hyprshot & hyprshot -m region -o ~/Pictures/Screenshots -z")) -- Screenshot region
-hl.bind("ALT + PRINT", hl.dsp.exec_cmd("pkill hyprshot & hyprshot -m window -o ~/Pictures/Screenshots -z")) -- Screenshot window
+hl.bind("PRINT", hl.dsp.exec_cmd("killall hyprshot ; hyprshot -m active -m output -o ~/Pictures/Screenshots -z")) -- Screenshot active monitor
+hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("killall hyprshot ; hyprshot -m region -o ~/Pictures/Screenshots -z")) -- Screenshot region
+hl.bind("ALT + PRINT", hl.dsp.exec_cmd("killall hyprshot ; hyprshot -m window -o ~/Pictures/Screenshots -z")) -- Screenshot window
 
 -- was going to replace hyprshot with HyprCapture but it seems to be a lil underbaked for me (especially in multi-monitor setups like mine) --
 

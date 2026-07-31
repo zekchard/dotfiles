@@ -69,9 +69,9 @@ end
 
 local floatApps = {
 	{ class = "^(kvantummanager|qt[56]ct|nwg-look)$" },
-	{ class = "^(org.pulseaudio.pavucontrol|blueman-manager|nm-applet|nm-connection-editor)$" },
+	{ class = "^(org.pulseaudio.pavucontrol|com.saivert.pwvucontrol|blueman-manager|nm-applet|nm-connection-editor)$" },
 	{ title = "^(Winetricks.*|Protontricks.*)$" },
-	{ title = ".*QuickCSS.*" },
+	{ title = "^.*QuickCSS.*$" },
 }
 for _, m in ipairs(floatApps) do
 	hl.window_rule({ match = m, float = true })
@@ -152,9 +152,10 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "pip",
-	float = 1,
-	pin = 1,
-	keep_aspect_ratio = 1,
+	dim_around = false,
+	float = true,
+	pin = true,
+	keep_aspect_ratio = true,
 	size = {
 		"max(monitor_w, monitor_h)*0.25",
 		"min(monitor_w, monitor_h)*0.25",

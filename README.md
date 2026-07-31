@@ -59,6 +59,7 @@ You can also download the tar from [releases](https://github.com/zekchard/dotfil
 | Wallpaper Daemon | `chaotic-aur/waypaper-git` |
 |  | `extra/awww` |
 | Power Menu | `chaotic-aur/wlogout` |
+| | `extra/hyprshutdown` |
 | Lock Screen | `extra/hyprlock` |
 | Color Picker | `extra/hyprpicker` |
 | Screenshots | `extra/hyprshot` |
@@ -74,7 +75,7 @@ You can also download the tar from [releases](https://github.com/zekchard/dotfil
 |  | `aur/blueberry-wayland` |
 | Yellow tinter for your eyes | `extra/wlsunset` |
 | Battery Notifications | `extra/batsignal` |
-| Screen Recorder | `chaotic-aur/wl-screenrec` |
+| Screen Recorder | `extra/gpu-screen-recorder` |
 | Audio Visualizer | `aur/pulse-visualizer-git` |
 | Music Player | `extra/rmpc` |
 | spotify for some reason | `chaotic-aur/spotify` |
