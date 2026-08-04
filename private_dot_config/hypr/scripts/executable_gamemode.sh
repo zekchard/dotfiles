@@ -4,6 +4,7 @@ if [ "$HYPRGAMEMODE" = true ] ; then
     hyprctl --batch "\
         eval hl.config({ animations = { enabled = false } });\
         eval hl.config({ decoration = { shadow = { enabled = false } } });\
+        eval hl.config({ decoration = { blur = { xray = true } } });\
         eval hl.config({ decoration = { blur = { enabled = false } } });"
 	swayosd-client --custom-message "Decorations disabled"
     exit

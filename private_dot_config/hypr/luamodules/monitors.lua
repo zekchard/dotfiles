@@ -31,6 +31,7 @@ hl.monitor({
 	mode = "1366x768@67",
 	position = "0x0",
 	scale = "1",
+	icc = "/home/zek/.color/CalibratedDisplayProfile-0.icc",
 })
 
 hl.monitor({

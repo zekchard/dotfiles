@@ -126,7 +126,6 @@
     "events": {
 		"on-discharging-warning": "notify-send -a 'Waybar battery notification' -u normal 'Battery is at 20%, consider charging'",
 		"on-discharging-critical": "notify-send -a 'Waybar battery notification' -u critical 'Battery is at 15%, consider charging immediately'",
-		"on-charging-100": "notify-send  -a 'Waybar battery notification' -u normal 'Battery is full'",
 		"on-discharging": "notify-send -a 'Waybar battery notification' -u normal 'Battery is disconnected from power source'",
 		"on-charging": "notify-send -a 'Waybar battery notification' -u normal 'Battery is charging'"
     },

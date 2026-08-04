@@ -64,5 +64,3 @@ fi
 if [[ $1 == "killallprocs" ]]; then
  killallprocs
 fi
- end
-fi

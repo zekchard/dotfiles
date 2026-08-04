@@ -46,9 +46,14 @@ for _, m in ipairs(modalMatches) do
 	})
 end
 
-local gameClass = "^(steam_app.*|gamescope|genshinimpact.*|zenlesszonezero.*)$"
-hl.window_rule({
-	match = { class = gameClass },
+local gameMatches = {
+	{ initial_title = "^(ZenlessZoneZero.*)$" },
+	{ class = "^(steam_app.*|gamescope)$" },
+	{ class = "^(genshinimpact.*|zenlesszonezero.*)$" },
+}
+for _, m in ipairs(gameMatches) do
+	hl.window_rule({
+		match = m,
 	float = 0,
 	monitor = 0,
 	fullscreen_state = 3,
@@ -57,6 +62,7 @@ hl.window_rule({
 	content = "game",
 	no_blur = 1,
 })
+end
 
 local opacityOverride = {
 	{ class = "^(kitty|ghostty|[Kk]onsole|Alacritty|gnome-terminal|xfce[0-9]?-terminal)$" },
@@ -156,6 +162,7 @@ hl.window_rule({
 	float = true,
 	pin = true,
 	keep_aspect_ratio = true,
+	opacity = "1.0 override",
 	size = {
 		"max(monitor_w, monitor_h)*0.25",
 		"min(monitor_w, monitor_h)*0.25",
