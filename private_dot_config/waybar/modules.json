@@ -1,26 +1,55 @@
 {
+	"hyprland/window": {
+		"align": 0,
+		"justify": "left",
+	   	"max-length": 64,
+	   	"icon": false,
+	   	"icon-size": 12,
+	   	"tooltip-format": "{initialClass}",
+	   	"format": "{title}",
+	   	"format-alt": "{class}",
+	},
+    "hyprland/workspaces": {
+    	"align": 0,
+    	"justify": "left",
+	   	"disable-scroll": false,
+	   	"all-outputs": true,
+	   	"warp-on-scroll": true,
+	   	"show-special": true,
+	   	"format": "{name}{icon}",
+	   	"format-icons": {
+	       	"urgent": " ",
+	       	"active": "",
+	       	"default": ""
+	   }
+    },
     "custom/arch": {
+    	"align": 1,
+    	"justify": "right",
         "format": "",
         "tooltip": true,
-        "tooltip-format": "Tray"
     },
     "tray": {
+    	"align": 1,
+    	"justify": "right",
         "icon-size": 14,
         "spacing": 12
     },
     "group/hardware": {
-	"orientation": "horizontal",
-    "drawer": {
-        "transition-duration": 500,
-        "children-class": "not-power",
-        "transition-left-to-right": false,
-        "click-to-reveal": true
-    },
-	"modules": [
-                "custom/arch",
-		"tray",
-		"idle_inhibitor"
-	]
+    	"align": 1,
+    	"justify": "right",
+		"orientation": "horizontal",
+    	"drawer": {
+        	"transition-duration": 500,
+        	"children-class": "not-power",
+        	"transition-left-to-right": false,
+        	"click-to-reveal": true
+    	},
+		"modules": [
+            "custom/arch",
+			"tray",
+			"idle_inhibitor"
+		]
     },
     "cava": {
             // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
@@ -49,27 +78,9 @@
                        "on-click-right": "mode"
                        }
         },
-     "hyprland/window": {
-            "max-length": 64,
-            "icon": false,
-            "icon-size": 12,
-            "tooltip-format": "{initialClass}",
-            "format": "{title}",
-            "format-alt": "{class}",
-        },
-    "hyprland/workspaces": {
-        "disable-scroll": false,
-        "all-outputs": true,
-        "warp-on-scroll": true,
-        "show-special": true,
-        "format": "{name}{icon}",
-        "format-icons": {
-            "urgent": " ",
-            "active": "",
-            "default": ""
-        }
-    },
     "idle_inhibitor": {
+    	"align": 1,
+    	"justify": "right",
         "format": "{icon}",
         "format-icons": {
             "activated": "",
@@ -77,6 +88,8 @@
         }
     },
     "wireplumber": {
+    	"align": 1,
+    	"justify": "right",
         "format": "{icon}{volume}%",
         "format-muted": "󰝟 MUTED",
         "format-source": " {volume}%",
@@ -85,87 +98,99 @@
         "on-click": "pwvucontrol"
     },
     "network": {
-	"interval": 2,
-        "format": " {bandwidthTotalBytes}",
-        // "format-ethernet": "   {bandwidthUpBytes} | {bandwidthDownBytes} ",
-        "tooltip-format": "{essid} connected as {ipaddr}",
-        // "format-linked": "{ifname} (No IP) ",
-        "format-alt": "  {bandwidthUpBytes} | {bandwidthDownBytes} ",
-        "format-disconnected": "Disconnected ⚠",
-	"on-click-right": "$TERM nmtui"
+    	"align": 1,
+    	"justify": "right",
+		"interval": 2,
+			"tooltip-format": "{essid} connected as {ipaddr}",
+        	"format": " {bandwidthTotalBytes}",
+        	"format-alt": "  {bandwidthUpBytes} | {bandwidthDownBytes} ",
+        	"format-disconnected": "Disconnected ⚠",
+		"on-click-right": "$TERM nmtui"
     },
     "cpu": {
+    	"align": 1,
+    	"justify": "right",
         "interval": 2,
         "format": " {usage}%",
         "format-alt": " {usage}% | {avg_frequency} GHz",
         "tooltip": true
     },
     "memory": {
-	"interval": 2,
+    	"align": 1,
+    	"justify": "right",
+		"interval": 2,
         "format": " {percentage}%",
-        "format-alt": " {used:0.1f}G/{total:0.1f}G",
-	"tooltip": true
+        	"tooltip-format": "{used:0.1f}GiB used\n{swapUsed:0.1f}GiB swap used ({swapState})",
+        	"format-alt": " {used:0.1f}G/{total:0.1f}G",
     },
     "temperature": {
+    	"align": 1,
+    	"justify": "right",
         "interval": 2,
         "hwmon-path": ["/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp1_input", "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp2_input"],
         "critical-threshold": 95,
         "warning-threshold": 85,
         "format": " {temperatureC}°C"
     },
-    "hyprland/language": {
-       "format": "  {}",
-       "format-en": "EN",
-       "format-ru": "RU"
-    },
     "battery": {
-    "states": {
-    	"warning": 20,
-    	"critical": 15
-    },
-    "events": {
-		"on-discharging-warning": "notify-send -a 'Waybar battery notification' -u normal 'Battery is at 20%, consider charging'",
-		"on-discharging-critical": "notify-send -a 'Waybar battery notification' -u critical 'Battery is at 15%, consider charging immediately'",
-		"on-discharging": "notify-send -a 'Waybar battery notification' -u normal 'Battery is disconnected from power source'",
-		"on-charging": "notify-send -a 'Waybar battery notification' -u normal 'Battery is charging'"
-    },
-	"interval": 5,
-        "format": "{icon} {capacity}%    {power} W",
-        "format-full": "{icon} {capacity}%    {power} W",
-        "format-charging": " {capacity}%    {power} W",
-        "format-plugged": " {capacity}%    {power} W",
-        "format-alt": "{icon} {time}    {power} W",
-        "format-icons": ["", "", "", "", ""]
+    	"align": 1,
+    	"justify": "right",
+    	"smooth-power": true,
+    	"smooth-power-time-constant": 60,
+    	"states": {
+    		"warning": 20,
+    		"critical": 10
+    	},
+    	"events": {
+			"on-discharging-warning": "swayosd-client --custom-icon battery-low --custom-message 'Battery low'",
+			"on-discharging-critical": "swayosd-client --custom-icon battery-caution --custom-message 'Battery critical'",
+			"on-discharging": "swayosd-client --custom-icon battery --custom-message 'Discharging'",
+			"on-charging": "swayosd-client --custom-icon battery --custom-message Charging"
+    	},
+		"interval": 5,
+		"tooltip-format": "{timeTo}\n{health} health at {cycles} cycles",
+		"format-time": "{H}:{m}",
+        	"format": "{icon} {capacity}%    {power:0.2f} W",
+        	"format-full": "{icon} {capacity}%    {power:0.2f} W",
+        	"format-charging": " {capacity}%    {power:0.2f} W",
+        	"format-plugged": " {capacity}%    {power:0.2f} W",
+        	"format-alt": "{icon} {time}    {power:0.0f} W",
+        	"format-icons": ["", "", "", "", ""]
     },
     "clock": {
+    	"align": 1,
+    	"justify": "right",
     	"interval": 1,
         "format": "{:%I:%M %p | %b %e %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%I:%M:%OS %p} "
     },
 	"custom/srstatus": {
+		"align": 1,
 	    "exec": "~/.config/waybar/scripts/srstatus.sh",
 	    "restart-interval": 1,
 	},
 	"custom/notification": {
-	  "tooltip": true,
-	  "format": "<span size='10pt'>{icon}</span>  {0}",
-	  "format-icons": {
-		    "notification": "󱅫",
-		    "none": "󰂜",
-		    "dnd-notification": "󰂠",
-		    "dnd-none": "󰪓",
-		    "inhibited-notification": "󰂛",
-		    "inhibited-none": "󰪑",
-		    "dnd-inhibited-notification": "󰂛",
-		    "dnd-inhibited-none": "󰪑"
-	  },
-	  "restart-interval": 5,
-	  "return-type": "json",
-	  "exec-if": "which swaync-client",
-	  "exec": "swaync-client -swb",
-	  "on-click": "swaync-client -t -sw",
-	  "on-click-right": "swaync-client -d -sw",
-	  "escape": true
+		"align": 1,
+		"justify": "right",
+	  	"tooltip": true,
+	  	"format": "<span size='10pt'>{icon}</span>  {0}",
+	  	"format-icons": {
+		    	"notification": "󱅫",
+		    	"none": "󰂜",
+		    	"dnd-notification": "󰂠",
+		    	"dnd-none": "󰪓",
+		    	"inhibited-notification": "󰂛",
+		    	"inhibited-none": "󰪑",
+		    	"dnd-inhibited-notification": "󰂛",
+		    	"dnd-inhibited-none": "󰪑"
+	  	},
+	  	"restart-interval": 5,
+	  	"return-type": "json",
+	  	"exec-if": "which swaync-client",
+	  	"exec": "swaync-client -swb",
+	  	"on-click": "swaync-client -t -sw",
+	  	"on-click-right": "swaync-client -d -sw",
+	  	"escape": true
 	},
 }

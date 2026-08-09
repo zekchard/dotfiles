@@ -61,12 +61,12 @@ hl.device({
     name        = "asue1201:00-04f3:3125-touchpad",
     sensitivity = 0.4,
     accel_profile = "flat",
-    scroll_factor = 0.3,
+    scroll_factor = 1,
 })
 
 hl.device({
     name        = "asue1201:00-04f3:3125-mouse",
     sensitivity = 0.4,
     accel_profile = "flat",
-    scroll_factor = 0.3,
+    scroll_factor = 1,
 })
