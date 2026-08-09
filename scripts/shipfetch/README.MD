@@ -9,7 +9,7 @@ my **vibecoded** [^1] extension of fastfetch that so happens to have matugen int
 
 ## Dependencies
 - `extra/imagemagick`
-- `extra/kitty` or any other terminal that uses the kitty image protocol
+- `extra/kitty` or any other terminal with a decent image protocol
 
 ## Matugen template snippet
 ```toml
