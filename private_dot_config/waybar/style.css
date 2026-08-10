@@ -1,9 +1,9 @@
 @import "colors.css";
 
 * {
-    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
     font-family: Symbols Nerd Font, FontAwesome, Readex Pro, Lexend, AnonymicePro Nerd Font Propo, Helvetica, Roboto, Arial, sans-serif;
     font-size: 12px;
+    font-weight: 500;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -92,10 +92,6 @@ window#waybar {
 
 #workspaces button {
   background: transparent;
-  font-family:
-    Lexend,
-    feather;
-  font-weight: 500;
   font-size: 12pt;
     color: @on_surface;
   border:none;

@@ -203,7 +203,7 @@
         },
         {
           "label": "󰂯",
-          "command": "blueberry"
+          "command": "blueman-manager"
         },
         {
           "label": "",

@@ -28,7 +28,7 @@ alias shipfetch="~/scripts/shipfetch/shipfetch.sh"
 
 alias screenrec="/home/zek/scripts/screenrec.sh"
 
-alias hyprconf='yazi ~/.config/hypr/'
+alias hyprconf='yazi ~/.config/hypr/modules'
 alias wbref='killall -SIGUSR2 waybar'
 alias wbconf='yazi ~/.config/waybar'
 
