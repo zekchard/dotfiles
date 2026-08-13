@@ -1,12 +1,12 @@
 --[[
 
-#                                                     
-#                                                     
-#    ██▄  ▄██  ▄▄▄  ▄▄  ▄▄ ▄▄ ▄▄▄▄▄▄ ▄▄▄  ▄▄▄▄   ▄▄▄▄ 
-#    ██ ▀▀ ██ ██▀██ ███▄██ ██   ██  ██▀██ ██▄█▄ ███▄▄ 
-#    ██    ██ ▀███▀ ██ ▀██ ██   ██  ▀███▀ ██ ██ ▄▄██▀ 
-# 
-#                                                                     
+#
+#
+#    ██▄  ▄██  ▄▄▄  ▄▄  ▄▄ ▄▄ ▄▄▄▄▄▄ ▄▄▄  ▄▄▄▄   ▄▄▄▄
+#    ██ ▀▀ ██ ██▀██ ███▄██ ██   ██  ██▀██ ██▄█▄ ███▄▄
+#    ██    ██ ▀███▀ ██ ▀██ ██   ██  ▀███▀ ██ ██ ▄▄██▀
+#
+#
 #   See https://wiki.hyprland.org/Configuring/Monitors/
 
 monitorv2 {
@@ -24,19 +24,19 @@ monitorv2 {
 }
 
 	
-]]--
+]] --
 
 hl.monitor({
-	output = "eDP-1",
-	mode = "1366x768@67",
-	position = "0x0",
-	scale = "1",
-	icc = "/home/zek/.color/CalibratedDisplayProfile-0.icc",
+    output = "eDP-1",
+    mode = "1366x768@67",
+    position = "0x0",
+    scale = "1",
+    icc = "/home/zek/.color/CalibratedDisplayProfile-1.icc",
 })
 
 hl.monitor({
-	output = "desc:XXX AAA",
-	mode = "1280x1024@67",
-	position = "auto-center-left",
-	scale = "1",
+    output = "desc:XXX AAA",
+    mode = "1280x1024@67",
+    position = "auto-center-left",
+    scale = "1",
 })

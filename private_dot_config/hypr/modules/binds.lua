@@ -21,9 +21,11 @@ hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("waypaper", { float = true, c
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 
 hl.bind(mainMod .. " + Z", hl.dsp.window.float({ action = "toggle" }))
-local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close()) -- closeWindowBind:set_enabled(false)
+hl.bind(mainMod .. " + C", hl.dsp.window.close())
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.window.kill())
 hl.bind(mainMod .. " + X", hl.dsp.window.fullscreen({ mode = "maximized" }))
 hl.bind(mainMod .. " + CTRL + X", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
+hl.bind(mainMod .. " + SHIFT + X", hl.dsp.window.fullscreen_state({ internal = 2, client = 0, action = toggle }))
 hl.bind(mainMod .. " + V", hl.dsp.window.pseudo())
 
 hl.bind(mainMod .. " + A", hl.dsp.window.cycle_next())
@@ -58,6 +60,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
 
 -- swaync --
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
+hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("swaync-client -d"))
 
 -- hyprlock --
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
@@ -135,7 +138,7 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- hyprconf key
-hl.bind("XF86Launch1", hl.dsp.exec_cmd("kitty yazi ~/.config/hypr/luamodules"))
+hl.bind("XF86Launch1", hl.dsp.exec_cmd("kitty yazi ~/.config/hypr/modules"))
 
 -- Layout switch bind
 hl.bind("SUPER + tab", function()
@@ -180,8 +183,8 @@ hl.bind(
     "SUPER + SHIFT + J",
     layout_bind({
         scrolling = hl.dsp.layout("swapcol l"), -- Scrolling: swap column with left one
-        dwindle = hl.dsp.layout("swapsplit"), -- Dwindle: swap window split
-        monocle = hl.dsp.layout("cycleprev"), -- Monocle and master: cycle prev window
+        dwindle = hl.dsp.layout("swapsplit"),   -- Dwindle: swap window split
+        monocle = hl.dsp.layout("cycleprev"),   -- Monocle and master: cycle prev window
         master = hl.dsp.layout("orientationprev"),
     })
 )
@@ -191,7 +194,7 @@ hl.bind(
     layout_bind({
         scrolling = hl.dsp.layout("swapcol r"), -- Scrolling: swap column with right one
         dwindle = hl.dsp.layout("togglesplit"), -- Dwindle: toggle window split
-        monocle = hl.dsp.layout("cyclenext"), -- Monocle and master: cycle next window
+        monocle = hl.dsp.layout("cyclenext"),   -- Monocle and master: cycle next window
         master = hl.dsp.layout("orientationnext"),
     })
 )

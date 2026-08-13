@@ -64,7 +64,7 @@ hl.config({
         background_color = background,
 
         always_follow_on_dnd = 1,
-        anr_missed_pings = 30,
+        anr_missed_pings = 2,
 
         enable_swallow = true,
         swallow_regex = "(kitty|ghostty|[Kk]onsole|Alacritty|gnome-terminal|xfce[0-9]?-terminal)",

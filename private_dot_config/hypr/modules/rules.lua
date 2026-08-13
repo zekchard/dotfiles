@@ -38,31 +38,6 @@ local modalMatches = {
     { title = "^(.*dialog.*)$" },
     { class = "^(hyprland-share-picker)$" },
 }
-for _, m in ipairs(modalMatches) do
-    hl.window_rule({
-        match = m,
-        float = true,
-        size = { "max(monitor_w, monitor_h)*0.8", "min(monitor_w, monitor_h)*0.8" },
-    })
-end
-
-local gameMatches = {
-    { initial_title = "^(ZenlessZoneZero.*)$" },
-    { class = "^(steam_app.*|gamescope)$" },
-    { class = "^(genshinimpact.*|zenlesszonezero.*)$" },
-}
-for _, m in ipairs(gameMatches) do
-    hl.window_rule({
-        match = m,
-        float = 0,
-        monitor = 0,
-        fullscreen_state = 3,
-        center = true,
-        immediate = true,
-        content = "game",
-        no_blur = 1,
-    })
-end
 
 local opacityOverride = {
     { class = "^(kitty|ghostty|[Kk]onsole|Alacritty|gnome-terminal|xfce[0-9]?-terminal)$" },
@@ -71,6 +46,27 @@ local opacityOverride = {
 }
 for _, m in ipairs(opacityOverride) do
     hl.window_rule({ match = m, opacity = "1.0 override" })
+end
+
+local gameMatches = {
+    { initial_title = "^(ZenlessZoneZero.*|Genshin Impact.*|.*Need for Speed™ Most Wanted.*)$" },
+    { initial_title = "^(HoYoPlay.*)$" },
+    { class = "^(steam_app.*|gamescope)$" },
+    { class = "^(genshinimpact.*|zenlesszonezero.*|speed.*)$" },
+}
+for _, m in ipairs(gameMatches) do
+    hl.window_rule({
+        match = m,
+        monitor = 0,
+        suppress_event = "fullscreenoutput",
+        fullscreen = 1,
+        fullscreen_state = "2 0",
+        workspace = "unset",
+        center = true,
+        immediate = true,
+        content = "game",
+        no_blur = 1,
+    })
 end
 
 local floatApps = {
@@ -87,6 +83,7 @@ hl.window_rule({
     match = { class = "^(.*[Cc]alculator.*)$" },
     float = true,
     size = { "max(monitor_w, monitor_h)*0.17", "min(monitor_w, monitor_h)*0.43" },
+    animation = "fade",
 })
 
 local floatfocusfix = hl.window_rule({
@@ -239,6 +236,14 @@ hl.window_rule({
     opacity = 0.85,
 })
 
+for _, m in ipairs(modalMatches) do
+    hl.window_rule({
+        match = m,
+        float = true,
+        size = { "max(monitor_w, monitor_h)*0.8", "min(monitor_w, monitor_h)*0.8" },
+    })
+end
+
 -----------------
 -- Layer Rules --
 -----------------
@@ -285,12 +290,5 @@ hl.layer_rule({
     name = "hyprpicker",
     blur = 0,
     no_anim = 1,
-    match = { namespace = "hyprpicker" },
-})
-
-hl.layer_rule({
-    name = "selection",
-    blur = 0,
-    no_anim = 1,
-    match = { namespace = "selection" },
+    match = { namespace = "^(hyprpicker|selection)$" },
 })
