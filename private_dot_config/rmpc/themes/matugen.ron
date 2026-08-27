@@ -8,20 +8,20 @@
     format_tag_separator: " | ",
     browser_column_widths: [20, 38, 42],
     background_color: None,
-    text_color: Some("#e1c1a3"),
+    text_color: Some("#bfc9c4"),
     header_background_color: None,
     modal_background_color: None,
     modal_backdrop: false,
-    preview_label_style: (fg: "#fbba74"),
-    preview_metadata_group_style: (fg: "#becc9b", modifiers: "Bold"),
+    preview_label_style: (fg: "#b9cbc3"),
+    preview_metadata_group_style: (fg: "#b2ccc2", modifiers: "Bold"),
     tab_bar: (
-        active_style: (fg: "#402c18", bg: "#e1c1a3", modifiers: "Bold"),
-        inactive_style: (fg: "#e1c1a3", modifiers: "Bold"),
+        active_style: (fg: "#29322f", bg: "#bfc9c4", modifiers: "Bold"),
+        inactive_style: (fg: "#bfc9c4", modifiers: "Bold"),
     ),
-    highlighted_item_style: (fg: "#e1c1a3", modifiers: "Bold"),
-    current_item_style: (fg: "#e1c1a3", bg: "#845316", modifiers: "Bold"),
-    borders_style: (fg: "#e1c1a3"),
-    highlight_border_style: (fg: "#e1c1a3"),
+    highlighted_item_style: (fg: "#bfc9c4", modifiers: "Bold"),
+    current_item_style: (fg: "#bfc9c4", bg: "#51625c", modifiers: "Bold"),
+    borders_style: (fg: "#bfc9c4"),
+    highlight_border_style: (fg: "#bfc9c4"),
     border_symbol_sets: {
         "bar_corners": (
         	parent: Rounded,
@@ -51,29 +51,29 @@
     progress_bar: (
         symbols: ["", "█", "", "█", ""],
         track_style: (
-            fg: "#402c18",
+            fg: "#29322f",
         ),
         elapsed_style: (
-            fg: "#e1c1a3",
+            fg: "#bfc9c4",
         ),
         thumb_style: (
-            fg: "#e1c1a3",
-            bg: "#402c18",
+            fg: "#bfc9c4",
+            bg: "#29322f",
         ),
         use_track_when_empty: false,
     ),
     scrollbar: (
         symbols: ["│", "█", "▲", "▼"],
-        track_style: (fg: "#e1c1a3"),
-        ends_style: (fg: "#feddbe"),
-        thumb_style: (fg: "#fbba74"),
+        track_style: (fg: "#bfc9c4"),
+        ends_style: (fg: "#dbe5df"),
+        thumb_style: (fg: "#b9cbc3"),
     ),
     song_table_format: [
         (
             prop: (
                 kind: Property(Artist),
-                style: (fg: "#ffdcbc"),
-                default: (kind: Text("Unknown"), style: (fg: "#ffdcbc"))
+                style: (fg: "#d4e7de"),
+                default: (kind: Text("Unknown"), style: (fg: "#d4e7de"))
             ),
 			width: "25%",
             alignment: Left,
@@ -81,22 +81,22 @@
         (
             prop: (
                 kind: Property(Title),
-                style: (fg: "#fbba74"),
-                default: (kind: Text("Unknown"), style: (fg: "#ffdcbc"))
+                style: (fg: "#b9cbc3"),
+                default: (kind: Text("Unknown"), style: (fg: "#d4e7de"))
             ),
             width: "35%",
             alignment: Left,
         ),
         (
-            prop: (kind: Property(Album), style: (fg: "#ffdcbc"),
-                default: (kind: Text("Unknown Album"), style: (fg: "#ffdcbc"))
+            prop: (kind: Property(Album), style: (fg: "#d4e7de"),
+                default: (kind: Text("Unknown Album"), style: (fg: "#d4e7de"))
             ),
             width: "30%",
             alignment: Left,
         ),
         (
-            prop: (kind: Property(Duration), style: (fg: "#fbba74"),
-                default: (kind: Text("-"), style: (fg: "#ffdcbc"))
+            prop: (kind: Property(Duration), style: (fg: "#b9cbc3"),
+                default: (kind: Text("-"), style: (fg: "#d4e7de"))
             ),
 			label: "Lnth.",
             width: "6",
@@ -145,12 +145,12 @@
                    panes: [
                        (
                            pane: Pane(Property(content: [
-                           	(kind: Text("["), style: (fg: "#becc9b", modifiers: "Bold")),
+                           	(kind: Text("["), style: (fg: "#b2ccc2", modifiers: "Bold")),
                             (
                            		kind: Property(Status(StateV2(playing_label: "Playing", paused_label: "Paused", stopped_label: "Stopped"))),
-                           	    style: (fg: "#becc9b", modifiers: "Bold")
+                           	    style: (fg: "#b2ccc2", modifiers: "Bold")
                            	),
-                           						(kind: Text("]"), style: (fg: "#becc9b", modifiers: "Bold"))
+                           						(kind: Text("]"), style: (fg: "#b2ccc2", modifiers: "Bold"))
                            ], align: Left)),
                            size: "12",
                        ),
@@ -162,9 +162,9 @@
                            size: "14",
                            pane: Pane(Property(
                                content: [
-                                   (kind: Property(Status(Elapsed)), style: (fg: "#fbba74")),
+                                   (kind: Property(Status(Elapsed)), style: (fg: "#b9cbc3")),
                                    (kind: Text(" / ")),
-                                   (kind: Property(Status(Duration)), style: (fg: "#fbba74")),
+                                   (kind: Property(Status(Duration)), style: (fg: "#b9cbc3")),
                                ], align: Right,
                            )),
                        ),
@@ -186,8 +186,8 @@
                     )
                 ],
                 right: [
-                    (kind: Property(Widget(ScanStatus)), style: (fg: "#fbba74")),
-                    (kind: Property(Widget(Volume)), style: (fg: "#fbba74"))
+                    (kind: Property(Widget(ScanStatus)), style: (fg: "#b9cbc3")),
+                    (kind: Property(Widget(Volume)), style: (fg: "#b9cbc3"))
                 ]
             ),
             (
@@ -196,22 +196,22 @@
                     (kind: Text(" remaining in queue"), style: (modifiers: "Dim"))
                 ],
                 center: [
-                    (kind: Property(Song(Artist)), style: (fg: "#becc9b", modifiers: "Bold"),
-                        default: (kind: Text("Unknown"), style: (fg: "#becc9b", modifiers: "Bold"))
+                    (kind: Property(Song(Artist)), style: (fg: "#b2ccc2", modifiers: "Bold"),
+                        default: (kind: Text("Unknown"), style: (fg: "#b2ccc2", modifiers: "Bold"))
                     ),
                     (kind: Text(" - ")),
                     (kind: Property(Song(Album)),
-                        style: (fg: "#fbba74"),
+                        style: (fg: "#b9cbc3"),
                         default: (kind: Text("Unknown Album"))
                     )
                 ],
                 right: [
                     (
                         kind: Property(Widget(States(
-                            active_style: (fg: "#fbba74", modifiers: "Bold"),
-                            separator_style: (fg: "#fbba74")))
+                            active_style: (fg: "#b9cbc3", modifiers: "Bold"),
+                            separator_style: (fg: "#b9cbc3")))
                         ),
-                        style: (fg: "#e1c1a3")
+                        style: (fg: "#bfc9c4")
                     ),
                 ]
             ),
@@ -220,17 +220,17 @@
     browser_song_format: [
         (
             kind: Group([
-                (kind: Property(Track), style: (fg: "#fbba74")),
+                (kind: Property(Track), style: (fg: "#b9cbc3")),
                 (kind: Text(" ")),
             ])
         ),
         (
             kind: Group([
-                (kind: Property(Artist), style: (fg: "#fbba74")),
+                (kind: Property(Artist), style: (fg: "#b9cbc3")),
                 (kind: Text(" - ")),
-                (kind: Property(Title), style: (fg: "#fbba74")),
+                (kind: Property(Title), style: (fg: "#b9cbc3")),
             ]),
-            default: (kind: Property(Filename), style: (fg: "#fbba74"))
+            default: (kind: Property(Filename), style: (fg: "#b9cbc3"))
         ),
     ],
     lyrics: (
@@ -254,9 +254,9 @@
         // support them as well!
         // rmpc does not support `horizontal_gradient` (yet?)
         bar_color: Gradient({
-            0: "#683d00",
-            50: "#fbba74",
-            100: "#ffdcbc"
+            0: "#3a4a44",
+            50: "#b9cbc3",
+            100: "#d4e7de"
         })
     ),
 )

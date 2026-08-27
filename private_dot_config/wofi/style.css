@@ -14,7 +14,7 @@ window {
 	background-size: 45%;
 	background-position: top right;
 	background-repeat: no-repeat;
-    font-size:18;
+    font-size:16;
 }
 #inner-box {
     margin: 0px;
@@ -30,7 +30,7 @@ window {
     border: none;
 }
 #input {
-    margin:10px;
+    margin:8px;
     padding: 5px;
     border: 2px solid alpha(@primary, 0.8);
     color: @on_surface;
@@ -59,7 +59,7 @@ window {
 #entry {
     border: none;
     margin: 1px;
-    padding: 6px;
+    padding: 4px;
     transition:all 0.2 linear;
 }
 #entry arrow {

@@ -60,6 +60,8 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
 
 -- swaync --
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
+hl.bind(mainMod .. " + CTRL + N", hl.dsp.exec_cmd("swaync-client --hide-all"))
+hl.bind(mainMod .. " + ALT + N", hl.dsp.exec_cmd("swaync-client -C"))
 hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("swaync-client -d"))
 
 -- hyprlock --

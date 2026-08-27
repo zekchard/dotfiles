@@ -22,9 +22,45 @@
 # See https://wiki.hypr.land/Configuring/Workspace-Rules/ for workspace rules
 ]] --
 
+---------------------
+-- Workspace Rules --
+---------------------
+
+hl.workspace_rule({
+    workspace = "special:S",
+    gaps_in = 5,
+    gaps_out = 25,
+    animation = "fade",
+})
+hl.window_rule({
+    match = { workspace = "special:S" },
+    pseudo = true
+})
+
 ------------------
 -- Window Rules --
 ------------------
+
+local gameMatches = {
+    { initial_title = "^(ZenlessZoneZero.*|Genshin Impact.*|.*Need for Speed™.*|Optimal solution.*)$" },
+    { initial_title = "^(HoYoPlay.*)$" },
+    { class = "^(steam_app.*|gamescope)$" },
+    { class = "^(genshinimpact.*|zenlesszonezero.*|speed.*)$" },
+}
+for _, m in ipairs(gameMatches) do
+    hl.window_rule({
+        match = m,
+        monitor = 0,
+        suppress_event = "fullscreenoutput",
+        fullscreen = 1,
+        fullscreen_state = "2 0",
+        workspace = "unset",
+        center = true,
+        immediate = true,
+        content = "game",
+        no_blur = 1,
+    })
+end
 
 local modalMatches = {
     {
@@ -46,27 +82,6 @@ local opacityOverride = {
 }
 for _, m in ipairs(opacityOverride) do
     hl.window_rule({ match = m, opacity = "1.0 override" })
-end
-
-local gameMatches = {
-    { initial_title = "^(ZenlessZoneZero.*|Genshin Impact.*|.*Need for Speed™ Most Wanted.*)$" },
-    { initial_title = "^(HoYoPlay.*)$" },
-    { class = "^(steam_app.*|gamescope)$" },
-    { class = "^(genshinimpact.*|zenlesszonezero.*|speed.*)$" },
-}
-for _, m in ipairs(gameMatches) do
-    hl.window_rule({
-        match = m,
-        monitor = 0,
-        suppress_event = "fullscreenoutput",
-        fullscreen = 1,
-        fullscreen_state = "2 0",
-        workspace = "unset",
-        center = true,
-        immediate = true,
-        content = "game",
-        no_blur = 1,
-    })
 end
 
 local floatApps = {

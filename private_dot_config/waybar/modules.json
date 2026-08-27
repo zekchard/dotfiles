@@ -1,86 +1,86 @@
 {
-	"hyprland/window": {
-		"align": 0,
-		"justify": "left",
-	   	"max-length": 64,
-	   	"icon": false,
-	   	"icon-size": 12,
-	   	"tooltip-format": "{initialClass}",
-	   	"format": "{title}",
-	   	"format-alt": "{class}",
-	},
+    "hyprland/window": {
+        "align": 0,
+        "justify": "left",
+        "max-length": 64,
+        "icon": false,
+        "icon-size": 12,
+        "tooltip-format": "{initialClass}",
+        "format": "{title}",
+        "format-alt": "{class}"
+    },
     "hyprland/workspaces": {
-    	"align": 0,
-    	"justify": "left",
-	   	"disable-scroll": false,
-	   	"all-outputs": true,
-	   	"warp-on-scroll": true,
-	   	"show-special": true,
-	   	"format": "{name}{icon}",
-	   	"format-icons": {
-	       	"urgent": " ",
-	       	"active": "",
-	       	"default": ""
-	   }
+        "align": 0,
+        "justify": "left",
+        "disable-scroll": false,
+        "all-outputs": true,
+        "warp-on-scroll": true,
+        "show-special": true,
+        "format": "{name}{icon}",
+        "format-icons": {
+            "urgent": " ",
+            "active": "",
+            "default": ""
+        }
     },
     "custom/arch": {
-    	"align": 1,
-    	"justify": "right",
+        "align": 1,
+        "justify": "right",
         "format": "",
-        "tooltip": true,
+        "tooltip": true
     },
     "tray": {
-    	"align": 1,
-    	"justify": "right",
+        "align": 1,
+        "justify": "right",
         "icon-size": 14,
         "spacing": 12
     },
     "group/hardware": {
-    	"align": 1,
-    	"justify": "right",
-		"orientation": "horizontal",
-    	"drawer": {
-        	"transition-duration": 500,
-        	"children-class": "not-power",
-        	"transition-left-to-right": false,
-        	"click-to-reveal": true
-    	},
-		"modules": [
+        "align": 1,
+        "justify": "right",
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false,
+            "click-to-reveal": true
+        },
+        "modules": [
             "custom/arch",
-			"tray",
-			"idle_inhibitor"
-		]
+            "tray",
+            "idle_inhibitor"
+        ]
     },
     "cava": {
-		// "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
-		"framerate": 15,
-		"autosens": 0,
-		"sensitivity": 25,
-		"bars": 16,
-		"sample_rate": 44100,
-		"lower_cutoff_freq": 100,
-		"higher_cutoff_freq": 10000,
-		"sleep_timer": 2,
-		"hide_on_silence": true,
-		"format_silent": " ",
-		"method": "pipewire",
-		"source": "auto",
-		"stereo": true,
-		"reverse": false,
-		"bar_delimiter": 0,
-		"bar_spacing": 12,
-		"monstercat": false,
-		"waves": false,
-		"noise_reduction": 0.15,
-		"input_delay": 0,
-		"format-icons": ["⠀", "⠀", "⣀", "⣤", "⣤", "⣶", "⣿"],
-		"actions": {
-        	"on-click-right": "mode"
-        	}
-        },
+        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 15,
+        "autosens": 0,
+        "sensitivity": 25,
+        "bars": 16,
+        "sample_rate": 44100,
+        "lower_cutoff_freq": 100,
+        "higher_cutoff_freq": 10000,
+        "sleep_timer": 2,
+        "hide_on_silence": true,
+        "format_silent": " ",
+        "method": "pipewire",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "bar_spacing": 12,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.15,
+        "input_delay": 0,
+        "format-icons": ["⠀", "⠀", "⣀", "⣤", "⣤", "⣶", "⣿"],
+        "actions": {
+            "on-click-right": "mode"
+        }
+    },
     "idle_inhibitor": {
-    	"align": 1,
-    	"justify": "right",
+        "align": 1,
+        "justify": "right",
         "format": "{icon}",
         "format-icons": {
             "activated": "",
@@ -88,109 +88,115 @@
         }
     },
     "wireplumber": {
-    	"align": 1,
-    	"justify": "right",
+        "align": 1,
+        "justify": "right",
         "format": "{icon}{volume}%",
+        "format-bluetooth": "󰂰 {icon}{volume}%",
         "format-muted": "󰝟 MUTED",
+        "format-bluetooth-muted": "󰂰 󰝟 MUTED",
         "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format-source-muted": " MUTED",
         "format-icons": [" ", " ", " "],
-        "on-click": "pwvucontrol"
+        "on-click": "pwvucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
     "network": {
-    	"align": 1,
-    	"justify": "right",
-		"interval": 2,
-			"tooltip-format": "{essid} connected as {ipaddr}",
-        	"format": " {bandwidthTotalBytes}",
-        	"format-alt": "  {bandwidthUpBytes} | {bandwidthDownBytes} ",
-        	"format-disconnected": "Disconnected ⚠",
-		"on-click-right": "$TERM nmtui"
+        "align": 1,
+        "justify": "right",
+        "interval": 2,
+        "tooltip-format": "{essid} connected as {ipaddr}",
+        "format": " {bandwidthTotalBytes}",
+        "format-alt": "  {bandwidthUpBytes} | {bandwidthDownBytes} ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click-right": "$TERM nmtui"
     },
     "cpu": {
-    	"align": 1,
-    	"justify": "right",
+        "align": 1,
+        "justify": "right",
         "interval": 2,
         "format": " {usage}%",
         "format-alt": " {usage}% | {avg_frequency:0.2f} GHz",
         "tooltip": true
     },
     "memory": {
-    	"align": 1,
-    	"justify": "right",
-		"interval": 2,
+        "align": 1,
+        "justify": "right",
+        "interval": 2,
         "format": " {percentage}%",
-        	"tooltip-format": "{avail:0.2f}GB free\nSwap: {swapState} - {swapUsed:0.2f}GB/{swapTotal:0.2f}GB",
-        	"format-alt": " {used:0.2f}G/{total:0.2f}G",
+        "tooltip-format": "{avail:0.2f}GB free\nSwap: {swapState} - {swapUsed:0.2f}GB/{swapTotal:0.2f}GB",
+        "format-alt": " {used:0.2f}G/{total:0.2f}G"
     },
     "temperature": {
-    	"align": 1,
-    	"justify": "right",
+        "align": 1,
+        "justify": "right",
         "interval": 2,
-        "hwmon-path": ["/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp1_input", "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp2_input"],
+        "hwmon-path": [
+            "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp1_input",
+            "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp2_input"
+        ],
         "critical-threshold": 95,
         "warning-threshold": 85,
         "format": " {temperatureC}°C"
     },
     "battery": {
-    	"align": 1,
-    	"justify": "right",
-    	"smooth-power": true,
-    	"smooth-power-time-constant": 60,
-    	"states": {
-    		"warning": 20,
-    		"critical": 10
-    	},
-    	"events": {
-			"on-discharging-warning": "swayosd-client --custom-icon battery-low --custom-message 'Battery low'",
-			"on-discharging-critical": "swayosd-client --custom-icon battery-caution --custom-message 'Battery critical'",
-			"on-discharging": "swayosd-client --custom-icon battery --custom-message 'Discharging'",
-			"on-charging": "swayosd-client --custom-icon battery --custom-message Charging"
-    	},
-		"interval": 5,
-		"tooltip-format": "{timeTo}\n{health} health at {cycles} cycles",
-		"format-time": "{H}:{m}",
-        	"format": "{icon} {capacity}%    {power:0.2f} W",
-        	"format-full": "{icon} {capacity}%    {power:0.2f} W",
-        	"format-charging": " {capacity}%    {power:0.2f} W",
-        	"format-plugged": " {capacity}%    {power:0.2f} W",
-        	"format-alt": "{icon} {time}    {power:0.0f} W",
-        	"format-icons": ["", "", "", "", ""]
+        "align": 1,
+        "justify": "right",
+        "smooth-power": true,
+        "smooth-power-time-constant": 60,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "events": {
+            "on-discharging-warning": "swayosd-client --custom-icon battery-low --custom-message 'Battery low'",
+            "on-discharging-critical": "swayosd-client --custom-icon battery-caution --custom-message 'Battery critical'",
+            "on-discharging": "swayosd-client --custom-icon battery --custom-message 'Discharging'",
+            "on-charging": "swayosd-client --custom-icon battery --custom-message Charging"
+        },
+        "interval": 5,
+        "tooltip-format": "{timeTo}\n{health} health at {cycles} cycles",
+        "format-time": "{H}:{m}",
+        "format": "{icon} {capacity}%    {power:0.2f} W",
+        "format-full": "{icon} {capacity}%    {power:0.2f} W",
+        "format-charging": " {capacity}%    {power:0.2f} W",
+        "format-plugged": " {capacity}%    {power:0.2f} W",
+        "format-alt": "{icon} {time}    {power:0.0f} W",
+        "format-icons": ["", "", "", "", ""]
     },
     "clock": {
-    	"align": 1,
-    	"justify": "right",
-    	"interval": 1,
+        "align": 1,
+        "justify": "right",
+        "interval": 1,
         "format": "{:%I:%M %p | %b %e %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%I:%M:%OS %p} "
     },
-	"custom/srstatus": {
-		"align": 1,
-	    "exec": "~/.config/waybar/scripts/srstatus.sh",
-	    "restart-interval": 1,
-	},
-	"custom/notification": {
-		"align": 1,
-		"justify": "right",
-	  	"tooltip": true,
-	  	"format": "<span size='10pt'>{icon}</span>  {0}",
-	  	"format-icons": {
-		    	"notification": "󱅫",
-		    	"none": "󰂜",
-		    	"dnd-notification": "󰂠",
-		    	"dnd-none": "󰪓",
-		    	"inhibited-notification": "󰂛",
-		    	"inhibited-none": "󰪑",
-		    	"dnd-inhibited-notification": "󰂛",
-		    	"dnd-inhibited-none": "󰪑"
-	  	},
-	  	"restart-interval": 5,
-	  	"return-type": "json",
-	  	"exec-if": "which swaync-client",
-	  	"exec": "swaync-client -swb",
-	  	"on-click": "swaync-client -t -sw",
-	  	"on-click-right": "swaync-client -d -sw",
-	  	"escape": true
-	},
+    "custom/srstatus": {
+        "align": 1,
+        "exec": "~/.config/waybar/scripts/srstatus.sh",
+        "restart-interval": 1
+    },
+    "custom/notification": {
+        "align": 1,
+        "justify": "right",
+        "tooltip": true,
+        "format": "<span size='10pt'>{icon}</span>  {0}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂜",
+            "dnd-notification": "󰂠",
+            "dnd-none": "󰪓",
+            "inhibited-notification": "󰂛",
+            "inhibited-none": "󰪑",
+            "dnd-inhibited-notification": "󰂛",
+            "dnd-inhibited-none": "󰪑"
+        },
+        "restart-interval": 5,
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    }
 }

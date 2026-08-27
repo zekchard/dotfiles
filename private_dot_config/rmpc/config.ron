@@ -22,6 +22,7 @@
     reflect_changes_to_playlist: false,
     select_current_song_on_change: false,
     ignore_leading_the: false,
+    extra_yt_dlp_args: ["--cookies=/home/zek/cookies.youtube.txt --extractor-args=youtube:player-client=tv_downgraded,web_safari,android_vr,web_embedded"],
     browser_song_sort: [Disc, Track, Artist, Title],
     directories_sort: SortFormat(group_by_type: true, reverse: false),
     auto_open_downloads: true,

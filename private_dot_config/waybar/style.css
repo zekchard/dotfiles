@@ -81,7 +81,7 @@ window#waybar {
 
 #battery.warning,
 #temperature.warning{
-	color: alpha(@on_error_container,1);
+	color: @on_error_container;
 }
 #battery.critical,
 #temperature.critical{
@@ -89,6 +89,14 @@ window#waybar {
     background: alpha(@error_container,.5);
 }
 
+#wireplumber.muted,
+#wireplumber.sink-muted,
+#wireplumber.source-muted,
+#pulseaudio.muted,
+#pulseaudio.sink-muted,
+#pulseaudio.source-muted{
+	color: @outline;
+}
 
 #workspaces button {
   background: transparent;
