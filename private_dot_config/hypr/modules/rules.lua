@@ -34,7 +34,9 @@ hl.workspace_rule({
 })
 hl.window_rule({
     match = { workspace = "special:S" },
-    pseudo = true
+    pseudo = true,
+    opacity = "0.9 override",
+    no_blur = 1
 })
 
 ------------------
@@ -83,6 +85,9 @@ local opacityOverride = {
 for _, m in ipairs(opacityOverride) do
     hl.window_rule({ match = m, opacity = "1.0 override" })
 end
+
+local floatCenter = hl.window_rule({ match = { float = true }, center = true })
+floatCenter:set_enabled(false)
 
 local floatApps = {
     { class = "^(kvantummanager|qt[56]ct|nwg-look)$" },
@@ -143,8 +148,6 @@ hl.window_rule({
         workspace = "f[1]",
     },
 })
-
-hl.window_rule({ match = { float = true }, center = true })
 
 -- Disabling that thing that bugged me from dragging anything in Photoshop --
 hl.window_rule({
@@ -249,6 +252,13 @@ hl.window_rule({
     tile = 1,
     keep_aspect_ratio = 1,
     opacity = 0.85,
+})
+
+hl.window_rule({
+    match = {
+        class = "spotify",
+    },
+    opacity = 0.875,
 })
 
 for _, m in ipairs(modalMatches) do

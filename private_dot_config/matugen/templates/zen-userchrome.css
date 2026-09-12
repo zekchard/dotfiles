@@ -6,41 +6,12 @@
   --tab-selected-textcolor: {{colors.primary.default.hex}} !important;
   --toolbar-color: {{colors.on_background.default.hex}} !important;
   --arrowpanel-color: {{colors.on_background.default.hex}} !important;
-  --arrowpanel-background: {{colors.surface_container.default.hex}}ee !important;
   --sidebar-text-color: {{colors.on_background.default.hex}} !important;
-  --zen-main-browser-background: {{colors.background.default.hex}}ee !important;
-  --zen-main-browser-background-toolbar: {{colors.background.default.hex}}ee !important;
 }
 
-#zen-browser-background {
-  --zen-main-browser-background: {{colors.background.default.hex}}ee !important;
-  --zen-background-opacity: 0.85 !important;
-}
-
-#zen-toolbar-background {
-  --zen-main-browser-background-toolbar: {{colors.background.default.hex}}ee !important;
-  --zen-background-opacity: 0.85 !important;
-}
-
-.sidebar-placesTree {
-  background-color: {{colors.surface_container.default.hex}}ee !important;
-}
-
-#zen-workspaces-button {
-  background-color: {{colors.surface_container.default.hex}}ee !important;
-}
-
-#TabsToolbar {
-  background-color: {{colors.background.default.hex}}ee !important;
-}
-
-.urlbar-background {
-  background-color: {{colors.surface_container.default.hex}}ee !important;
-}
 
 .urlbar-input::selection {
   color: {{colors.on_primary.default.hex}} !important;
-  background-color: {{colors.primary.default.hex}}ee !important;
 }
 
 .urlbarView-url {
@@ -58,10 +29,6 @@ toolbar .toolbarbutton-1 {
       fill: {{colors.primary.default.hex}}
     }
   }
-}
-
-#zen-appcontent-navbar-container {
-  background-color: {{colors.background.default.hex}} !important;
 }
 
 #PanelUI-menu-button .toolbarbutton-icon,

@@ -36,7 +36,7 @@ hl.monitor({
 
 hl.monitor({
     output = "desc:XXX AAA",
-    mode = "1280x1024@67",
+    mode = "1280x1024@72",
     position = "auto-center-left",
     scale = "1",
 })

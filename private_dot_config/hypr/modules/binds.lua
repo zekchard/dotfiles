@@ -23,9 +23,12 @@ hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Z", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.window.kill())
+
 hl.bind(mainMod .. " + X", hl.dsp.window.fullscreen({ mode = "maximized" }))
 hl.bind(mainMod .. " + CTRL + X", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 hl.bind(mainMod .. " + SHIFT + X", hl.dsp.window.fullscreen_state({ internal = 2, client = 0, action = toggle }))
+hl.bind(mainMod .. " + ALT + X", hl.dsp.window.fullscreen_state({ internal = 0, client = 2, action = toggle }))
+
 hl.bind(mainMod .. " + V", hl.dsp.window.pseudo())
 
 hl.bind(mainMod .. " + A", hl.dsp.window.cycle_next())
@@ -72,6 +75,11 @@ hl.bind("ALT + SHIFT + Z", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind("PRINT", hl.dsp.exec_cmd("killall hyprshot ; hyprshot -m active -m output -o ~/Pictures/Screenshots -z")) -- Screenshot active monitor
 hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("killall hyprshot ; hyprshot -m region -o ~/Pictures/Screenshots -z"))    -- Screenshot region
 hl.bind("ALT + PRINT", hl.dsp.exec_cmd("killall hyprshot ; hyprshot -m window -o ~/Pictures/Screenshots -z"))     -- Screenshot window
+hl.bind("SHIFT + Print",
+    hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y-%m-%d_%H%M%S.png"'))
+hl.bind("CTRL+ SHIFT + Print",
+    hl.dsp.exec_cmd(
+        'grim -g "$(slurp -d)" - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y-%m-%d_%H%M%S.png"'))
 
 -- was going to replace hyprshot with HyprCapture but it seems to be a lil underbaked for me (especially in multi-monitor setups like mine) --
 

@@ -32,17 +32,17 @@ killallprocs() {
 }
 
 record() {
-	gpu-screen-recorder -cr limited -bm cbr -q 3000 -a default_output -f 70 -w eDP-1 -o "$SROUTPUT" & echo $! > /tmp/screenrecording
+	gpu-screen-recorder -bm cbr -q 4250 -a default_output -f 70 -w eDP-1 -o "$SROUTPUT" & echo $! > /tmp/screenrecording
 	echo " Rec" > /tmp/srstatus
 	}
 	
 record2() {
-	gpu-screen-recorder -cr limited -bm cbr -q 3000 -a default_output -f 70 -w HDMI-A-1 -o "$SROUTPUT" & echo $! > /tmp/screenrecording
+	gpu-screen-recorder -bm cbr -q 4250 -a default_output -f 70 -w HDMI-A-1 -o "$SROUTPUT" & echo $! > /tmp/screenrecording
 	echo " Rec" > /tmp/srstatus
 	}
 
 region() {
-	gpu-screen-recorder -cr limited -bm cbr -q 3000 -a default_output -f 70 -w $(slurp -f "%wx%h+%x+%y") -o "$SROUTPUT" & echo $! > /tmp/screenrecording
+	gpu-screen-recorder -bm cbr -q 4250 -a default_output -f 70 -w $(slurp -f "%wx%h+%x+%y") -o "$SROUTPUT" & echo $! > /tmp/screenrecording
 	echo " Rec" > /tmp/srstatus
 	}
 

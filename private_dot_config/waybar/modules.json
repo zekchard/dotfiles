@@ -131,7 +131,7 @@
         "justify": "right",
         "interval": 2,
         "hwmon-path": [
-            "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp1_input",
+            "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hw'mon5/temp1_input",
             "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp2_input"
         ],
         "critical-threshold": 95,
@@ -153,14 +153,14 @@
             "on-discharging": "swayosd-client --custom-icon battery --custom-message 'Discharging'",
             "on-charging": "swayosd-client --custom-icon battery --custom-message Charging"
         },
-        "interval": 5,
+        "interval": 15,
         "tooltip-format": "{timeTo}\n{health} health at {cycles} cycles",
         "format-time": "{H}:{m}",
-        "format": "{icon} {capacity}%    {power:0.2f} W",
-        "format-full": "{icon} {capacity}%    {power:0.2f} W",
-        "format-charging": " {capacity}%    {power:0.2f} W",
-        "format-plugged": " {capacity}%    {power:0.2f} W",
-        "format-alt": "{icon} {time}    {power:0.0f} W",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {capacity}%    {power:0.2f} W",
         "format-icons": ["", "", "", "", ""]
     },
     "clock": {
