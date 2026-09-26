@@ -127,11 +127,11 @@ lissajous:
   rotation: 1
 
 audio:
-  silence_threshold: -70.21277
-  sample_rate: 44100
-  gain_db: -0.06382942
+  silence_threshold: -69.57447
+  sample_rate: 48000
+  gain_db: -3.5106397
   engine: pipewire
-  device: default
+  device: easyeffects_sink
 
 lufs:
   mode: momentary
@@ -143,17 +143,17 @@ font: /usr/share/fonts/TTF/SpaceMonoNerdFontPropo-Bold.ttf
 visualizers:
   main:
     type: hsplit
-    ratio: 0.846519
+    ratio: 0.84572786
     children:
       - type: hsplit
-        ratio: 0.09363296
+        ratio: 0.53963983
         children:
-          - id: lufs
           - type: hsplit
-            ratio: 0.5
+            ratio: 0.17452008
             children:
+              - id: lufs
               - id: spectrum_analyzer
-              - id: oscilloscope
+          - id: oscilloscope
       - id: lissajous
 
 plugins:

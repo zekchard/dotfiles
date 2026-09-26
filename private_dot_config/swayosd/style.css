@@ -1,4 +1,4 @@
-@import "/home/zek/.config/waybar/colors.css";
+@import "colors.css";
 
 window#osd {
   font-family: Symbols Nerd Font, Readex Pro, Lexend, AnonymicePro Nerd Font Propo, Helvetica, Roboto, Arial, sans-serif;

@@ -103,7 +103,7 @@ hl.animation({ leaf = "borderangle", enabled = true, speed = 10, bezier = "easeO
 
 hl.animation({ leaf = "windows", enabled = true, speed = 4.49, bezier = "easeInOutCirc" })
 hl.animation({ leaf = "windowsIn", enabled = true, speed = 3.85, bezier = "easeInOutExpo", style = "popin 92%" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.80, bezier = "easeInOutExpo", style = "popin 92%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.80, bezier = "easeInOutExpo", style = "popin 90%" })
 hl.animation({ leaf = "windowsMove", enabled = true, speed = 6.5, bezier = "easeOutExpo" })
 
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })

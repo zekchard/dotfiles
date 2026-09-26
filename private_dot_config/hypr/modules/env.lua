@@ -1,12 +1,12 @@
 --[[
 
-#                                                  
-#                                                  
-#            ██████ ▄▄  ▄▄ ▄▄ ▄▄  ██  ██  ▄▄▄  ▄▄▄▄   ▄▄▄▄ 
-#            ██▄▄   ███▄██ ██▄██  ██▄▄██ ██▀██ ██▄█▄ ███▄▄ 
-#            ██▄▄▄▄ ██ ▀██  ▀█▀  ▄ ▀██▀  ██▀██ ██ ██ ▄▄██▀ 
-#                                                  
-#                                                  
+#
+#
+#            ██████ ▄▄  ▄▄ ▄▄ ▄▄  ██  ██  ▄▄▄  ▄▄▄▄   ▄▄▄▄
+#            ██▄▄   ███▄██ ██▄██  ██▄▄██ ██▀██ ██▄█▄ ███▄▄
+#            ██▄▄▄▄ ██ ▀██  ▀█▀  ▄ ▀██▀  ██▀██ ██ ██ ▄▄██▀
+#
+#
 #      https://wiki.hypr.land/Configuring/Environment-variables/
 # https://wiki.hypr.land/Configuring/Keywords/#setting-the-environment
 
@@ -23,7 +23,7 @@ env = EDITOR,micro
 env = OCL_ICD_VENDORS,/etc/OpenCL/vendors/rusticl.icd
 env = RUSTICL_ENABLE,radeonsi
 	
-]]--
+]] --
 
 hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
@@ -40,6 +40,8 @@ hl.env("TERM", "kitty")
 hl.env("TERMINAL", "kitty")
 hl.env("BROWSER", "zen-browser")
 hl.env("EDITOR", "micro")
+
+hl.env("AWWW_TRANSITION_POS", "top-right")
 
 hl.env("OCL_ICD_VENDORS", "/etc/OpenCL/vendors/rusticl.icd")
 hl.env("RUSTICL_ENABLE", "radeonsi")

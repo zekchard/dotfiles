@@ -8,11 +8,6 @@ set = false
 
 # Modified colors.css to take RGB values instead for me to modify its transparency in the configs
 
-# The base command to run for applying the wallpaper.
-# Keywords like {{ image }} or anything that works inside of hooks works here.
-# You could also set a static color if you use the color keywords and the wallpaper setter supports it.
-command = "awww img --transition-type center '{{ image }}'"
-
 # Implemented this so that the currently used color can be cat'ed
 [templates.currentcolor]
 input_path = '~/.config/matugen/templates/current'
@@ -79,6 +74,11 @@ output_path = '~/.config/pulse-visualizer/themes/matugen.txt'
 input_path = "~/.config/matugen/colors.css"
 output_path = "~/.config/swaync/colors.css"
 post_hook = "swaync-client -R -rs"
+
+[templates.swayosd]
+input_path = "~/.config/matugen/colors.css"
+output_path = "~/.config/swayosd/colors.css"
+post_hook = "killall swayosd-server ; nohup swayosd-server > /dev/null 2>&1 &"
 
 [templates.wlogout]
 input_path = '~/.config/matugen/colors.css'
