@@ -143,13 +143,13 @@ font: /usr/share/fonts/TTF/SpaceMonoNerdFontPropo-Bold.ttf
 visualizers:
   main:
     type: hsplit
-    ratio: 0.84572786
+    ratio: 0.84615386
     children:
       - type: hsplit
         ratio: 0.53963983
         children:
           - type: hsplit
-            ratio: 0.17452008
+            ratio: 0.17301038
             children:
               - id: lufs
               - id: spectrum_analyzer

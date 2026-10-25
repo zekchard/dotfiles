@@ -1,6 +1,6 @@
 /**
  * @name system24 matugen
- * @description a tui-style discord theme. (recolored with matugen, currently rgb(from {{ colors.source_color.default.hex }} r g b))
+ * @description a tui-style discord theme. (recolored with matugen, currently {{ colors.source_color.default.hex }})
  * @author refact0r
  * @version 2.0.0
  * @invite nz87hXyvcy
@@ -21,7 +21,7 @@ body {
     letter-spacing: -0.05ch; /* decreases letter spacing for better readability. recommended on monospace fonts.*/
 
     /* sizes */
-    --gap: 12px; /* spacing between panels */
+    --gap: 10px; /* spacing between panels */
     --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
     --border-thickness: 2px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
     --border-hover-transition: 0.2s ease; /* transition for borders when hovered */
@@ -54,7 +54,7 @@ body {
 
     /* background image options */
     --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
-    --background-image-url: url(''); /* url of the background image */
+    --background-image-url: rgb(from {{colors.surface.default.hex}} r g b / 0.8); /* url of the background image */
 
     /* transparency/blur options */
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */

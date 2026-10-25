@@ -33,3 +33,50 @@ scrollbar slider {
     background-color: alpha(@accent_color, 0.5) ;
     border-radius: 15px;
 }
+
+/* Thunar */
+/* icon styles */
+.thunar .view .cell:hover {
+  background: alpha(@accent_bg_color, 0.1);
+}
+.thunar .view .cell {
+  border-radius: 8px;
+  background: alpha(@window_bg_color, 0.1);
+  color: @window_fg_color;
+  border-radius: 15px;
+}
+
+.thunar,
+.thunar:disabled,
+.thunar:backdrop {
+  background: alpha(@window_bg_color, 0.85),
+}
+.thunar toolbar {
+  background: alpha(@card_bg_color,0.5);
+  padding: 8px 10px;
+  border-top: 1px solid @window_bg_color;
+}
+/* toolbar back btns and stuff */
+.thunar toolbar .image-button {
+  color: @window_fg_color;
+}
+/* input bar */
+.thunar toolbar toolitem widget box entry {
+  color: @window_fg_color;
+  background: alpha(@surface_container, 0.50);
+}
+/* sidebar */
+.thunar .sidebar {
+  background: alpha(@surface_container_high, 0.15);
+  color: @window_fg_color;
+  border-radius: 0px;
+}
+/* main body */
+.thunar notebook .view {
+  background: alpha(@window_bg_color, 0)
+}
+/* bottom right section */
+.thunar statusbar {
+  color: @window_fg_color;
+  background: alpha(@card_bg_color, 0.10);
+}

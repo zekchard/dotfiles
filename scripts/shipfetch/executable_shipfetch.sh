@@ -18,10 +18,10 @@ SHIPFETCH_IMG="${images[$SHIPFETCH_INDEX]}"
 fastfetch \
 -c "$HOME/scripts/shipfetch/shipfetch.jsonc" \
 --logo "$SHIPFETCH_IMG" \
---logo-height 12 \
+--logo-height 10 \
 --logo-padding-right 2 \
 --logo-padding-left 2 \
 --logo-padding-top 2 \
---logo-recache 
+--logo-cache rerun
 
 shopt -u nullglob

@@ -30,7 +30,6 @@ hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("CLUTTER_BACKEND", "wayland")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
---hl.env("QT_STYLE_OVERRIDE", "kvantum-dark")
 
 hl.env("XCURSOR_SIZE", "22")
 hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
@@ -47,3 +46,7 @@ hl.env("OCL_ICD_VENDORS", "/etc/OpenCL/vendors/rusticl.icd")
 hl.env("RUSTICL_ENABLE", "radeonsi")
 
 hl.env("MPD_HOST", "/home/zek/.cache/mpd/socket")
+
+-- An update in gtk4 broke blur for apps that use it, this env reverts it
+-- https://github.com/hyprwm/Hyprland/discussions/16507#discussioncomment-18832324
+hl.env("GDK_WAYLAND_DISABLE", "ext_background_effect_manager_v1")

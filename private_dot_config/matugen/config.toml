@@ -2,10 +2,6 @@
 
 verbose = true
 
-[config.wallpaper]
-# Whether to set the wallpaper or not
-set = false
-
 # Modified colors.css to take RGB values instead for me to modify its transparency in the configs
 
 # Implemented this so that the currently used color can be cat'ed

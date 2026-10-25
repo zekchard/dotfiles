@@ -39,6 +39,10 @@ hl.window_rule({
     no_blur = 1
 })
 
+hl.window_rule({
+    match = { class = ".*" },
+    no_blur = 0
+})
 ------------------
 -- Window Rules --
 ------------------
