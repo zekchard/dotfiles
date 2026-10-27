@@ -22,6 +22,11 @@
 # See https://wiki.hypr.land/Configuring/Workspace-Rules/ for workspace rules
 ]] --
 
+hl.window_rule({
+    match = { class = ".*" },
+    no_blur = 0
+})
+
 ---------------------
 -- Workspace Rules --
 ---------------------
@@ -39,10 +44,6 @@ hl.window_rule({
     no_blur = 1
 })
 
-hl.window_rule({
-    match = { class = ".*" },
-    no_blur = 0
-})
 ------------------
 -- Window Rules --
 ------------------
@@ -91,7 +92,7 @@ for _, m in ipairs(opacityOverride) do
 end
 
 local floatCenter = hl.window_rule({ match = { float = true }, center = true })
-floatCenter:set_enabled(false)
+floatCenter:set_enabled(true)
 
 local floatApps = {
     { class = "^(kvantummanager|qt[56]ct|nwg-look)$" },

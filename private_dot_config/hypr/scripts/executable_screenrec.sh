@@ -8,7 +8,7 @@ SROUTPUT="$HOME/Videos/Screencasts/$(date "+%m-%d-%Y %I-%M-%S %p").mp4"
 record() {
 	notify-send -t 3000 'Screen recording' 'gpu-screen-recorder will be recording the laptop monitor (eDP-1) in 3 seconds...'
 	sleep 3
-	gpu-screen-recorder -bm cbr -q 4250 -a default_output -fm vfr -f 70 -w eDP-1 -o "$SROUTPUT" & echo $! > /tmp/screenrecording
+	gpu-screen-recorder -bm cbr -q 4250 -a 'alsa_output.pci-0000_03_00.6.analog-stereo.monitor' -f 70 -w eDP-1 -o "$SROUTPUT" & echo $! > /tmp/screenrecording
 	echo " Rec" > /tmp/srstatus
 	}
 

@@ -12,7 +12,7 @@
 ]]
 --
 
-local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local mainMod = "SUPER" -- Sets "Windows/Super" key as main modifier
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
@@ -48,7 +48,7 @@ hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("sleep 0.25 && hyprctl kill"))
 
 -- Scripts --
 hl.bind("ALT + SHIFT + X", hl.dsp.exec_cmd("~/.config/hypr/scripts/ocr.sh"))
-hl.bind(mainMod .. " + ALT + G", hl.dsp.exec_cmd("~/.config/hypr/scripts/gamemode.sh"))
+hl.bind(mainMod .. " + CTRL + G", hl.dsp.exec_cmd("~/.config/hypr/scripts/gamemode.sh"))
 hl.bind(mainMod .. " + CTRL + R", hl.dsp.exec_cmd("~/.config/hypr/scripts/screenrec.sh"))
 
 -- Wofi --
@@ -70,28 +70,16 @@ hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("swaync-client -d"))
 -- hyprlock --
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
--- hyprpicker and hyprshot --
+-- hyprpicker, hyprshot, and satty --
 hl.bind("ALT + SHIFT + Z", hl.dsp.exec_cmd("hyprpicker -a"))
 hl.bind("PRINT", hl.dsp.exec_cmd("killall hyprshot ; hyprshot -m active -m output -o ~/Pictures/Screenshots -z")) -- Screenshot active monitor
 hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("killall hyprshot ; hyprshot -m region -o ~/Pictures/Screenshots -z"))    -- Screenshot region
 hl.bind("ALT + PRINT", hl.dsp.exec_cmd("killall hyprshot ; hyprshot -m window -o ~/Pictures/Screenshots -z"))     -- Screenshot window
 hl.bind("SHIFT + Print",
-    hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y-%m-%d_%H%M%S.png"'))
+    hl.dsp.exec_cmd('grim - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y-%m-%d_%H%M%S_satty.png"'))
 hl.bind("CTRL+ SHIFT + Print",
     hl.dsp.exec_cmd(
-        'grim -g "$(slurp -d)" - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y-%m-%d_%H%M%S.png"'))
-
--- was going to replace hyprshot with HyprCapture but it seems to be a lil underbaked for me (especially in multi-monitor setups like mine) --
-
---hl.bind("CTRL + PRINT", function()
---    hl.plugin.hyprcapture.open("region")
---end)
---hl.bind("PRINT", function()
---    hl.plugin.hyprcapture.quick("fullscreen")
---end)
---hl.bind("ALT + PRINT", function()
---    hl.plugin.hyprcapture.open("window")
---end)
+        'grim -g "$(slurp -d)" - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y-%m-%d_%H%M%S_satty.png"'))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
