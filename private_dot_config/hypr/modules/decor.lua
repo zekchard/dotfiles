@@ -60,13 +60,44 @@ hl.config({
             new_optimizations = true,
             size = 5,
             xray = false,
-            passes = 2,
-            noise = 0.14,
+            passes = 1,
+            noise = 0.08,
             contrast = 1.45,
             brightness = 0.759,
             vibrancy_darkness = 0.188,
             vibrancy = 0.36,
+            variant = "prism",
+            aurora = {
+                color1 = primary,
+                color2 = tertiary,
+                intensity = 0.23,
+                speed = 10
+            },
+            glass = {
+                refraction = 10,
+                roughness = 0,
+                size = 120,
+            },
+            heat_shimmer = {
+                speed = 0
+            },
+            ripple = {
+                duration = 1.3,
+                radius = 100,
+                strength = 16,
+                width = 20,
+            }
         },
+        wobble                = {
+            enabled = false,
+            mesh = 2,
+            stiffness = 900,
+            damping = 120,
+            mass = 1,
+            intensity = 0.2,
+            value_epsilon = 0.25,
+            velocity_epsilon = 2
+        }
     },
 
     animations = {

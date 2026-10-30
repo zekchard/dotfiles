@@ -72,6 +72,7 @@ your home directory.
 | Lock Screen                          | `extra/hyprlock`                                                                                                                             |
 | Color Picker                         | `extra/hyprpicker`                                                                                                                           |
 | Screenshots                          | `extra/hyprshot`                                                                                                                             |
+|                                      | `extra/satty`                                                                                                                                |
 | Idle Manager                         | `extra/hypridle`                                                                                                                             |
 | Launcher                             | `extra/wofi`                                                                                                                                 |
 | Clipboard                            | `extra/cliphist`                                                                                                                             |

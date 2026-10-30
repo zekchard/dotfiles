@@ -69,6 +69,17 @@ for _, m in ipairs(gameMatches) do
     })
 end
 
+local floatCenter = hl.window_rule({ match = { float = true }, center = true })
+floatCenter:set_enabled(true)
+local centerExcept = {
+    { class = "^([Ff]ire[Al]lpaca)$" },
+}
+for _, m in ipairs(centerExcept) do
+    hl.window_rule({ match = m, center = false })
+end
+local globalNN = hl.window_rule({ match = ".*", nearest_neighbor = 1, })
+globalNN:set_enabled(true)
+
 local modalMatches = {
     {
         title =
@@ -80,6 +91,7 @@ local modalMatches = {
     { class = "^(.*dialog.*)$" },
     { title = "^(.*dialog.*)$" },
     { class = "^(hyprland-share-picker)$" },
+    { class = "^(hyprpolkitagent)$" },
 }
 
 local opacityOverride = {
@@ -90,9 +102,6 @@ local opacityOverride = {
 for _, m in ipairs(opacityOverride) do
     hl.window_rule({ match = m, opacity = "1.0 override" })
 end
-
-local floatCenter = hl.window_rule({ match = { float = true }, center = true })
-floatCenter:set_enabled(true)
 
 local floatApps = {
     { class = "^(kvantummanager|qt[56]ct|nwg-look)$" },
@@ -117,10 +126,9 @@ local floatfocusfix = hl.window_rule({
     float = 1,
     match = {
         float = 1,
-        initial_class = ".*",
+        class = ".*",
     },
 })
-
 floatfocusfix:set_enabled(true)
 
 local suppressMaximizeRule = hl.window_rule({
@@ -128,7 +136,6 @@ local suppressMaximizeRule = hl.window_rule({
     match = { class = ".*" },
     suppress_event = "maximize",
 })
-
 suppressMaximizeRule:set_enabled(true)
 -- Ignore maximize requests from all apps. set_enabled(false) to disable
 
@@ -195,10 +202,13 @@ hl.window_rule({
 
 hl.window_rule({
     name = "nautiluspreview",
-    match = { class = "^(org.gnome.NautilusPreviewer)$" },
+    match = { class = "^(org\\.gnome\\.NautilusPreviewer)$" },
     float = true,
     dim_around = false,
-    min_size = { 0, 0 },
+    min_size = {
+        "max(monitor_w, monitor_h)*0.55",
+        "min(monitor_w, monitor_h)*0.55",
+    },
     opacity = 1.0,
 })
 
@@ -241,7 +251,7 @@ hl.window_rule({
 
 hl.window_rule({
     name = "kdeconnectd",
-    match = { class = ".*org.kde.kdeconnect.daemon.*" },
+    match = { class = ".*org\\.kde\\.kdeconnect\\.daemon.*" },
     float = 1,
 })
 
