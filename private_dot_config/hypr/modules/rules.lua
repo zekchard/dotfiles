@@ -1,25 +1,18 @@
 --[[
-#
-#
-#    ██     ██ ▄▄ ▄▄  ▄▄ ▄▄▄▄   ▄▄▄  ▄▄   ▄▄
-#    ██ ▄█▄ ██ ██ ███▄██ ██▀██ ██▀██ ██ ▄ ██
-#     ▀██▀██▀  ██ ██ ▀██ ████▀ ▀███▀  ▀█▀█▀  ▄
-#                                           ▀
-#    ██     ██  ▄▄▄  ▄▄▄▄  ▄▄ ▄▄  ▄▄▄▄ ▄▄▄▄   ▄▄▄   ▄▄▄▄ ▄▄▄▄▄
-#    ██ ▄█▄ ██ ██▀██ ██▄█▄ ██▄█▀ ███▄▄ ██▄█▀ ██▀██ ██▀▀▀ ██▄▄
-#     ▀██▀██▀  ▀███▀ ██ ██ ██ ██ ▄▄██▀ ██    ██▀██ ▀████ ██▄▄▄  ▄
-#                                                              ▀
-#     ▄▄▄  ▄▄  ▄▄ ▄▄▄▄    ██      ▄▄▄  ▄▄ ▄▄ ▄▄▄▄▄ ▄▄▄▄
-#    ██▀██ ███▄██ ██▀██   ██     ██▀██ ▀███▀ ██▄▄  ██▄█▄
-#    ██▀██ ██ ▀██ ████▀   ██████ ██▀██   █   ██▄▄▄ ██ ██
-#
-#    █████▄  ▄▄ ▄▄ ▄▄    ▄▄▄▄▄  ▄▄▄▄
-#    ██▄▄██▄ ██ ██ ██    ██▄▄  ███▄▄
-#    ██   ██ ▀███▀ ██▄▄▄ ██▄▄▄ ▄▄██▀
-#
-#
-# See https://wiki.hypr.land/Configuring/Window-Rules/ for more
-# See https://wiki.hypr.land/Configuring/Workspace-Rules/ for workspace rules
+
+
+
+ ███████████            ████
+▒▒███▒▒▒▒▒███          ▒▒███
+ ▒███    ▒███ █████ ████▒███   ██████  █████
+ ▒██████████ ▒▒███ ▒███ ▒███  ███▒▒██████▒▒
+ ▒███▒▒▒▒▒███ ▒███ ▒███ ▒███ ▒███████▒▒█████
+ ▒███    ▒███ ▒███ ▒███ ▒███ ▒███▒▒▒  ▒▒▒▒███
+ █████   █████▒▒█████████████▒▒██████ ██████
+▒▒▒▒▒   ▒▒▒▒▒  ▒▒▒▒▒▒▒▒▒▒▒▒▒  ▒▒▒▒▒▒ ▒▒▒▒▒▒
+
+
+
 ]] --
 
 hl.window_rule({
@@ -69,14 +62,16 @@ for _, m in ipairs(gameMatches) do
     })
 end
 
+hl.window_rule({ match = { float = true }, persistent_size = true })
 local floatCenter = hl.window_rule({ match = { float = true }, center = true })
-floatCenter:set_enabled(true)
 local centerExcept = {
-    { class = "^([Ff]ire[Al]lpaca)$" },
+    { class = "^([Ff]ire[Aa]lpaca)$" },
 }
 for _, m in ipairs(centerExcept) do
     hl.window_rule({ match = m, center = false })
 end
+floatCenter:set_enabled(true)
+
 local globalNN = hl.window_rule({ match = ".*", nearest_neighbor = 1, })
 globalNN:set_enabled(true)
 
@@ -105,6 +100,7 @@ end
 
 local floatApps = {
     { class = "^(kvantummanager|qt[56]ct|nwg-look)$" },
+    { class = "^(.*org\\.kde\\.kdeconnect\\..*)$" },
     { class = "^(org.pulseaudio.pavucontrol|com.saivert.pwvucontrol|blueman-manager|nm-applet|nm-connection-editor)$" },
     { title = "^(Winetricks.*|Protontricks.*)$" },
     { title = "^.*QuickCSS.*$" },
@@ -188,7 +184,7 @@ hl.window_rule({
     dim_around = false,
     float = true,
     pin = true,
-    keep_aspect_ratio = true,
+    keep_aspect_ratio = false,
     opacity = "1.0 override",
     size = {
         "max(monitor_w, monitor_h)*0.25",

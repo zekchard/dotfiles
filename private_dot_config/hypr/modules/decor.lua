@@ -1,13 +1,17 @@
 --[[
 
-#
-#
-#    ████▄  ▄▄▄▄▄  ▄▄▄▄  ▄▄▄  ▄▄▄▄   ▄▄▄ ▄▄▄▄▄▄ ▄▄  ▄▄▄  ▄▄  ▄▄
-#    ██  ██ ██▄▄  ██▀▀▀ ██▀██ ██▄█▄ ██▀██  ██   ██ ██▀██ ███▄██
-#    ████▀  ██▄▄▄ ▀████ ▀███▀ ██ ██ ██▀██  ██   ██ ▀███▀ ██ ▀██
-#
-#
-#    https://wiki.hypr.land/Configuring/Variables/#decoration
+
+
+ ██████████
+▒▒███▒▒▒▒███
+ ▒███   ▒▒███  ██████  ██████   ██████  ████████
+ ▒███    ▒███ ███▒▒██████▒▒███ ███▒▒███▒▒███▒▒███
+ ▒███    ▒███▒███████▒███ ▒▒▒ ▒███ ▒███ ▒███ ▒▒▒
+ ▒███    ███ ▒███▒▒▒ ▒███  ███▒███ ▒███ ▒███
+ ██████████  ▒▒██████▒▒██████ ▒▒██████  █████
+▒▒▒▒▒▒▒▒▒▒    ▒▒▒▒▒▒  ▒▒▒▒▒▒   ▒▒▒▒▒▒  ▒▒▒▒▒
+
+
 
 ]] --
 hl.config({
@@ -66,7 +70,7 @@ hl.config({
             brightness = 0.759,
             vibrancy_darkness = 0.188,
             vibrancy = 0.36,
-            variant = "prism",
+            variant = "frost",
             aurora = {
                 color1 = primary,
                 color2 = tertiary,
@@ -74,8 +78,8 @@ hl.config({
                 speed = 10
             },
             glass = {
-                refraction = 10,
-                roughness = 0,
+                refraction = 20,
+                roughness = 0.7,
                 size = 120,
             },
             heat_shimmer = {
@@ -85,7 +89,7 @@ hl.config({
                 duration = 1.3,
                 radius = 100,
                 strength = 16,
-                width = 20,
+                width = 16,
             }
         },
         wobble                = {

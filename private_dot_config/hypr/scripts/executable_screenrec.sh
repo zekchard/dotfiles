@@ -10,13 +10,15 @@ record() {
 	sleep 3
 	gpu-screen-recorder -bm cbr -q 4250 -a 'alsa_output.pci-0000_03_00.6.analog-stereo.monitor' -f 70 -w eDP-1 -o "$SROUTPUT" & echo $! > /tmp/screenrecording
 	echo " Rec" > /tmp/srstatus
+	echo "$SROUTPUT" > /tmp/srfname
 	}
 
 end() {
 	kill -15 "$(cat /tmp/screenrecording)"
 	rm -f /tmp/screenrecording
 	echo "" > /tmp/srstatus
-	notify-send -t 3000 'Screen recording stopped' "Saved to $SROUTPUT"
+	notify-send -t 3000 'Screen recording stopped' "Saved to $(cat /tmp/srfname)"
+	rm -f /tmp/srfname
 }
 
 ([[ -f /tmp/screenrecording ]] && end && exit 0) || record

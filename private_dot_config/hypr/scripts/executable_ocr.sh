@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # Dependencies: tesseract-ocr imagemagick hyprshot
 
 SCR_IMG=`mktemp`

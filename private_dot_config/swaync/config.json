@@ -92,28 +92,29 @@
     "menubar": {
       "menu#powermode-buttons": {
         "label": "󰓅", 
-        "position": "right",
+        "position": "right", 
+        /* sudoers dropin needed */
         "actions": [ 
           {
             "label": "Performance",
-            "command": "cpupower-gui pr Performance && swaync-client -cp && swayosd-client --custom-message 'CPU in Performance governor'"
+            "command": "sudo cpupower frequency-set -d 1.4GHz -u 2.6GHz -g performance -r && swaync-client -cp && swayosd-client --custom-message 'CPU in Performance governor'"
           },
           {
             "label": "Ondemand",
-            "command": "cpupower-gui pr Ondemand && swaync-client -cp && swayosd-client --custom-message 'CPU in Ondemand governor'"
+            "command": "sudo cpupower frequency-set -d 1.4GHz -u 2.6GHz -g ondemand -r && swaync-client -cp && swayosd-client --custom-message 'CPU in Ondemand governor'"
           },
           {
             "label": "Conservative",
-            "command": "cpupower-gui pr Conservative && swaync-client -cp && swayosd-client --custom-message 'CPU in Conservative governor'"
+            "command": "sudo cpupower frequency-set -d 1.4GHz -u 2.6GHz -g conservative -r -cp && swayosd-client --custom-message 'CPU in Conservative governor'"
           },
           {
             "label": "Powersave",
-            "command": "cpupower-gui pr Balanced && swaync-client -cp && swayosd-client --custom-message 'CPU in Powersave governor'"
+            "command": "sudo cpupower frequency-set -d 1.4GHz -u 1.4GHz -g powersave -r && swaync-client -cp && swayosd-client --custom-message 'CPU in Powersave governor'"
           },
 
           {
             "label": "Limit to 1696Mhz",
-            "command": "cpupower-gui pr 1.7GHz && swaync-client -cp && swayosd-client --custom-message 'CPU limited to 1.7GHz'"
+            "command": "sudo cpupower frequency-set -d 1.4GHz -u 1.7GHz -g performance && swaync-client -cp && swayosd-client --custom-message 'CPU limited to 1.7GHz'"
           }
         ]
       },
@@ -210,7 +211,7 @@
           "type": "toggle",
           "active": true,
           "command": "/home/zek/.config/hypr/scripts/gamemode.sh",
-          "update-command": "/home/zek/.config/swaync/gamemodewatch.sh"
+          "update-command": "echo $(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')"
         },
         {
           "label": "󰂠",

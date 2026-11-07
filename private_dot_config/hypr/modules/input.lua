@@ -1,13 +1,18 @@
 --[[
 
-#
-#
-#            ██ ▄▄  ▄▄ ▄▄▄▄  ▄▄ ▄▄ ▄▄▄▄▄▄
-#            ██ ███▄██ ██▄█▀ ██ ██   ██
-#            ██ ██ ▀██ ██    ▀███▀   ██
-#
-#
-# https://wiki.hypr.land/Configuring/Variables/#input
+
+
+ █████                               █████
+▒▒███                               ▒▒███
+ ▒███ ████████  ████████  █████ ███████████
+ ▒███▒▒███▒▒███▒▒███▒▒███▒▒███ ▒███▒▒▒███▒
+ ▒███ ▒███ ▒███ ▒███ ▒███ ▒███ ▒███  ▒███
+ ▒███ ▒███ ▒███ ▒███ ▒███ ▒███ ▒███  ▒███ ███
+ █████████ █████▒███████  ▒▒████████ ▒▒█████
+▒▒▒▒▒▒▒▒▒ ▒▒▒▒▒ ▒███▒▒▒    ▒▒▒▒▒▒▒▒   ▒▒▒▒▒
+                ▒███
+                █████
+               ▒▒▒▒▒
 
 ]] --
 
@@ -23,11 +28,11 @@ hl.config({
         force_no_accel = false,
 
         touchpad = {
-            natural_scroll = false,
+            natural_scroll = true,
         },
 
         tablet = {
-            output = "0",
+            --output = "0",
         }
     },
     gestures = {
@@ -47,7 +52,6 @@ hl.gesture({
 hl.device({
     name = "opentabletdriver-virtual-artist-tablet",
     enabled = true,
-    --output = "1",
 })
 
 hl.device({
@@ -61,7 +65,7 @@ hl.device({
     name          = "asue1201:00-04f3:3125-touchpad",
     sensitivity   = 0.4,
     accel_profile = "flat",
-    scroll_factor = 1,
+    scroll_factor = 0.6,
 })
 
 hl.device({
