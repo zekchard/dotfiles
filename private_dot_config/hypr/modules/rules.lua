@@ -116,6 +116,12 @@ hl.window_rule({
     animation = "fade",
 })
 
+hl.window_rule({
+    match = { class = "^(.*org\\.kde\\.kdeconnect\\.app.*)$" },
+    float = true,
+    size = { "max(monitor_w, monitor_h)*0.83", "min(monitor_w, monitor_h)*0.64" },
+})
+
 local floatfocusfix = hl.window_rule({
     name = "floatfocusfix",
     no_initial_focus = 1,

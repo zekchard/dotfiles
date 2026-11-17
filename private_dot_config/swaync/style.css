@@ -331,6 +331,7 @@ notificationwindow, blankwindow {
   border:2px solid var(--lower-border-color);
   border-radius: var(--border-radius);
   box-shadow: 0px 0px 6px 0px #1A1A1A;
+  backdrop-filter: blur(20px);
   }
 
 .control-center .control-center-list-placeholder {
@@ -364,6 +365,7 @@ notificationwindow, blankwindow {
 
 .floating-notifications {
   background: transparent;
+  backdrop-filter: blur(20px);
 }
 
 .floating-notifications .notification {

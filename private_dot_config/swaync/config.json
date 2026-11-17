@@ -105,7 +105,7 @@
           },
           {
             "label": "Conservative",
-            "command": "sudo cpupower frequency-set -d 1.4GHz -u 2.6GHz -g conservative -r -cp && swayosd-client --custom-message 'CPU in Conservative governor'"
+            "command": "sudo cpupower frequency-set -d 1.4GHz -u 2.6GHz -g conservative -r && swaync-client -cp && swayosd-client --custom-message 'CPU in Conservative governor'"
           },
           {
             "label": "Powersave",
