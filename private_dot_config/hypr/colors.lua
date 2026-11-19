@@ -7,7 +7,7 @@ error_container = "rgba(93000aee)"
 
 inverse_on_surface = "rgba(2f3131ee)"
 
-inverse_primary = "rgba(516163ee)"
+inverse_primary = "rgba(516164ee)"
 
 inverse_surface = "rgba(e3e2e2ee)"
 
@@ -23,15 +23,15 @@ on_primary_container = "rgba(d4e6e8ee)"
 
 on_primary_fixed = "rgba(0e1e20ee)"
 
-on_primary_fixed_variant = "rgba(394a4bee)"
+on_primary_fixed_variant = "rgba(394a4cee)"
 
 on_secondary = "rgba(293233ee)"
 
-on_secondary_container = "rgba(dae4e5ee)"
+on_secondary_container = "rgba(dae4e6ee)"
 
 on_secondary_fixed = "rgba(141d1eee)"
 
-on_secondary_fixed_variant = "rgba(3f4849ee)"
+on_secondary_fixed_variant = "rgba(3f484aee)"
 
 on_surface = "rgba(e3e2e2ee)"
 
@@ -39,11 +39,11 @@ on_surface_variant = "rgba(c7c6c6ee)"
 
 on_tertiary = "rgba(1c3437ee)"
 
-on_tertiary_container = "rgba(cce8eaee)"
+on_tertiary_container = "rgba(cde7ebee)"
 
 on_tertiary_fixed = "rgba(051f22ee)"
 
-on_tertiary_fixed_variant = "rgba(324b4dee)"
+on_tertiary_fixed_variant = "rgba(324b4eee)"
 
 outline = "rgba(919190ee)"
 
@@ -51,7 +51,7 @@ outline_variant = "rgba(464747ee)"
 
 primary = "rgba(b8caccee)"
 
-primary_container = "rgba(394a4bee)"
+primary_container = "rgba(394a4cee)"
 
 primary_fixed = "rgba(d4e6e8ee)"
 
@@ -59,17 +59,17 @@ primary_fixed_dim = "rgba(b8caccee)"
 
 scrim = "rgba(000000ee)"
 
-secondary = "rgba(bec8c9ee)"
+secondary = "rgba(bec8caee)"
 
-secondary_container = "rgba(3f4849ee)"
+secondary_container = "rgba(3f484aee)"
 
-secondary_fixed = "rgba(dae4e5ee)"
+secondary_fixed = "rgba(dae4e6ee)"
 
-secondary_fixed_dim = "rgba(bec8c9ee)"
+secondary_fixed_dim = "rgba(bec8caee)"
 
 shadow = "rgba(000000ee)"
 
-source_color = "rgba(4c9198ee)"
+source_color = "rgba(4b5a5cee)"
 
 surface = "rgba(121414ee)"
 
@@ -91,11 +91,11 @@ surface_tint = "rgba(b8caccee)"
 
 surface_variant = "rgba(464747ee)"
 
-tertiary = "rgba(b1cbceee)"
+tertiary = "rgba(b1cbcfee)"
 
-tertiary_container = "rgba(324b4dee)"
+tertiary_container = "rgba(324b4eee)"
 
-tertiary_fixed = "rgba(cce8eaee)"
+tertiary_fixed = "rgba(cde7ebee)"
 
-tertiary_fixed_dim = "rgba(b1cbceee)"
+tertiary_fixed_dim = "rgba(b1cbcfee)"
 

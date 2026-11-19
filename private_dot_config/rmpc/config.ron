@@ -22,7 +22,7 @@
     reflect_changes_to_playlist: false,
     select_current_song_on_change: false,
     ignore_leading_the: false,
-    extra_yt_dlp_args: ["--ignore-config --cookies=/home/zek/cookies.youtube.txt --force-ipv4 --sleep-requests 1 --sleep-interval 5 --max-sleep-interval 30 --concurrent-fragments 3 --throttled-rate 100K"],
+    extra_yt_dlp_args: ["--verbose", "--ppa=\"ThumbnailsConvertor:-qmin 1 -q:v 1 -vf crop=\\\"'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\\\"\"", "--force-ipv4", "--sleep-requests=1", "--sleep-interval=5", "--max-sleep-interval=30", "--concurrent-fragments=3", "--throttled-rate=100K"],
     browser_song_sort: [Disc, Track, Artist, Title],
     directories_sort: SortFormat(group_by_type: true, reverse: false),
     auto_open_downloads: true,

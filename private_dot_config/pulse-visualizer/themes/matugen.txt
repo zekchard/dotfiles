@@ -6,6 +6,6 @@ credit: "Matugen generated theme"
 color: 184, 202, 204
 selection: 212, 230, 232
 text: 227, 226, 226
-accent: 76, 145, 152
+accent: 75, 90, 92
 bg: 18, 20, 20
 bgaccent: 56, 57, 57

@@ -8,20 +8,20 @@
     format_tag_separator: " | ",
     browser_column_widths: [20, 38, 42],
     background_color: None,
-    text_color: Some("#bec8c9"),
+    text_color: Some("#bec8ca"),
     header_background_color: None,
     modal_background_color: None,
     modal_backdrop: false,
     preview_label_style: (fg: "#b8cacc"),
-    preview_metadata_group_style: (fg: "#b1cbce", modifiers: "Bold"),
+    preview_metadata_group_style: (fg: "#b1cbcf", modifiers: "Bold"),
     tab_bar: (
-        active_style: (fg: "#293233", bg: "#bec8c9", modifiers: "Bold"),
-        inactive_style: (fg: "#bec8c9", modifiers: "Bold"),
+        active_style: (fg: "#293233", bg: "#bec8ca", modifiers: "Bold"),
+        inactive_style: (fg: "#bec8ca", modifiers: "Bold"),
     ),
-    highlighted_item_style: (fg: "#bec8c9", modifiers: "Bold"),
-    current_item_style: (fg: "#bec8c9", bg: "#516163", modifiers: "Bold"),
-    borders_style: (fg: "#bec8c9"),
-    highlight_border_style: (fg: "#bec8c9"),
+    highlighted_item_style: (fg: "#bec8ca", modifiers: "Bold"),
+    current_item_style: (fg: "#bec8ca", bg: "#516164", modifiers: "Bold"),
+    borders_style: (fg: "#bec8ca"),
+    highlight_border_style: (fg: "#bec8ca"),
     border_symbol_sets: {
         "bar_corners": (
         	parent: Rounded,
@@ -54,18 +54,18 @@
             fg: "#293233",
         ),
         elapsed_style: (
-            fg: "#bec8c9",
+            fg: "#bec8ca",
         ),
         thumb_style: (
-            fg: "#bec8c9",
+            fg: "#bec8ca",
             bg: "#293233",
         ),
         use_track_when_empty: false,
     ),
     scrollbar: (
         symbols: ["│", "█", "▲", "▼"],
-        track_style: (fg: "#bec8c9"),
-        ends_style: (fg: "#dae4e5"),
+        track_style: (fg: "#bec8ca"),
+        ends_style: (fg: "#dae4e6"),
         thumb_style: (fg: "#b8cacc"),
     ),
     song_table_format: [
@@ -145,12 +145,12 @@
                    panes: [
                        (
                            pane: Pane(Property(content: [
-                           	(kind: Text("["), style: (fg: "#b1cbce", modifiers: "Bold")),
+                           	(kind: Text("["), style: (fg: "#b1cbcf", modifiers: "Bold")),
                             (
                            		kind: Property(Status(StateV2(playing_label: "Playing", paused_label: "Paused", stopped_label: "Stopped"))),
-                           	    style: (fg: "#b1cbce", modifiers: "Bold")
+                           	    style: (fg: "#b1cbcf", modifiers: "Bold")
                            	),
-                           						(kind: Text("]"), style: (fg: "#b1cbce", modifiers: "Bold"))
+                           						(kind: Text("]"), style: (fg: "#b1cbcf", modifiers: "Bold"))
                            ], align: Left)),
                            size: "12",
                        ),
@@ -196,8 +196,8 @@
                     (kind: Text(" remaining in queue"), style: (modifiers: "Dim"))
                 ],
                 center: [
-                    (kind: Property(Song(Artist)), style: (fg: "#b1cbce", modifiers: "Bold"),
-                        default: (kind: Text("Unknown"), style: (fg: "#b1cbce", modifiers: "Bold"))
+                    (kind: Property(Song(Artist)), style: (fg: "#b1cbcf", modifiers: "Bold"),
+                        default: (kind: Text("Unknown"), style: (fg: "#b1cbcf", modifiers: "Bold"))
                     ),
                     (kind: Text(" - ")),
                     (kind: Property(Song(Album)),
@@ -211,7 +211,7 @@
                             active_style: (fg: "#b8cacc", modifiers: "Bold"),
                             separator_style: (fg: "#b8cacc")))
                         ),
-                        style: (fg: "#bec8c9")
+                        style: (fg: "#bec8ca")
                     ),
                 ]
             ),
@@ -254,7 +254,7 @@
         // support them as well!
         // rmpc does not support `horizontal_gradient` (yet?)
         bar_color: Gradient({
-            0: "#394a4b",
+            0: "#394a4c",
             50: "#b8cacc",
             100: "#d4e6e8"
         })
